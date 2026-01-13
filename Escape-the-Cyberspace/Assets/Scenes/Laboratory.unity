@@ -1986,21 +1986,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &354403022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354403017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c592198af75e5c14282d4d66c6a7ba6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
-  jumpForce: 2
-  gravity: -9.8
 --- !u!1001 &373592496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5628,9 +5613,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1782702501690864755, guid: 82e6b34e57e76604da0bcc56ca2b17a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 354403020}
-    - targetCorrespondingSourceObject: {fileID: 1782702501690864755, guid: 82e6b34e57e76604da0bcc56ca2b17a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 354403022}
   m_SourcePrefab: {fileID: 100100000, guid: 82e6b34e57e76604da0bcc56ca2b17a8, type: 3}
 --- !u!1001 &1125567982
 PrefabInstance:
