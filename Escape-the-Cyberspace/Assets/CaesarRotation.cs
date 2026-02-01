@@ -1,69 +1,74 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class VRRotatableRing : MonoBehaviour
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable))]
+public class GrabRotateDisk : MonoBehaviour
 {
-    [Header("Rotation Settings")]
-    public Transform rotationCenter; // Center of the Caesar disk
-    public Vector3 rotationAxis = Vector3.right; // X-axis rotation
+    [Header("Rotation")]
+    public Vector3 rotationAxis = Vector3.up; // local axis
+    public float sensitivity = 1.0f;
 
-    private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor grabbingHand;
-    private bool isGrabbed = false;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
+    private Transform interactorTransform;
 
-    private Vector3 lastHandDirection;
+    private Vector3 lastProjectedVector;
 
-    private void OnEnable()
+    void Awake()
     {
-        var grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        if (grabInteractable != null)
-        {
-            grabInteractable.selectEntered.AddListener(OnGrab);
-            grabInteractable.selectExited.AddListener(OnRelease);
-        }
-        else
-        {
-            Debug.LogWarning("VRRotatableRing requires XRGrabInteractable on the same GameObject!");
-        }
+        grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+
+        grab.selectEntered.AddListener(OnGrab);
+        grab.selectExited.AddListener(OnRelease);
     }
 
-    private void OnDisable()
+    void OnDestroy()
     {
-        var grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        if (grabInteractable != null)
-        {
-            grabInteractable.selectEntered.RemoveListener(OnGrab);
-            grabInteractable.selectExited.RemoveListener(OnRelease);
-        }
+        grab.selectEntered.RemoveListener(OnGrab);
+        grab.selectExited.RemoveListener(OnRelease);
     }
 
-    private void OnGrab(SelectEnterEventArgs args)
+    void OnGrab(SelectEnterEventArgs args)
     {
-        grabbingHand = args.interactorObject as UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor;
-        isGrabbed = true;
+        Debug.Log("Is Grabbed!");
+        interactorTransform = args.interactorObject.transform;
 
-        // Initial vector from center to hand
-        lastHandDirection = (grabbingHand.transform.position - rotationCenter.position).normalized;
+        lastProjectedVector = ProjectToPlane(interactorTransform.position);
     }
 
-    private void OnRelease(SelectExitEventArgs args)
+    void OnRelease(SelectExitEventArgs args)
     {
-        grabbingHand = null;
-        isGrabbed = false;
+        interactorTransform = null;
     }
 
-    private void Update()
+    void Update()
     {
-        if (isGrabbed && grabbingHand != null)
-        {
-            Vector3 currentHandDirection = (grabbingHand.transform.position - rotationCenter.position).normalized;
+        if (interactorTransform == null)
+            return;
 
-            // Calculate angle relative to X-axis
-            float angle = Vector3.SignedAngle(lastHandDirection, currentHandDirection, rotationAxis);
+        Vector3 currentProjectedVector = ProjectToPlane(interactorTransform.position);
 
-            // Apply rotation around X-axis
-            transform.Rotate(rotationAxis, angle, Space.World);
+        float angle = Vector3.SignedAngle(
+            lastProjectedVector,
+            currentProjectedVector,
+            transform.TransformDirection(rotationAxis)
+        );
 
-            lastHandDirection = currentHandDirection;
-        }
+        transform.Rotate(
+            rotationAxis,
+            angle * sensitivity,
+            Space.Self
+        );
+
+        lastProjectedVector = currentProjectedVector;
+    }
+
+    Vector3 ProjectToPlane(Vector3 worldPos)
+    {
+        Vector3 center = transform.position;
+        Vector3 axisWorld = transform.TransformDirection(rotationAxis);
+
+        Vector3 toHand = worldPos - center;
+
+        return Vector3.ProjectOnPlane(toHand, axisWorld).normalized;
     }
 }
