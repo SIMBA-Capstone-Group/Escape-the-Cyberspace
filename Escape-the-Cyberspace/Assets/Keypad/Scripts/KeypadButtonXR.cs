@@ -25,6 +25,7 @@ public class KeypadButtonXRHook : MonoBehaviour
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
+        if (keypadButton != null)
         keypadButton.PressButton();
     }
 }
