@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Snappable
+  - Key
   layers:
   - Default
   - TransparentFX
