@@ -1,7 +1,7 @@
 ﻿<Solution>
   <Project Path="MikeNspiredXRIStarterKit.Runtime.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj" />
   <Project Path="MikeNspired XR HandPoser Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
 </Solution>
