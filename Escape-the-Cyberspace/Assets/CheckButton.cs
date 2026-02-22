@@ -3,6 +3,11 @@ using TMPro;
 
 public class CheckButton : MonoBehaviour
 {
+    [Header("ENTER 5 UPPERCASE LETTERS, NO NUMBERS.")]
+    public string CorrectAnswer;
+    [Header("ADD COLORS FOR FLASKS AND DUCKS")]
+    public Color[] MatchColors;
+
     [Header("UI STUFF")]
     public TextMeshProUGUI Letter1;
     public TextMeshProUGUI Letter2;
@@ -10,22 +15,95 @@ public class CheckButton : MonoBehaviour
     public TextMeshProUGUI Letter4;
     public TextMeshProUGUI Letter5;
 
-    [Header("ENTER 5 UPPERCASE LETTERS, NO NUMBERS.")]
-    public string CorrectAnswer;
-
-    [Header(" ")]
     [Header("CRYPTEX STUFF")]
     public GameObject Key;
     public GameObject KeySpawnPoint;
     //public FixedJoint LidJoint;
     public GameObject Cryptex;
     private int HasBeenPressed;
+
+    [Header("FLASK MATERIALS")]
+    public Renderer[] FlaskRenderers;
+
+    [Header("STICKY NOTE LETTERS")]
+    public TMP_Text Note1;
+    public TMP_Text Note2;
+    public TMP_Text Note3;
+    public TMP_Text Note4;
+    public TMP_Text Note5;
+
+    [Header("DUCKY MATERIALS")]
+    public Renderer[] DuckRenderers;
+
+    [Header("DUCKY TEXT OBJECTS")]
+    public TMP_Text Duck1;
+    public TMP_Text Duck2;
+    public TMP_Text Duck3;
+    public TMP_Text Duck4;
+    public TMP_Text Duck5;
+
+    private string[] DuckBinaries = {"000", "001", "010", "011", "100"};
+    private int[] DuckOrder;
+
+    int[] GenerateRandomOrder(int length)
+    {
+        int[] order = new int[length];
+        for (int i = 0; i < length; i++)
+            order[i] = i;
+
+        for (int i = length - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            (order[i], order[j]) = (order[j], order[i]);
+        }
+
+        return order;
+    }
+
+void InitializePuzzle()
+{
+    DuckOrder = GenerateRandomOrder(5);
+
+    TMP_Text[] DuckTexts = { Duck1, Duck2, Duck3, Duck4, Duck5 };
+    TMP_Text[] Notes     = { Note1, Note2, Note3, Note4, Note5 };
+
+    for (int duckIndex = 0; duckIndex < 5; duckIndex++)
+    {
+        int mappedIndex = DuckOrder[duckIndex];
+
+        // DUCK COLOR
+        Material[] duckMats = DuckRenderers[duckIndex].materials;
+        duckMats[0].color = MatchColors[mappedIndex]; // body
+        duckMats[2].color = MatchColors[mappedIndex]; // wings
+        DuckRenderers[duckIndex].materials = duckMats;
+
+        // BINARY ON DUCK
+        DuckTexts[duckIndex].text = DuckBinaries[mappedIndex];
+
+        // FLASK COLOR
+        Material[] flaskMats = FlaskRenderers[duckIndex].materials;
+        flaskMats[0].color = MatchColors[mappedIndex];
+        FlaskRenderers[duckIndex].materials = flaskMats;
+
+        // STICKY NOTE LETTER
+        Notes[duckIndex].text = CorrectAnswer[mappedIndex].ToString();
+    }
+}
     void Start()
     {
         if (CorrectAnswer.Length != 5)
         {
             Debug.Log("ERROR: String CorrectAnswer must be 5 characters!");
         }
+
+        if (MatchColors.Length != 5)
+        {
+            Debug.Log("ERROR: Must have 5 colors, 5 duck meshes, and 5 flask liquid meshes!");
+        }
+
+        // FUTURE WORK: add a 5-letter randomizer here for random cryptex solutions
+        
+        InitializePuzzle();
     }
 
     public void CheckIfCorrect()
@@ -59,6 +137,8 @@ public class CheckButton : MonoBehaviour
             Debug.Log("Already pressed button...");
         }
     }
+
+    
 
 
 }

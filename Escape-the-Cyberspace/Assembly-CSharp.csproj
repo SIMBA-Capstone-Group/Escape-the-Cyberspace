@@ -54,6 +54,7 @@
     <Compile Include="Assets\WireBuilder\Scripts\TubeRenderer.cs" />
     <Compile Include="Assets\KeySnap.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\IgnoreInInspectorAttribute.cs" />
+    <Compile Include="Assets\StickyNote_TextController.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHiderManager.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\AButtonAttribute.cs" />
     <Compile Include="Assets\InputTest.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\CryptexRingMovement.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\VNB - Office Set\ReadMe.txt" />
     <None Include="Assets\3D Laboratory Environment with Appratus\Documentation\3D Laboratory environment with appratus.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -663,6 +665,14 @@
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Library\PackageCache\com.unity.collections@aea9d3bd5e19\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.0f1-x86_64\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.0f1-x86_64\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
