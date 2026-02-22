@@ -20,12 +20,36 @@ public class CheckButton : MonoBehaviour
     //public FixedJoint LidJoint;
     public GameObject Cryptex;
     private int HasBeenPressed;
+
+    [Header("STICKY NOTE LETTERS")]
+    public TMP_Text Note1;
+    public TMP_Text Note2;
+    public TMP_Text Note3;
+    public TMP_Text Note4;
+    public TMP_Text Note5;
+
+    void PopulateStickyNotes()
+{
+    if (CorrectAnswer.Length != 5)
+    {
+        Debug.LogError("CorrectAnswer must be exactly 5 characters.");
+        return;
+    }
+
+    Note1.text = CorrectAnswer[0].ToString();
+    Note2.text = CorrectAnswer[1].ToString();
+    Note3.text = CorrectAnswer[2].ToString();
+    Note4.text = CorrectAnswer[3].ToString();
+    Note5.text = CorrectAnswer[4].ToString();
+}
     void Start()
     {
         if (CorrectAnswer.Length != 5)
         {
             Debug.Log("ERROR: String CorrectAnswer must be 5 characters!");
         }
+
+        PopulateStickyNotes();
     }
 
     public void CheckIfCorrect()
@@ -59,6 +83,8 @@ public class CheckButton : MonoBehaviour
             Debug.Log("Already pressed button...");
         }
     }
+
+    
 
 
 }
