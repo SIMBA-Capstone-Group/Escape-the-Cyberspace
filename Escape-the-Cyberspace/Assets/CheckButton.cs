@@ -101,6 +101,8 @@ void InitializePuzzle()
             Debug.Log("ERROR: Must have 5 colors, 5 duck meshes, and 5 flask liquid meshes!");
         }
 
+        // FUTURE WORK: add a 5-letter randomizer here for random cryptex solutions
+        
         InitializePuzzle();
     }
 
