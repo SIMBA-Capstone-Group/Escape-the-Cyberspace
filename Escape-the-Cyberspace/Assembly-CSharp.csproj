@@ -80,14 +80,11 @@
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\FencePlacement.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\KiiValuePair.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\LightSourceObject.cs" />
-    <Compile Include="Assets\MHLab\StickyNotes\Scripts\StickyNote.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\KeyValuePairPropertyDrawer.cs" />
-    <Compile Include="Assets\MHLab\StickyNotes\Scripts\StickyNotesManager.cs" />
     <Compile Include="Assets\Scripts\DisableColliderOnAccess.cs" />
     <Compile Include="Assets\ScifiOfficeLite\Scripts\DemoFirstPersonController.cs" />
     <Compile Include="Assets\CheckButton.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\RotatableObject.cs" />
-    <Compile Include="Assets\MHLab\StickyNotes\Scripts\StickyNoteTag.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Keypad\Scripts\Keypad.cs" />
     <Compile Include="Assets\Keypad\Scripts\KeypadInteractionFPV.cs" />
@@ -103,7 +100,6 @@
     <Compile Include="Assets\WireBuilder\Scripts\WireBuilder.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\PrefabGroup.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHider.cs" />
-    <Compile Include="Assets\MHLab\StickyNotes\Scripts\StickyNoteAdvanced.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\CryptexRingMovement.cs" />
   </ItemGroup>

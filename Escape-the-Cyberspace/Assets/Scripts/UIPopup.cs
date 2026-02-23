@@ -7,16 +7,31 @@ public class ShowUIOnGrab : MonoBehaviour
     public GameObject uiPopup; // Assign in Inspector
 
     [Header("Input")]
-    [SerializeField] private UnityEngine.InputSystem.InputActionProperty lockButton;
+    [SerializeField] private UnityEngine.InputSystem.InputActionProperty unlockButton;
+
+    [Header("Hand Interactors")]
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor leftInteractor;
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor rightInteractor;
+
+    [Header("Interaction Manager (assign or leave null to auto-find)")]
+    [SerializeField] private XRInteractionManager interactionManager;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
 
     private bool isLocked = false;
     private bool isHeld = false;
 
+    private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor lockingInteractor;
+
+
+    private bool isForcing;
+
     private void Awake()
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+
+        if(interactionManager == null)
+            interactionManager = FindFirstObjectByType<XRInteractionManager>();
     }
 
     private void OnEnable()
@@ -24,7 +39,7 @@ public class ShowUIOnGrab : MonoBehaviour
         grabInteractable.selectEntered.AddListener(OnGrab);
         grabInteractable.selectExited.AddListener(OnRelease);
 
-        lockButton.action.Enable();
+        unlockButton.action.Enable();
     }
 
     private void OnDisable()
@@ -32,41 +47,100 @@ public class ShowUIOnGrab : MonoBehaviour
         grabInteractable.selectEntered.RemoveListener(OnGrab);
         grabInteractable.selectExited.RemoveListener(OnRelease);
 
-        lockButton.action.Disable();
+        unlockButton.action.Disable();
     }
 
     private void Update()
     {
-        if (isHeld && lockButton.action.WasPressedThisFrame())
+        if (isHeld && isLocked && unlockButton.action.WasPressedThisFrame())
         {
-            ToggleLock();
+            Unlock();
         }
     }
 
     private void OnGrab(SelectEnterEventArgs args)
     {
+        if (isForcing) return;
+
         isHeld = true;
         uiPopup.SetActive(true);
+
+        // Checks which interactor grabs the cryptex
+        lockingInteractor = args.interactorObject as UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor;
+
+        LockToCurrentHand();
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
+        if (isForcing) return;
+
+        // If locked, immediately re-grab
+        if (isLocked && lockingInteractor != null)
+        {
+            isForcing = true;
+
+            interactionManager.SelectEnter(
+                (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)lockingInteractor,
+                (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable)grabInteractable
+            );
+
+            isForcing = false;
+            return;
+        }
+
         isHeld = false;
-        
         uiPopup.SetActive(false);
     }
 
-    private void ToggleLock()
+    private void LockToCurrentHand()
     {
-        isLocked = !isLocked;
+        if (lockingInteractor == null || interactionManager == null) return;
 
-         if (isLocked)
+        isLocked = true;
+
+        if (!grabInteractable.isSelected)
         {
-            Debug.Log("Cryptex Locked");
+            isForcing = true;
+            interactionManager.SelectEnter((UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)lockingInteractor,(UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable)grabInteractable);
+            isForcing = false;
         }
-        else
+
+        //Disable the interactor to prevent grabbing anything else
+        StartCoroutine(DisableInteractorNextFrame(lockingInteractor));
+
+        Debug.Log($"Cryptex locked to: {lockingInteractor.transform.name}");
+    }
+    private System.Collections.IEnumerator DisableInteractorNextFrame(UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor interactor)
+    {
+        yield return null; // wait one frame
+        interactor.enabled = false;
+    }
+
+    private void Unlock()
+    {
+        if (interactionManager == null) return;
+
+        isLocked = false;
+
+        if (lockingInteractor != null)
+            lockingInteractor.enabled = true;
+
+        // Force release from whichever interactor is holding it
+        if (grabInteractable.isSelected && grabInteractable.interactorsSelecting.Count > 0)
         {
-            Debug.Log("Cryptex Unlocked");
+            var current = grabInteractable.interactorsSelecting[0];
+
+            isForcing = true;
+            interactionManager.SelectExit(current, grabInteractable);
+            isForcing = false;
         }
+
+        lockingInteractor = null;
+
+        isHeld = false;
+        uiPopup.SetActive(false);
+
+        Debug.Log("Cryptex unlocked.");
     }
 }

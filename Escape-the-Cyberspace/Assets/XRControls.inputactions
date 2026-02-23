@@ -1,0 +1,78 @@
+{
+    "version": 1,
+    "name": "XRControls",
+    "maps": [
+        {
+            "name": "XRI",
+            "id": "d3772c43-e401-425f-9927-49e8638d5c05",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "e4913bb7-d5c9-414b-80ca-5516ae52a769",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Unlock",
+                    "type": "Button",
+                    "id": "8a68a2d7-8ff9-432b-9a45-9da72fae3ee8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "446a7a10-2c2d-4ad6-b2ea-bc8a4f1f1fcf",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8dc8712e-786d-4733-ace5-56424a56d9e5",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Unlock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e052e046-b79c-4bd5-a7ce-e544aa80af87",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Unlock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New Control Scheme",
+            "bindingGroup": "New Control Scheme",
+            "devices": [
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
