@@ -105800,15 +105800,11 @@ PrefabInstance:
       objectReference: {fileID: 496808802}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripValue.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
-      propertyPath: OnGripPressed.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripReleased.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnTriggerValue.m_PersistentCalls.m_Calls.Array.size
@@ -105816,11 +105812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripValue.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripValue.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -105828,7 +105824,7 @@ PrefabInstance:
       objectReference: {fileID: 2033597354}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripReleased.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -105848,7 +105844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartAnimationPosing
+      value: SetAnimationValue
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripReleased.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -105856,7 +105852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripReleased.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnToDefaultPosing
+      value: SetAnimationValue
       objectReference: {fileID: 0}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: OnGripValue.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
