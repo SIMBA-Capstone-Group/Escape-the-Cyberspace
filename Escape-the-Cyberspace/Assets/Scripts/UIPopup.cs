@@ -9,6 +9,10 @@ public class ShowUIOnGrab : MonoBehaviour
     [Header("Input")]
     [SerializeField] private UnityEngine.InputSystem.InputActionProperty lockButton;
 
+    [Header("Hand Interactors")]
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor leftInteractor;
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor rightInteractor;
+
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
 
     private bool isLocked = false;
@@ -47,6 +51,16 @@ public class ShowUIOnGrab : MonoBehaviour
     {
         isHeld = true;
         uiPopup.SetActive(true);
+
+        // STEP 1: Detect which hand grabbed it
+        var grabbedBy = args.interactorObject as UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor;
+
+        if (grabbedBy == leftInteractor)
+            Debug.Log("Cryptex grabbed by LEFT hand");
+        else if (grabbedBy == rightInteractor)
+            Debug.Log("Cryptex grabbed by RIGHT hand");
+        else
+            Debug.Log($"Cryptex grabbed by OTHER interactor: {args.interactorObject.transform.name}");
     }
 
     private void OnRelease(SelectExitEventArgs args)
