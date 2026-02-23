@@ -14815,6 +14815,7 @@ GameObject:
   - component: {fileID: 225054120}
   - component: {fileID: 225054123}
   - component: {fileID: 225054122}
+  - component: {fileID: 225054124}
   m_Layer: 3
   m_Name: LeftGrabInteractable
   m_TagString: Untagged
@@ -15054,6 +15055,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &225054124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225054118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f5e66ceba91254f922088ba557b7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MikeNspiredXRIStarterKit.Runtime::MikeNspired.XRIStarterKit.HandPoser
+  leftHandPose: {fileID: 0}
+  rightHandPose: {fileID: 0}
+  LeftHandAnimationPose: {fileID: 11400000, guid: 2df1a239165bcd44586bc655f980d4ed, type: 2}
+  RightHandAnimationPose: {fileID: 0}
+  leftHandAttach: {fileID: 0}
+  rightHandAttach: {fileID: 0}
+  hasAnimationPose: 1
+  currentLeftHand: {fileID: 0}
+  currentRightHand: {fileID: 0}
+  grabAttachPoints: {fileID: 0}
 --- !u!1 &226310095
 GameObject:
   m_ObjectHideFlags: 0
