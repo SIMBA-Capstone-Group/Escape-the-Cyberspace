@@ -26,8 +26,13 @@ public class ShowUIOnGrab : MonoBehaviour
 
     private bool isForcing;
 
+    private InteractionLayerMask leftOriginalMask;
+    private InteractionLayerMask rightOriginalMask;
+
     private void Awake()
     {
+        leftOriginalMask = leftInteractor.interactionLayers;
+        rightOriginalMask = rightInteractor.interactionLayers;
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
 
         if(interactionManager == null)
@@ -75,16 +80,14 @@ public class ShowUIOnGrab : MonoBehaviour
     {
         if (isForcing) return;
 
-        // If locked, immediately re-grab
         if (isLocked && lockingInteractor != null)
         {
+            // Re-grab immediately if player tries to release while locked
             isForcing = true;
-
             interactionManager.SelectEnter(
                 (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)lockingInteractor,
                 (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable)grabInteractable
             );
-
             isForcing = false;
             return;
         }
@@ -99,18 +102,18 @@ public class ShowUIOnGrab : MonoBehaviour
 
         isLocked = true;
 
-        if (!grabInteractable.isSelected)
-        {
-            isForcing = true;
-            interactionManager.SelectEnter((UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)lockingInteractor,(UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable)grabInteractable);
-            isForcing = false;
-        }
+        // Restrict the grabbing hand so it can only select Cryptex-layer objects
+        // (keeps rays/UI working because the interactor stays enabled)
+        var cryptexOnly = grabInteractable.interactionLayers;
 
-        //Disable the interactor to prevent grabbing anything else
-        StartCoroutine(DisableInteractorNextFrame(lockingInteractor));
+        if (lockingInteractor == leftInteractor)
+            leftInteractor.interactionLayers = cryptexOnly;
+        else if (lockingInteractor == rightInteractor)
+            rightInteractor.interactionLayers = cryptexOnly;
 
         Debug.Log($"Cryptex locked to: {lockingInteractor.transform.name}");
     }
+
     private System.Collections.IEnumerator DisableInteractorNextFrame(UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor interactor)
     {
         yield return null; // wait one frame
@@ -123,8 +126,9 @@ public class ShowUIOnGrab : MonoBehaviour
 
         isLocked = false;
 
-        if (lockingInteractor != null)
-            lockingInteractor.enabled = true;
+        // Restore interaction masks so hands can grab everything again
+        leftInteractor.interactionLayers = leftOriginalMask;
+        rightInteractor.interactionLayers = rightOriginalMask;
 
         // Force release from whichever interactor is holding it
         if (grabInteractable.isSelected && grabInteractable.interactorsSelecting.Count > 0)
@@ -132,12 +136,14 @@ public class ShowUIOnGrab : MonoBehaviour
             var current = grabInteractable.interactorsSelecting[0];
 
             isForcing = true;
-            interactionManager.SelectExit(current, grabInteractable);
+            interactionManager.SelectExit(
+                (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)current,
+                (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable)grabInteractable
+            );
             isForcing = false;
         }
 
         lockingInteractor = null;
-
         isHeld = false;
         uiPopup.SetActive(false);
 
