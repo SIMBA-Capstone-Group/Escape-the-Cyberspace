@@ -16924,6 +16924,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268953343}
   m_CullTransparentMesh: 1
+--- !u!114 &270251450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Right Interaction/Select Value
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
 --- !u!114 &270391733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17667,20 +17681,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1515966673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &283998787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Right Interaction/Select Value
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
 --- !u!1 &285622890
 GameObject:
   m_ObjectHideFlags: 0
@@ -53200,7 +53200,7 @@ PrefabInstance:
     - target: {fileID: 7270380055479342110, guid: 59feb73c4d89d7144ae43c83a2f3dacf, type: 3}
       propertyPath: gripAction
       value: 
-      objectReference: {fileID: 1537480225}
+      objectReference: {fileID: 1922419223}
     - target: {fileID: 7270380055479342110, guid: 59feb73c4d89d7144ae43c83a2f3dacf, type: 3}
       propertyPath: triggerAction
       value: 
@@ -94301,20 +94301,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1515966673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1537480225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Left Interaction/Select Value
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: e6005f29-e4c1-4f3b-8bf7-3a28bab5ca9c
 --- !u!1 &1538960008
 GameObject:
   m_ObjectHideFlags: 0
@@ -105732,7 +105718,7 @@ PrefabInstance:
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: gripAction
       value: 
-      objectReference: {fileID: 283998787}
+      objectReference: {fileID: 270251450}
     - target: {fileID: 8333224977003873828, guid: 6bb922801c5a8c64a961c26152eebfb2, type: 3}
       propertyPath: triggerAction
       value: 
@@ -118217,6 +118203,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1515966673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1922419223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Left Interaction/Select Value
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: e6005f29-e4c1-4f3b-8bf7-3a28bab5ca9c
 --- !u!1 &1930740367
 GameObject:
   m_ObjectHideFlags: 0
