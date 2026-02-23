@@ -75,12 +75,22 @@ public class ShowUIOnGrab : MonoBehaviour
     {
         if (isForcing) return;
 
-        isHeld = false;
-
-        if (!isLocked)
+        // If locked, immediately re-grab
+        if (isLocked && lockingInteractor != null)
         {
-            uiPopup.SetActive(false);
+            isForcing = true;
+
+            interactionManager.SelectEnter(
+                (UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)lockingInteractor,
+                (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable)grabInteractable
+            );
+
+            isForcing = false;
+            return;
         }
+
+        isHeld = false;
+        uiPopup.SetActive(false);
     }
 
     private void LockToCurrentHand()
@@ -97,9 +107,14 @@ public class ShowUIOnGrab : MonoBehaviour
         }
 
         //Disable the interactor to prevent grabbing anything else
-        lockingInteractor.enabled = false;
+        StartCoroutine(DisableInteractorNextFrame(lockingInteractor));
 
         Debug.Log($"Cryptex locked to: {lockingInteractor.transform.name}");
+    }
+    private System.Collections.IEnumerator DisableInteractorNextFrame(UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor interactor)
+    {
+        yield return null; // wait one frame
+        interactor.enabled = false;
     }
 
     private void Unlock()

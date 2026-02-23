@@ -135107,7 +135107,7 @@ MonoBehaviour:
     m_Reference: {fileID: 0}
   leftInteractor: {fileID: 225054121}
   rightInteractor: {fileID: 858752362}
-  interactionManager: {fileID: 0}
+  interactionManager: {fileID: 856631819}
 --- !u!136 &2011017879314466289
 CapsuleCollider:
   m_ObjectHideFlags: 0
