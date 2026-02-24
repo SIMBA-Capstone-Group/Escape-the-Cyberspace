@@ -1,24 +1,17 @@
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using UnityEngine.EventSystems; // Required for clicking
 
 public class LoginManager : MonoBehaviour, IPointerClickHandler
 {
-    [Header("UI Objects")]
-    public GameObject visualKeyboard;
-    public Text passwordInputField;  // Drag the 'Pass' text object from Monitor 2 here
-    public GameObject atbashCanvas;   // The canvas for the right monitor
+    public GameObject visualKeyboard; // Drag your keyboard object here
 
-    [Header("Security")]
-    public string correctPassword = "BadPassword123";
-
-    // 1. This handles the INITIAL CLICK on the monitor screen
+    // This function runs automatically when the VR raycast clicks this object
     public void OnPointerClick(PointerEventData eventData)
     {
         if (visualKeyboard != null)
         {
             visualKeyboard.SetActive(true);
-            Debug.Log("Monitor Clicked: Showing Keyboard");
+            Debug.Log("Monitor clicked - Opening Keyboard");
         }
     }
 
