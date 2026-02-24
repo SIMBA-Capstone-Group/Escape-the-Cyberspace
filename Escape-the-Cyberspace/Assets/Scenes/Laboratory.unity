@@ -62298,18 +62298,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: 6c74df3e7d4896347a072fc9daaa0377, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: set_name
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PlayerIncorrectFeedback()
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1011097809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74040,6 +74028,7 @@ MonoBehaviour:
   Letter3: {fileID: 210404507}
   Letter4: {fileID: 891558048}
   Letter5: {fileID: 117494840}
+  feedbackUI: {fileID: 0}
   Key: {fileID: 156194877}
   KeySpawnPoint: {fileID: 218640544}
   Cryptex: {fileID: 2011017879314466285}
@@ -129427,7 +129416,6 @@ GameObject:
   - component: {fileID: 2058517508}
   - component: {fileID: 2058517507}
   - component: {fileID: 2058517506}
-  - component: {fileID: 2058517511}
   m_Layer: 5
   m_Name: CryptexUI
   m_TagString: Untagged
@@ -129542,24 +129530,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4689.4155, y: 9937.692}
   m_SizeDelta: {x: 1124.5, y: 629.25}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2058517511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058517505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c74df3e7d4896347a072fc9daaa0377, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OutputofCryptex
-  flashTarget: {fileID: 0}
-  incorrectText: {fileID: 6603502}
-  flashOnTime: 0.12
-  flashOffTime: 0.1
-  flashCount: 2
-  incorrectShowTime: 1
 --- !u!1 &2058795864
 GameObject:
   m_ObjectHideFlags: 0
