@@ -1,21 +1,28 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // Required for clicking
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class LoginManager : MonoBehaviour, IPointerClickHandler
 {
-    public GameObject visualKeyboard; // Drag your keyboard object here
+    [Header("UI Objects")]
+    public GameObject visualKeyboard;
+    public Text passwordInputField;  // Drag the 'Pass' text object from Monitor 2 here
+    public GameObject atbashCanvas;   // Drag the hidden Atbash Canvas here
 
-    // This function runs automatically when the VR raycast clicks this object
+    [Header("Security")]
+    public string correctPassword = "BadPassword123";
+
+    // 1. This triggers when the VR Raycast clicks the Monitor Screen
     public void OnPointerClick(PointerEventData eventData)
     {
         if (visualKeyboard != null)
         {
             visualKeyboard.SetActive(true);
-            Debug.Log("Monitor clicked - Opening Keyboard");
+            Debug.Log("Monitor Clicked: Showing Keyboard");
         }
     }
 
-    // 2. This is called by the Keyboard's 'Enter' button
+    // 2. This is called by the 'Enter' button on the Visual Keyboard
     public void ValidatePassword()
     {
         if (passwordInputField.text == correctPassword)
@@ -24,14 +31,15 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            Debug.Log("Invalid Password");
-            // Optional: visual feedback like turning text red
+            Debug.Log("Invalid Password: " + passwordInputField.text);
         }
     }
 
     private void UnlockAtbashPuzzle()
     {
-        visualKeyboard.SetActive(false);
+        // Hide keyboard and show the Atbash PNG
+        if (visualKeyboard != null) visualKeyboard.SetActive(false);
+
         if (atbashCanvas != null)
         {
             atbashCanvas.SetActive(true);

@@ -63436,9 +63436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80884fe8e2ecafc4ab59d355a4cf9e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  visualKeyboard: {fileID: 0}
-  passwordInputField: {fileID: 0}
-  atbashCanvas: {fileID: 0}
+  visualKeyboard: {fileID: 1539515434}
+  passwordInputField: {fileID: 530132946}
+  atbashCanvas: {fileID: 500441522}
   correctPassword: BadPassword123
 --- !u!1001 &1041081358
 PrefabInstance:
@@ -97865,6 +97865,11 @@ PrefabInstance:
 --- !u!224 &1539515433 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3882326545938136808, guid: 9d6d4a24689e178439ae30e92495dbf0, type: 3}
+  m_PrefabInstance: {fileID: 1539515432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1539515434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1430652576886381062, guid: 9d6d4a24689e178439ae30e92495dbf0, type: 3}
   m_PrefabInstance: {fileID: 1539515432}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1541678398
