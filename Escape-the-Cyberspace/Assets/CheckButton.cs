@@ -8,12 +8,14 @@ public class CheckButton : MonoBehaviour
     [Header("ADD COLORS FOR FLASKS AND DUCKS")]
     public Color[] MatchColors;
 
+
     [Header("UI STUFF")]
     public TextMeshProUGUI Letter1;
     public TextMeshProUGUI Letter2;
     public TextMeshProUGUI Letter3;
     public TextMeshProUGUI Letter4;
     public TextMeshProUGUI Letter5;
+    [SerializeField] private OutputOfCryptex feedbackUI;
 
     [Header("CRYPTEX STUFF")]
     public GameObject Key;
@@ -115,11 +117,17 @@ void InitializePuzzle()
             if(letterArray[i] != CorrectAnswer[i])
             {
                 Debug.Log("Incorrect letter entered");
+
+                if (feedbackUI != null)
+                    feedbackUI.PlayIncorrectFeedback();
+
                 return;
             }
         }
         Debug.Log("Correct passphrase entered");
-        OpenCryptex();
+        if (feedbackUI != null)
+            feedbackUI.PlayCorrectFeedbackAndHideUI();
+        Invoke(nameof(OpenCryptex), 0.9f);
     }
 
     private void OpenCryptex()
