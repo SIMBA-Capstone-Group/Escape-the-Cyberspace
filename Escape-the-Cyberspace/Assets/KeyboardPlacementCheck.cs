@@ -13,12 +13,6 @@ public class KeyboardPlacementCheck : MonoBehaviour
         KeyboardSnapPoint.selectExited.AddListener(OnUnsnap);
     }
 
-    private void OnDisable()
-    {
-        KeyboardSnapPoint.selectEntered.RemoveListener(OnSnap);
-        KeyboardSnapPoint.selectExited.RemoveListener(OnUnsnap);
-    }
-
     private void OnSnap(SelectEnterEventArgs args)
     {
         if(ComputerPlug.hasSelection == true)
@@ -30,5 +24,11 @@ public class KeyboardPlacementCheck : MonoBehaviour
     private void OnUnsnap(SelectExitEventArgs args)
     {
         KeyboardUI.SetActive(false);
+    }
+
+    public void NoMoreUIPlease()
+    {
+        KeyboardSnapPoint.selectEntered.RemoveListener(OnSnap);
+        KeyboardSnapPoint.selectExited.RemoveListener(OnUnsnap);
     }
 }

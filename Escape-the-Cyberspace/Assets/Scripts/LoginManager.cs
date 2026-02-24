@@ -8,6 +8,7 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
     public InputField passwordInputField;
     public GameObject atbashCanvas;
     public string correctPassword = "BadPassword123";
+    public KeyboardPlacementCheck KeyboardListener;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -28,6 +29,10 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
             if (atbashCanvas != null)
             {
                 atbashCanvas.SetActive(true);
+            }
+            if (KeyboardListener != null)
+            {
+                KeyboardListener.NoMoreUIPlease();
             }
         }
     }
