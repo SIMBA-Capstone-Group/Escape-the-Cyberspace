@@ -63351,6 +63351,7 @@ GameObject:
   - component: {fileID: 1037374429}
   - component: {fileID: 1037374431}
   - component: {fileID: 1037374432}
+  - component: {fileID: 1037374433}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -63436,10 +63437,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80884fe8e2ecafc4ab59d355a4cf9e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  visualKeyboard: {fileID: 1539515434}
+  visualKeyboard: {fileID: 1081803627}
   passwordInputField: {fileID: 530132946}
   atbashCanvas: {fileID: 500441522}
   correctPassword: BadPassword123
+--- !u!65 &1037374433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037374427}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1041081358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65723,7 +65745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1081803628
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -97867,11 +97889,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3882326545938136808, guid: 9d6d4a24689e178439ae30e92495dbf0, type: 3}
   m_PrefabInstance: {fileID: 1539515432}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1539515434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1430652576886381062, guid: 9d6d4a24689e178439ae30e92495dbf0, type: 3}
-  m_PrefabInstance: {fileID: 1539515432}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1541678398
 GameObject:
   m_ObjectHideFlags: 0
@@ -121355,7 +121372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1930740368
 RectTransform:
   m_ObjectHideFlags: 0
