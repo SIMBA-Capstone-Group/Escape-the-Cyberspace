@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450586b6fe1e3c4409299dc6edd58dc4, type: 3}
+  m_Name: L_DuckGrab
+  m_EditorClassIdentifier: MikeNspiredXRIStarterKit.Runtime::MikeNspired.XRIStarterKit.PoseScriptableObject
+  joints:
+  - jointName: Hand_R_Jnt
+    localPosition: {x: -0, y: 0, z: 0}
+    localRotation: {x: -0.4454931, y: -0.5233299, z: 0.4698291, w: -0.5540058}
+  - jointName: Index1_R_Jnt_aux
+    localPosition: {x: -0.06778852, y: 0.003385093, z: -0.025425702}
+    localRotation: {x: -0.6542952, y: -0.077950194, z: 0.013240752, w: 0.75209457}
+  - jointName: Index2_R_Jnt
+    localPosition: {x: -0.028008947, y: -0.0000000047683715, z: -0.000000019073486}
+    localRotation: {x: 0.0063230856, y: -0.08550829, z: 0.073474064, w: -0.99360454}
+  - jointName: Index3_R_Jnt
+    localPosition: {x: -0.032881897, y: -0.00006421507, z: 0.000017597893}
+    localRotation: {x: 0.059093572, y: 0.24317965, z: -0.08460375, w: -0.9644759}
+  - jointName: Index4_R_Jnt
+    localPosition: {x: -0.021589432, y: 0.0000000035762786, z: -0.000000019073486}
+    localRotation: {x: 0.000000053085376, y: 0.092165105, z: -0.000000025960617, w: 0.99574375}
+  - jointName: Middle1_R_Jnt_aux
+    localPosition: {x: -0.07512863, y: 0.009641629, z: -0.0058642887}
+    localRotation: {x: -0.6946551, y: -0.09817422, z: 0.1288947, w: 0.7008583}
+  - jointName: Middle2_R_Jnt
+    localPosition: {x: -0.023896817, y: 0, z: 0.0000000047683715}
+    localRotation: {x: 0.001282486, y: -0.10169458, z: 0.012544868, w: -0.9947357}
+  - jointName: Middle3_R_Jnt
+    localPosition: {x: -0.036074314, y: 0, z: 0.000000007152557}
+    localRotation: {x: -0.0027268857, y: 0.18508036, z: -0.013840972, w: -0.9826221}
+  - jointName: Middle4_R_Jnt
+    localPosition: {x: -0.023493031, y: 0, z: -0.000000009536743}
+    localRotation: {x: 0.000000088708425, y: 0.08762551, z: 0.00000003381863, w: 0.99615353}
+  - jointName: Pinky1_R_Jnt_aux
+    localPosition: {x: -0.06562062, y: 0.012072377, z: 0.029743098}
+    localRotation: {x: -0.6788249, y: -0.2127033, z: 0.23520504, w: 0.66229355}
+  - jointName: Pinky2_R_Jnt
+    localPosition: {x: -0.023915999, y: -0.0000007180497, z: -0.000045639463}
+    localRotation: {x: -0.00713068, y: -0.2535265, z: -0.0891864, w: -0.96318185}
+  - jointName: Pinky3_R_Jnt
+    localPosition: {x: -0.027791858, y: -0.000049859576, z: -0.00003532681}
+    localRotation: {x: -0.0038721762, y: 0.4487888, z: 0.15147859, w: -0.88069737}
+  - jointName: Pinky4_R_Jnt
+    localPosition: {x: -0.01817017, y: 0.000000007152557, z: 0}
+    localRotation: {x: -0.000000011647096, y: 0.09828581, z: 0.00000006461909, w: 0.99515826}
+  - jointName: Ring1_R_Jnt_aux
+    localPosition: {x: -0.07358111, y: 0.011175599, z: 0.011074878}
+    localRotation: {x: -0.6849294, y: -0.15479314, z: 0.19219403, w: 0.68554527}
+  - jointName: Ring2_R_Jnt
+    localPosition: {x: -0.023851871, y: -0.000039985403, z: -0.000038428232}
+    localRotation: {x: -0.00952345, y: -0.11346586, z: -0.002738211, w: -0.9934925}
+  - jointName: Ring3_R_Jnt
+    localPosition: {x: -0.032414027, y: -5.9604643e-10, z: -0.000000009536743}
+    localRotation: {x: -0.00000005844046, y: 0.16858381, z: -0.00000007037303, w: -0.9856873}
+  - jointName: Ring4_R_Jnt
+    localPosition: {x: -0.021078033, y: 0, z: -0.000000009536743}
+    localRotation: {x: 0.00000008609572, y: 0.123450786, z: -0.000000064562535, w: 0.9923507}
+  - jointName: Thumb1_R_Jnt
+    localPosition: {x: -0.03936372, y: -0.016382731, z: -0.030164283}
+    localRotation: {x: -0.8199778, y: -0.29044968, z: -0.44146696, w: 0.21995996}
+  - jointName: Thumb2_R_Jnt
+    localPosition: {x: -0.03368904, y: 0.00000000834465, z: 0.0000000047683715}
+    localRotation: {x: -0.00000007450578, y: 0.23099443, z: -0.000000014901165, w: -0.9729551}
+  - jointName: Thumb3_R_Jnt
+    localPosition: {x: -0.023863167, y: -0.0000000011920929, z: 0}
+    localRotation: {x: 0.00000008393247, y: 0.07827924, z: -0.0000000718203, w: 0.9969315}
