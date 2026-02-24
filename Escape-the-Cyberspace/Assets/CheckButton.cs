@@ -125,7 +125,9 @@ void InitializePuzzle()
             }
         }
         Debug.Log("Correct passphrase entered");
-        OpenCryptex();
+        if (feedbackUI != null)
+            feedbackUI.PlayCorrectFeedbackAndHideUI();
+        Invoke(nameof(OpenCryptex), 0.9f);
     }
 
     private void OpenCryptex()
