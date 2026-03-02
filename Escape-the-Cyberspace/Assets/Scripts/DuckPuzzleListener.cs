@@ -8,7 +8,6 @@ public class CheckButton : MonoBehaviour
     [Header("ADD COLORS FOR FLASKS AND DUCKS")]
     public Color[] MatchColors;
 
-
     [Header("UI STUFF")]
     public TextMeshProUGUI Letter1;
     public TextMeshProUGUI Letter2;
@@ -47,7 +46,7 @@ public class CheckButton : MonoBehaviour
     private string[] DuckBinaries = {"000", "001", "010", "011", "100"};
     private int[] DuckOrder;
 
-    int[] GenerateRandomOrder(int length)
+    private int[] GenerateRandomOrder(int length)
     {
         int[] order = new int[length];
         for (int i = 0; i < length; i++)
@@ -62,45 +61,55 @@ public class CheckButton : MonoBehaviour
         return order;
     }
 
-void InitializePuzzle()
-{
-    DuckOrder = GenerateRandomOrder(5);
-
-    TMP_Text[] DuckTexts = { Duck1, Duck2, Duck3, Duck4, Duck5 };
-    TMP_Text[] Notes     = { Note1, Note2, Note3, Note4, Note5 };
-
-    for (int duckIndex = 0; duckIndex < 5; duckIndex++)
+    private void InitializePuzzle()
     {
-        int mappedIndex = DuckOrder[duckIndex];
+        DuckOrder = GenerateRandomOrder(MatchColors.Length);
 
-        // DUCK COLOR
-        Material[] duckMats = DuckRenderers[duckIndex].materials;
-        duckMats[0].color = MatchColors[mappedIndex]; // body
-        duckMats[2].color = MatchColors[mappedIndex]; // wings
-        DuckRenderers[duckIndex].materials = duckMats;
+        TMP_Text[] DuckTexts = { Duck1, Duck2, Duck3, Duck4, Duck5 };
+        TMP_Text[] Notes     = { Note1, Note2, Note3, Note4, Note5 };
 
-        // BINARY ON DUCK
-        DuckTexts[duckIndex].text = DuckBinaries[mappedIndex];
+        for (int duckIndex = 0; duckIndex < MatchColors.Length; duckIndex++)
+        {
+            int mappedIndex = DuckOrder[duckIndex];
 
-        // FLASK COLOR
-        Material[] flaskMats = FlaskRenderers[duckIndex].materials;
-        flaskMats[0].color = MatchColors[mappedIndex];
-        FlaskRenderers[duckIndex].materials = flaskMats;
+            // DUCK COLOR
+            Material[] duckMats = DuckRenderers[duckIndex].materials;
+            duckMats[0].color = MatchColors[mappedIndex]; // body
+            duckMats[2].color = MatchColors[mappedIndex]; // wings
+            DuckRenderers[duckIndex].materials = duckMats;
 
-        // STICKY NOTE LETTER
-        Notes[duckIndex].text = CorrectAnswer[mappedIndex].ToString();
+            // BINARY ON DUCK
+            DuckTexts[duckIndex].text = DuckBinaries[mappedIndex];
+
+            // FLASK COLOR
+            Material[] flaskMats = FlaskRenderers[duckIndex].materials;
+            flaskMats[0].color = MatchColors[mappedIndex];
+            FlaskRenderers[duckIndex].materials = flaskMats;
+
+            // STICKY NOTE LETTER
+            Notes[duckIndex].text = CorrectAnswer[mappedIndex].ToString();
+        }
     }
-}
     void Start()
     {
         if (CorrectAnswer.Length != 5)
         {
-            Debug.Log("ERROR: String CorrectAnswer must be 5 characters!");
+            Debug.LogError("ERROR: String CorrectAnswer must be 5 characters!");
         }
 
         if (MatchColors.Length != 5)
         {
-            Debug.Log("ERROR: Must have 5 colors, 5 duck meshes, and 5 flask liquid meshes!");
+            Debug.LogError("ERROR: Must have 5 colors");
+        }
+
+        if (DuckRenderers.Length != 5)
+        {
+            Debug.LogError("ERROR: Must have 5 duck renders!");
+        }
+
+        if (FlaskRenderers.Length != 5)
+        {
+            Debug.LogError("ERROR: Must have 5 flask renders!");
         }
 
         // FUTURE WORK: add a 5-letter randomizer here for random cryptex solutions
@@ -112,7 +121,7 @@ void InitializePuzzle()
     {
         char[] letterArray = {Letter1.text[0], Letter2.text[0], Letter3.text[0], Letter4.text[0], Letter5.text[0]};
         
-        for (int i = 0; i <= 4; i++)
+        for (int i = 0; i <= letterArray.Length; i++)
         {
             if(letterArray[i] != CorrectAnswer[i])
             {
@@ -145,8 +154,4 @@ void InitializePuzzle()
             Debug.Log("Already pressed button...");
         }
     }
-
-    
-
-
 }

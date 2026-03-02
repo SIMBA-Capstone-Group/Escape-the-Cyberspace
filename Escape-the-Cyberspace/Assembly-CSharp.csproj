@@ -70,6 +70,7 @@
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\KiiValuePair.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\LightSourceObject.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\KeyValuePairPropertyDrawer.cs" />
+    <Compile Include="Assets\Scripts\DuckPuzzleListener.cs" />
     <Compile Include="Assets\Visual Keyboard\Scripts\VisualKeyForKeyboard.cs" />
     <Compile Include="Assets\Scripts\DisableColliderOnAccess.cs" />
     <Compile Include="Assets\ScifiOfficeLite\Scripts\DemoFirstPersonController.cs" />
@@ -98,7 +99,6 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_02.cs" />
     <Compile Include="Assets\Scripts\InputTest.cs" />
-    <Compile Include="Assets\Scripts\CheckButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\VNB - Office Set\ReadMe.txt" />
