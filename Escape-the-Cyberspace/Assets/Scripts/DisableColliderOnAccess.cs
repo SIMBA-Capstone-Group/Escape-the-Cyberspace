@@ -13,6 +13,15 @@ public class DisableColliderOnAccess : MonoBehaviour
     public void DisableCollision()
     {
         if (col != null)
+        {
             col.enabled = false;
+            Invoke(nameof(EnableCollision), 1f); // call after 1 second
+        }
+    }
+
+    void EnableCollision()
+    {
+        if (col != null)
+            col.enabled = true;
     }
 }
