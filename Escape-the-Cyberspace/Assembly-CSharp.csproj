@@ -53,8 +53,8 @@
     <Compile Include="Assets\WireBuilder\Scripts\PlugController.cs" />
     <Compile Include="Assets\Scripts\StickyNote_TextController.cs" />
     <Compile Include="Assets\Scripts\KeySnap.cs" />
-    <Compile Include="Assets\Scripts\UIPopup.cs" />
     <Compile Include="Assets\Visual Keyboard\Scripts\VisualKeyboard.cs" />
+    <Compile Include="Assets\Scripts\UIPopup.cs" />
     <Compile Include="Assets\WireBuilder\Scripts\TubeRenderer.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\IgnoreInInspectorAttribute.cs" />
     <Compile Include="Assets\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHiderManager.cs" />
