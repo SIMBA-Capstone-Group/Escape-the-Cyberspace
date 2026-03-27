@@ -4276,14 +4276,22 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6977811603789046617, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1324252326}
+      addedObject: {fileID: 1324252332}
+    - targetCorrespondingSourceObject: {fileID: 6977811603789046617, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1324252333}
   m_SourcePrefab: {fileID: 100100000, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
 --- !u!1 &1324252325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6977811603789046617, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
   m_PrefabInstance: {fileID: 1324252324}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1324252326
+--- !u!4 &1324252327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7754629026806872547, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
+  m_PrefabInstance: {fileID: 1324252324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1324252332
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4309,12 +4317,28 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!4 &1324252327 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7754629026806872547, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
-  m_PrefabInstance: {fileID: 1324252324}
+  m_CollisionDetection: 2
+--- !u!65 &1324252333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324252325}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.35957822, y: 0.45491737, z: 0.28206205}
+  m_Center: {x: -0.00000071525574, y: 0.22745869, z: 0}
 --- !u!1001 &1375129340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4409,7 +4433,7 @@ Transform:
   m_GameObject: {fileID: 1430531271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4685.58, y: 9926.188, z: -5784.791}
+  m_LocalPosition: {x: -4691.94, y: 9926.085, z: -5788.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
