@@ -6,7 +6,7 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
 {
     public GameObject keyboardUI;
     public InputField passwordInputField;
-    public GameObject atbashCanvas;
+    public GameObject [] poweredOnScreens;
     public string correctPassword = "BadPassword123";
     public KeyboardPlacementCheck KeyboardListener;
 
@@ -26,9 +26,12 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
             {
                 keyboardUI.SetActive(false);
             }
-            if (atbashCanvas != null)
+            if (poweredOnScreens != null)
             {
-                atbashCanvas.SetActive(true);
+                foreach(GameObject screen in poweredOnScreens)
+                {
+                    screen.SetActive(true);
+                }
             }
             if (KeyboardListener != null)
             {
