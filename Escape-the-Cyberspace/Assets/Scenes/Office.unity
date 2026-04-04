@@ -7774,6 +7774,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 1597800950}
     m_Modifications:
     - target: {fileID: 7407274028449423983, guid: 5f05dd56701363f41ad235cb91defdfe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407274028449423983, guid: 5f05dd56701363f41ad235cb91defdfe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407274028449423983, guid: 5f05dd56701363f41ad235cb91defdfe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407274028449423983, guid: 5f05dd56701363f41ad235cb91defdfe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5824795
       objectReference: {fileID: 0}
@@ -8929,6 +8941,18 @@ PrefabInstance:
       value: Red Soda Can
       objectReference: {fileID: 0}
     - target: {fileID: 4199515693481071631, guid: d82527cbb4817394384f8b323f084619, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199515693481071631, guid: d82527cbb4817394384f8b323f084619, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199515693481071631, guid: d82527cbb4817394384f8b323f084619, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199515693481071631, guid: d82527cbb4817394384f8b323f084619, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.861479
       objectReference: {fileID: 0}
@@ -9534,6 +9558,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 409342802}
     m_Modifications:
+    - target: {fileID: 348012251047438310, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.993
+      objectReference: {fileID: 0}
+    - target: {fileID: 348012251047438310, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.133
+      objectReference: {fileID: 0}
     - target: {fileID: 802911711889033543, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
       propertyPath: m_Name
       value: OfficeRoom
@@ -9560,7 +9592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3718185420389639923, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.964
+      value: 0.9674
       objectReference: {fileID: 0}
     - target: {fileID: 3718185420389639923, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11793,6 +11825,22 @@ PrefabInstance:
     - target: {fileID: 1013212261718704106, guid: 89aabed63b4a4274ea158a8cf5f0b937, type: 3}
       propertyPath: m_Name
       value: Bathroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949095444034630956, guid: 89aabed63b4a4274ea158a8cf5f0b937, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.296
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114141768997929686, guid: 89aabed63b4a4274ea158a8cf5f0b937, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.099
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337677636881591066, guid: 89aabed63b4a4274ea158a8cf5f0b937, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.137
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407462044587521072, guid: 89aabed63b4a4274ea158a8cf5f0b937, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.033
       objectReference: {fileID: 0}
     - target: {fileID: 6757151366976767711, guid: 89aabed63b4a4274ea158a8cf5f0b937, type: 3}
       propertyPath: m_LocalScale.x
