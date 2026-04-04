@@ -3383,8 +3383,16 @@ PrefabInstance:
       value: cheese_slice
       objectReference: {fileID: 0}
     - target: {fileID: 7933124143687312446, guid: badf43c03faeecc44b1d60198000318e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933124143687312446, guid: badf43c03faeecc44b1d60198000318e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933124143687312446, guid: badf43c03faeecc44b1d60198000318e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7933124143687312446, guid: badf43c03faeecc44b1d60198000318e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3526,7 +3534,7 @@ MonoBehaviour:
   m_ParentInteractableObject: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
