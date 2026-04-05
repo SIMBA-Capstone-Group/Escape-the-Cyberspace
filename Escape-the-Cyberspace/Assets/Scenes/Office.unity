@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4059880143670500456, guid: 277102404487ed246998bb12a783ac64, type: 3}
       propertyPath: m_Name
-      value: Smaller Monitor
+      value: NE Smaller Monitor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -430,6 +430,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5896837111506774628, guid: bfc1bde826a927c409364b1e9bb4778c, type: 3}
   m_PrefabInstance: {fileID: 47787671}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &60084088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 60084089}
+  m_Layer: 0
+  m_Name: Computers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &60084089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60084088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.201607, y: 0.98881686, z: 1.6546998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1645869499}
+  - {fileID: 1126815946}
+  - {fileID: 1329812042}
+  - {fileID: 1935645826}
+  - {fileID: 2058238607}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &91639945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4201928601577611626, guid: 8c876e24530ea9045ab1d3be73b05e67, type: 3}
@@ -595,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7137a47d13d3a284bb1946ace6bd7afa, type: 3}
       propertyPath: m_Name
-      value: Monitor 1
+      value: SD Monitor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -603,6 +639,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7137a47d13d3a284bb1946ace6bd7afa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1347056549}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7137a47d13d3a284bb1946ace6bd7afa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 309268855}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7137a47d13d3a284bb1946ace6bd7afa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 637661130}
@@ -1076,7 +1115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
-      value: Keyboard UI
+      value: Manager Keyboard UI
       objectReference: {fileID: 0}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_IsActive
@@ -1141,7 +1180,7 @@ PrefabInstance:
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
-      objectReference: {fileID: 1365802294}
+      objectReference: {fileID: 914731646}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1211,6 +1250,7 @@ MonoBehaviour:
   passwordInputField: {fileID: 310780152}
   poweredOnScreens:
   - {fileID: 535475990}
+  loginScreen: {fileID: 1019782541}
   correctPassword: pass
   KeyboardListener: {fileID: 0}
 --- !u!114 &283019803
@@ -1248,68 +1288,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283019800}
   m_CullTransparentMesh: 1
---- !u!1001 &291745744
-PrefabInstance:
+--- !u!1 &309268851
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1126815946}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.32661
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.012026072
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.998001
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-      propertyPath: m_Name
-      value: Keyboard 1 (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1846f65912951e44e8999bf42853becb, type: 3}
---- !u!4 &291745745 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1846f65912951e44e8999bf42853becb, type: 3}
-  m_PrefabInstance: {fileID: 291745744}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 309268855}
+  - component: {fileID: 309268854}
+  - component: {fileID: 309268853}
+  - component: {fileID: 309268852}
+  m_Layer: 0
+  m_Name: SD Screen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &309268852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309268851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &309268853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309268851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &309268854
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309268851}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &309268855
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309268851}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.066}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1651914446}
+  m_Father: {fileID: 157027962}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.001, y: 0.418}
+  m_SizeDelta: {x: 0.77, y: 0.41}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &310780150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1404,7 @@ GameObject:
   - component: {fileID: 310780153}
   - component: {fileID: 310780152}
   m_Layer: 5
-  m_Name: Password
+  m_Name: Secretary Password
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1694,7 +1774,7 @@ GameObject:
   - component: {fileID: 334023783}
   - component: {fileID: 334023782}
   m_Layer: 5
-  m_Name: Password
+  m_Name: SD Password
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1716,7 +1796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.08474, y: 0.2054}
+  m_AnchoredPosition: {x: -0.08474, y: 0.1644}
   m_SizeDelta: {x: 403.69092, y: 27.4625}
   m_Pivot: {x: 0.04, y: -1}
 --- !u!114 &334023782
@@ -2274,7 +2354,7 @@ GameObject:
   - component: {fileID: 447011976}
   - component: {fileID: 447011975}
   m_Layer: 5
-  m_Name: Password
+  m_Name: Admin Password
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3066,7 +3146,7 @@ GameObject:
   - component: {fileID: 535475992}
   - component: {fileID: 535475991}
   m_Layer: 0
-  m_Name: ComputerScreen
+  m_Name: Secretary Computer Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3168,7 +3248,7 @@ GameObject:
   - component: {fileID: 588077136}
   - component: {fileID: 588077135}
   m_Layer: 0
-  m_Name: LoginScreen
+  m_Name: Admin Login Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3276,7 +3356,7 @@ GameObject:
   - component: {fileID: 603660577}
   - component: {fileID: 603660576}
   m_Layer: 0
-  m_Name: Computer_Old
+  m_Name: Secretary Monitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3545,7 +3625,7 @@ GameObject:
   - component: {fileID: 611649919}
   - component: {fileID: 611649918}
   m_Layer: 0
-  m_Name: ComputerScreen
+  m_Name: Admin Computer Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3647,7 +3727,7 @@ GameObject:
   - component: {fileID: 637661132}
   - component: {fileID: 637661131}
   m_Layer: 0
-  m_Name: LoginScreen
+  m_Name: SD Login Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3672,8 +3752,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.001, y: 0.38}
-  m_SizeDelta: {x: 0.77, y: 0.49}
+  m_AnchoredPosition: {x: 0.001, y: 0.4178}
+  m_SizeDelta: {x: 0.77, y: 0.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637661131
 MonoBehaviour:
@@ -3845,7 +3925,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
-      value: Keyboard UI
+      value: NE Keyboard UI
       objectReference: {fileID: 0}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_IsActive
@@ -4261,7 +4341,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.77, y: 0.49}
+  m_SizeDelta: {x: 0.77, y: 0.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770759349
 MonoBehaviour:
@@ -4278,7 +4358,8 @@ MonoBehaviour:
   keyboardUI: {fileID: 1347056548}
   passwordInputField: {fileID: 334023782}
   poweredOnScreens:
-  - {fileID: 982816721}
+  - {fileID: 309268851}
+  loginScreen: {fileID: 637661129}
   correctPassword: pass
   KeyboardListener: {fileID: 0}
 --- !u!114 &770759350
@@ -4416,6 +4497,7 @@ MonoBehaviour:
   passwordInputField: {fileID: 447011975}
   poweredOnScreens:
   - {fileID: 611649916}
+  loginScreen: {fileID: 588077133}
   correctPassword: pass
   KeyboardListener: {fileID: 0}
 --- !u!114 &801086002
@@ -5366,7 +5448,7 @@ GameObject:
   - component: {fileID: 914731647}
   - component: {fileID: 914731646}
   m_Layer: 5
-  m_Name: Password
+  m_Name: Manager Password
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5614,6 +5696,7 @@ MonoBehaviour:
   poweredOnScreens:
   - {fileID: 1862796221}
   - {fileID: 1646108298}
+  loginScreen: {fileID: 990143264}
   correctPassword: pass
   KeyboardListener: {fileID: 0}
 --- !u!1 &937239106
@@ -6243,7 +6326,7 @@ GameObject:
   - component: {fileID: 982816724}
   - component: {fileID: 982816723}
   m_Layer: 0
-  m_Name: ComputerScreen
+  m_Name: Manager Computer Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6345,7 +6428,7 @@ GameObject:
   - component: {fileID: 990143267}
   - component: {fileID: 990143266}
   m_Layer: 0
-  m_Name: LoginScreen
+  m_Name: NE Login Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6591,7 +6674,7 @@ GameObject:
   - component: {fileID: 1019782544}
   - component: {fileID: 1019782543}
   m_Layer: 0
-  m_Name: LoginScreen
+  m_Name: Secretary Login Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6869,14 +6952,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126815945}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.863, y: 1.0008429, z: -6.7663}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.338607, y: 0.012026072, z: -8.421}
   m_LocalScale: {x: 1.5, y: 1.4, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 291745745}
   - {fileID: 1702558983}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 60084089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1144772576
 PrefabInstance:
@@ -7261,6 +7343,7 @@ MonoBehaviour:
   passwordInputField: {fileID: 914731646}
   poweredOnScreens:
   - {fileID: 982816721}
+  loginScreen: {fileID: 1462079543}
   correctPassword: pass
   KeyboardListener: {fileID: 0}
 --- !u!114 &1225895134
@@ -7775,13 +7858,13 @@ Transform:
   m_GameObject: {fileID: 1329812041}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.49, y: 0.037894107, z: -7.64}
+  m_LocalPosition: {x: -1.288393, y: -0.9509227, z: -9.2947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 12487549}
   - {fileID: 1790077426}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 60084089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1331219867 stripped
 Transform:
@@ -7798,7 +7881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
-      value: Keyboard UI
+      value: SD Keyboard UI
       objectReference: {fileID: 0}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_IsActive
@@ -7863,7 +7946,7 @@ PrefabInstance:
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
-      objectReference: {fileID: 1365802294}
+      objectReference: {fileID: 334023782}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7893,7 +7976,7 @@ GameObject:
   - component: {fileID: 1365802296}
   - component: {fileID: 1365802294}
   m_Layer: 5
-  m_Name: Password
+  m_Name: NE Password
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8408,7 +8491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
-      value: Keyboard UI
+      value: Admin Keyboard UI
       objectReference: {fileID: 0}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_IsActive
@@ -8473,7 +8556,7 @@ PrefabInstance:
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
-      objectReference: {fileID: 1365802294}
+      objectReference: {fileID: 447011975}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8517,7 +8600,7 @@ GameObject:
   - component: {fileID: 1462079546}
   - component: {fileID: 1462079545}
   m_Layer: 0
-  m_Name: LoginScreen
+  m_Name: Manager Login Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9287,14 +9370,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645869498}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.201607, y: 0.98881686, z: 1.6546998}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 754980339}
   - {fileID: 1331219867}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 60084089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646108298
 GameObject:
@@ -9403,6 +9486,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 776aefd9e4dbb4d49a90873a91b00304, type: 3}
   m_PrefabInstance: {fileID: 6737352493293298758}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1651914445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651914446}
+  - component: {fileID: 1651914448}
+  - component: {fileID: 1651914447}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1651914446
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651914445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 309268855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.77, y: 0.41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1651914447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651914445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: ee278633add2d514ba56a3b6b5f64f68, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1651914448
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651914445}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1652035566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9693,7 +9848,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 293664438175520417, guid: 49a63a9b4e65a1549adadf0b8bd6d404, type: 3}
       propertyPath: m_Name
-      value: Main Monitor
+      value: NE Main Monitor
       objectReference: {fileID: 0}
     - target: {fileID: 1105808447958256667, guid: 49a63a9b4e65a1549adadf0b8bd6d404, type: 3}
       propertyPath: m_LocalScale.x
@@ -10740,14 +10895,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935645825}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.862, y: 0.8176198, z: -11.831853}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.66039276, y: -0.17119706, z: -13.486553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2046462330}
   - {fileID: 603660575}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 60084089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1938559868
 PrefabInstance:
@@ -10824,7 +10979,7 @@ PrefabInstance:
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
-      objectReference: {fileID: 1365802294}
+      objectReference: {fileID: 310780152}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11192,7 +11347,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8645344544297239674, guid: 3507e8ff1f70aab419ff43ad3eca74bf, type: 3}
       propertyPath: m_Name
-      value: Keyboard 3
+      value: Secretary Keyboard
       objectReference: {fileID: 0}
     - target: {fileID: 8985173435177148096, guid: 3507e8ff1f70aab419ff43ad3eca74bf, type: 3}
       propertyPath: m_LocalScale.x
@@ -11350,13 +11505,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058238606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.2, y: 1.0008425, z: -6.288}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.001607, y: 0.012025595, z: -7.9427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 157027962}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 60084089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082591910
 GameObject:
@@ -14602,7 +14757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1846f65912951e44e8999bf42853becb, type: 3}
       propertyPath: m_Name
-      value: Keyboard 1
+      value: Admin Keyboard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14619,7 +14774,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 293664438175520417, guid: 49a63a9b4e65a1549adadf0b8bd6d404, type: 3}
       propertyPath: m_Name
-      value: Computer Monitor
+      value: Admin Computer Monitor
       objectReference: {fileID: 0}
     - target: {fileID: 1105808447958256667, guid: 49a63a9b4e65a1549adadf0b8bd6d404, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15883,7 +16038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868229666595128429, guid: 576aa388655dd03448ef7832ad27dfbd, type: 3}
       propertyPath: m_Name
-      value: Monitor 2
+      value: Manager Monitor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16171,9 +16326,5 @@ SceneRoots:
   - {fileID: 1108355388}
   - {fileID: 943501317}
   - {fileID: 409342802}
-  - {fileID: 1645869499}
-  - {fileID: 1126815946}
-  - {fileID: 1329812042}
-  - {fileID: 1935645826}
-  - {fileID: 2058238607}
+  - {fileID: 60084089}
   - {fileID: 1245186204}

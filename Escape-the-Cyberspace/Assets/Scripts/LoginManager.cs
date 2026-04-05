@@ -7,6 +7,7 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
     public GameObject keyboardUI;
     public InputField passwordInputField;
     public GameObject [] poweredOnScreens;
+    public GameObject loginScreen;
     public string correctPassword = "BadPassword123";
     public KeyboardPlacementCheck KeyboardListener;
 
@@ -32,6 +33,10 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
                 {
                     screen.SetActive(true);
                 }
+            }
+            if (loginScreen != null)
+            {
+                loginScreen.SetActive(false);
             }
             if (KeyboardListener != null)
             {
