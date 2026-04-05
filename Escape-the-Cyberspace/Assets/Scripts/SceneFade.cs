@@ -10,6 +10,14 @@ public class SceneFader : MonoBehaviour
 
     public void FadeToScene(string sceneName)
     {
+        Debug.Log("FadeToScene called with scene: " + sceneName);
+
+        if (fadeImage == null)
+        {
+            Debug.LogError("fadeImage is not assigned!");
+            return;
+        }
+
         StartCoroutine(FadeAndLoad(sceneName));
     }
 
@@ -21,11 +29,12 @@ public class SceneFader : MonoBehaviour
         while (time < fadeDuration)
         {
             time += Time.deltaTime;
-            color.a = Mathf.Lerp(0, 1, time / fadeDuration);
+            color.a = Mathf.Lerp(0f, 1f, time / fadeDuration);
             fadeImage.color = color;
             yield return null;
         }
 
+        Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 }
