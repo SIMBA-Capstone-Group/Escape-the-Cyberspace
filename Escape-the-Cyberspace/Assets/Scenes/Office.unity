@@ -4247,8 +4247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69468a3a56fc2e142952b431e2358896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SocketTeleporter
-  noteObject: {fileID: 0}
-  targetLocation: {fileID: 0}
+  noteObject: {fileID: 88838187}
+  targetLocation: {fileID: 1087444811}
 --- !u!1 &799241489
 GameObject:
   m_ObjectHideFlags: 0
