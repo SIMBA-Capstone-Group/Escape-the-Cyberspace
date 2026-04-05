@@ -8,13 +8,21 @@ public class SceneFader : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 1f;
 
+    private void Start()
+    {
+        if (fadeImage != null)
+        {
+            Color c = fadeImage.color;
+            c.a = 0f;
+            fadeImage.color = c;
+        }
+    }
+
     public void FadeToScene(string sceneName)
     {
-        Debug.Log("FadeToScene called with scene: " + sceneName);
-
         if (fadeImage == null)
         {
-            Debug.LogError("fadeImage is not assigned!");
+            Debug.LogError("Fade Image is NOT assigned!");
             return;
         }
 
@@ -34,7 +42,6 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 }
