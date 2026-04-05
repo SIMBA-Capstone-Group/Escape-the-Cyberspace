@@ -2623,7 +2623,6 @@ GameObject:
   - component: {fileID: 529606618}
   - component: {fileID: 529606617}
   - component: {fileID: 529606616}
-  - component: {fileID: 529606620}
   m_Layer: 0
   m_Name: Cheese Circle
   m_TagString: Untagged
@@ -2643,7 +2642,8 @@ Transform:
   m_LocalPosition: {x: 0.04200077, y: -0.013999995, z: -0.33600044}
   m_LocalScale: {x: 0.3, y: 0.005, z: 0.3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 786169730}
   m_Father: {fileID: 1141951008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &529606616
@@ -2677,7 +2677,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 786169731}
+        m_TargetAssemblyTypeName: SocketTeleporter, Assembly-CSharp
+        m_MethodName: TeleportNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -2774,20 +2786,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529606614}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &529606620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529606614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69468a3a56fc2e142952b431e2358896, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  noteObject: {fileID: 88838187}
-  targetLocation: {fileID: 1087444811}
 --- !u!1 &566167223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,6 +4203,52 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4018097780521350069, guid: f1cd6800d51724d4291ee22764292e86, type: 3}
+--- !u!1 &786169729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 786169730}
+  - component: {fileID: 786169731}
+  m_Layer: 0
+  m_Name: SocketTeleporter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &786169730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786169729}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.5772989, y: -2.21, z: -1.9574037}
+  m_LocalScale: {x: 3.333333, y: 200, z: 3.333333}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 529606615}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &786169731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786169729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69468a3a56fc2e142952b431e2358896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SocketTeleporter
+  noteObject: {fileID: 0}
+  targetLocation: {fileID: 0}
 --- !u!1 &799241489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,7 +6073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087444810}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.4861596, z: 0, w: -0.8738701}
+  m_LocalRotation: {x: -0, y: 0.48615956, z: -0, w: -0.8738701}
   m_LocalPosition: {x: 0.31023026, y: -0.016400002, z: -0.070423126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
