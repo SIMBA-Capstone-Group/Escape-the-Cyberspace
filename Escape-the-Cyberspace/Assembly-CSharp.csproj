@@ -74,6 +74,7 @@
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\RotatableObject.cs" />
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_03.cs" />
     <Compile Include="Assets\Models\Keypad\Scripts\KeypadButtonXR.cs" />
+    <Compile Include="Assets\Scripts\NoteSpawner.cs" />
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_02.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\PrefabGroup.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Rotatable.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SnapToPoint.cs" />
     <Compile Include="Assets\Scripts\ChangeText.cs" />
+    <Compile Include="Assets\Scripts\CheeseNoteTeleporter.cs" />
     <Compile Include="Assets\Scripts\SnapAndStay.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHider.cs" />
     <Compile Include="Assets\WireBuilder\Scripts\WireBuilder.cs" />
