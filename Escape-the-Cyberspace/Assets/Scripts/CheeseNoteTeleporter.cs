@@ -3,21 +3,23 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketTeleporter : MonoBehaviour
 {
-    public GameObject noteObject;    // The note waiting outside the map
-    public Transform targetLocation; // A Transform (Empty GameObject) where the note should go
-    
+    // note and where note is supposed to teleport to
+    public GameObject noteObject;    
+    public Transform targetLocation; 
+ 
+    // has the note already been teleported?
     private bool hasTeleported = false;
 
     public void TeleportNote(SelectEnterEventArgs args)
     {
+	// if the note hasn't been teleported already
         if (!hasTeleported)
         {
-            // Move the note to the target's position and rotation
+            // Move the note to the location it's supposed to appear
             noteObject.transform.position = targetLocation.position;
             noteObject.transform.rotation = targetLocation.rotation;
-
-            // Optional: Play a sound or particle effect at the targetLocation
-            hasTeleported = true;
+	
+	    hasTeleported = true;    
         }
     }
 }
