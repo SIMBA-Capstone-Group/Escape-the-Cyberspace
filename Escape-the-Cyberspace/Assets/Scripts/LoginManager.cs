@@ -21,6 +21,7 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
 
     public void ValidatePassword()
     {
+        Debug.Log(passwordInputField.text);
         if (passwordInputField.text == correctPassword)
         {
             if (keyboardUI != null)
