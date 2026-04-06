@@ -132,7 +132,7 @@ public class CheckButton : MonoBehaviour
     {
         char[] letterArray = {Letter1.text[0], Letter2.text[0], Letter3.text[0], Letter4.text[0], Letter5.text[0]};
         
-        for (int i = 0; i <= letterArray.Length; i++)
+        for (int i = 0; i < letterArray.Length; i++)
         {
             if(letterArray[i] != CorrectAnswer[i])
             {
