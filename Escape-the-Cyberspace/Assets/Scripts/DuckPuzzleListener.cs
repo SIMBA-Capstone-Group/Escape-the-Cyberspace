@@ -3,7 +3,6 @@ using TMPro;
 
 public class CheckButton : MonoBehaviour
 {
-    [Header("ENTER 5 UPPERCASE LETTERS, NO NUMBERS.")]
     public string CorrectAnswer;
     [Header("ADD COLORS FOR FLASKS AND DUCKS")]
     public Color[] MatchColors;
@@ -61,9 +60,21 @@ public class CheckButton : MonoBehaviour
         return order;
     }
 
+    private string GenerateRandomAnswer(int length = 5)
+    {
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string answer = "";
+        for (int i = 0 ;i < length; i++)
+        {
+            answer += chars[Random.Range(0, chars.Length)];
+        }
+        return answer;
+
+    }
     private void InitializePuzzle()
     {
         DuckOrder = GenerateRandomOrder(MatchColors.Length);
+        CorrectAnswer = GenerateRandomAnswer(MatchColors.Length);
 
         TMP_Text[] DuckTexts = { Duck1, Duck2, Duck3, Duck4, Duck5 };
         TMP_Text[] Notes     = { Note1, Note2, Note3, Note4, Note5 };
