@@ -7237,6 +7237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coffee Pot
       objectReference: {fileID: 0}
+    - target: {fileID: 7667835315297616522, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7754629026806872547, guid: e76e5944cc22d9b4b99c830ae464ec2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.510479
@@ -11639,6 +11643,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 12.83
       objectReference: {fileID: 0}
+    - target: {fileID: 6921797156445976892, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921797156905169008, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921797156971516259, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921797157451281978, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7082123856885252469, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11690,6 +11710,10 @@ PrefabInstance:
     - target: {fileID: 7630333436257601623, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.254
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808195261141674554, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8296606764419969444, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
       propertyPath: m_LocalPosition.x
