@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class PointsSystem : MonoBehaviour
 {
+    public string levelNumber;
     public double startingPoints;
     public double scoredPoints;
     public bool isRunning = true;
@@ -16,7 +17,7 @@ public class PointsSystem : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        savePath = Application.persistentDataPath + "/score.json";
+        savePath = Application.persistentDataPath + "/level" + levelNumber + "score.json";
         LoadScore(); // try loading first
 
         isRunning = true;
