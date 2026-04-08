@@ -9667,7 +9667,7 @@ GameObject:
   - component: {fileID: 1430531281}
   m_Layer: 3
   m_Name: XR Origin (VR)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
