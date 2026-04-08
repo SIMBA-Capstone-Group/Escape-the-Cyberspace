@@ -740,6 +740,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
+--- !u!114 &192405282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+  m_PrefabInstance: {fileID: 1432188489}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9c714c6d633be4fa3b90e2579e4b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &203195973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1011,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1702558983}
     m_Modifications:
+    - target: {fileID: 164935809913677855, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
       value: Manager Keyboard UI
@@ -1008,6 +1023,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 436787855914345458, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 564359954636855953, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 783998109776820897, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 940184144181468898, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1023602112886462648, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1083819327981638348, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1087842195111142001, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1204903667511088012, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1243152941994473071, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
     - target: {fileID: 1285217983852876351, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.055000015
@@ -1064,10 +1115,98 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1286986858219133079, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1331345363660708193, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1460376604749595979, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1646411434577822656, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 1649584723121153997, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2034225316743535887, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2069040842303800829, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2513717762253544549, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2522148659593637101, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2540825879328332773, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2607254190983397791, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2688644927433830323, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2750523297074378427, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2861550171271085531, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 2943360149239958092, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 3035797239919783889, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 3053312189501740415, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 3191352521450214256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
       objectReference: {fileID: 914731646}
+    - target: {fileID: 3320176010818114123, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 3461528168380567669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 3826164786454042232, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 3885351145715371095, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
     - target: {fileID: 4017737048729727701, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1076,6 +1215,90 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ValidatePassword
       objectReference: {fileID: 0}
+    - target: {fileID: 4337820569478444743, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 4753389965420483579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 4906165272701436868, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 4935422859697127562, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 4970376761291965467, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 5208355921868998431, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 5366572024902206745, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 5669755043520372616, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 5864276532990983599, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 6209570996527866245, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 6354356455081861278, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 7060470585422250484, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 7191431689094858256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 7504864747808324542, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 7596990077700309521, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 7724747133089332579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 7763724511183354070, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 8336867115566949669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 8574333312260964287, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 8969289390380272731, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
+    - target: {fileID: 9157337764229980470, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1853519923}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1898,6 +2121,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3916496462391171717, guid: 80cbb9df11318004a95e198e69e78a10, type: 3}
   m_PrefabInstance: {fileID: 366055736}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &369280257 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+  m_PrefabInstance: {fileID: 1347056547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9c714c6d633be4fa3b90e2579e4b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &376249841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3832,6 +4066,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1790077426}
     m_Modifications:
+    - target: {fileID: 164935809913677855, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
       value: NE Keyboard UI
@@ -3840,6 +4078,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 436787855914345458, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 564359954636855953, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 783998109776820897, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 940184144181468898, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1023602112886462648, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1083819327981638348, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1087842195111142001, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1204903667511088012, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1243152941994473071, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
     - target: {fileID: 1285217983852876351, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.054999996
@@ -3896,10 +4170,98 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1286986858219133079, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1331345363660708193, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1460376604749595979, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1646411434577822656, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 1649584723121153997, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2034225316743535887, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2069040842303800829, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2513717762253544549, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2522148659593637101, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2540825879328332773, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2607254190983397791, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2688644927433830323, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2750523297074378427, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2861550171271085531, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 2943360149239958092, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 3035797239919783889, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 3053312189501740415, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 3191352521450214256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
       objectReference: {fileID: 1365802294}
+    - target: {fileID: 3320176010818114123, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 3461528168380567669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 3826164786454042232, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 3885351145715371095, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
     - target: {fileID: 4017737048729727701, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3908,6 +4270,90 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ValidatePassword
       objectReference: {fileID: 0}
+    - target: {fileID: 4337820569478444743, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 4753389965420483579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 4906165272701436868, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 4935422859697127562, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 4970376761291965467, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 5208355921868998431, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 5366572024902206745, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 5669755043520372616, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 5864276532990983599, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 6209570996527866245, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 6354356455081861278, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 7060470585422250484, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 7191431689094858256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 7504864747808324542, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 7596990077700309521, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 7724747133089332579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 7763724511183354070, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 8336867115566949669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 8574333312260964287, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 8969289390380272731, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
+    - target: {fileID: 9157337764229980470, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 1395176942}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7716,6 +8162,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157027962}
     m_Modifications:
+    - target: {fileID: 164935809913677855, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
       value: SD Keyboard UI
@@ -7724,6 +8174,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 436787855914345458, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 564359954636855953, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 783998109776820897, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 940184144181468898, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1023602112886462648, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1083819327981638348, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1087842195111142001, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1204903667511088012, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1243152941994473071, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
     - target: {fileID: 1285217983852876351, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.055000015
@@ -7780,10 +8266,98 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1286986858219133079, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1331345363660708193, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1460376604749595979, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1646411434577822656, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 1649584723121153997, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2034225316743535887, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2069040842303800829, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2513717762253544549, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2522148659593637101, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2540825879328332773, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2607254190983397791, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2688644927433830323, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2750523297074378427, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2861550171271085531, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 2943360149239958092, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 3035797239919783889, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 3053312189501740415, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 3191352521450214256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
       objectReference: {fileID: 334023782}
+    - target: {fileID: 3320176010818114123, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 3461528168380567669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 3826164786454042232, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 3885351145715371095, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
     - target: {fileID: 4017737048729727701, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7792,6 +8366,90 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ValidatePassword
       objectReference: {fileID: 0}
+    - target: {fileID: 4337820569478444743, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 4753389965420483579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 4906165272701436868, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 4935422859697127562, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 4970376761291965467, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 5208355921868998431, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 5366572024902206745, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 5669755043520372616, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 5864276532990983599, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 6209570996527866245, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 6354356455081861278, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 7060470585422250484, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 7191431689094858256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 7504864747808324542, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 7596990077700309521, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 7724747133089332579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 7763724511183354070, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 8336867115566949669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 8574333312260964287, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 8969289390380272731, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
+    - target: {fileID: 9157337764229980470, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 369280257}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8045,6 +8703,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba08e2e36c3186d47bb5bff407ef271e, type: 3}
+--- !u!114 &1395176942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+  m_PrefabInstance: {fileID: 666185342}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9c714c6d633be4fa3b90e2579e4b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1430531271
 GameObject:
   m_ObjectHideFlags: 0
@@ -8334,6 +9003,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1331219867}
     m_Modifications:
+    - target: {fileID: 164935809913677855, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
       value: Admin Keyboard UI
@@ -8342,6 +9015,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 436787855914345458, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 564359954636855953, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 783998109776820897, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 940184144181468898, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1023602112886462648, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1083819327981638348, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1087842195111142001, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1204903667511088012, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1243152941994473071, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
     - target: {fileID: 1285217983852876351, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.055000015
@@ -8398,10 +9107,98 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1286986858219133079, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1331345363660708193, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1460376604749595979, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1646411434577822656, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 1649584723121153997, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2034225316743535887, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2069040842303800829, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2513717762253544549, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2522148659593637101, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2540825879328332773, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2607254190983397791, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2688644927433830323, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2750523297074378427, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2861550171271085531, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 2943360149239958092, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 3035797239919783889, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 3053312189501740415, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 3191352521450214256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
       objectReference: {fileID: 447011975}
+    - target: {fileID: 3320176010818114123, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 3461528168380567669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 3826164786454042232, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 3885351145715371095, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
     - target: {fileID: 4017737048729727701, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8410,6 +9207,90 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ValidatePassword
       objectReference: {fileID: 0}
+    - target: {fileID: 4337820569478444743, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 4753389965420483579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 4906165272701436868, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 4935422859697127562, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 4970376761291965467, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 5208355921868998431, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 5366572024902206745, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 5669755043520372616, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 5864276532990983599, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 6209570996527866245, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 6354356455081861278, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 7060470585422250484, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 7191431689094858256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 7504864747808324542, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 7596990077700309521, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 7724747133089332579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 7763724511183354070, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 8336867115566949669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 8574333312260964287, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 8969289390380272731, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
+    - target: {fileID: 9157337764229980470, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 192405282}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10282,6 +11163,17 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1853519923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+  m_PrefabInstance: {fileID: 210325340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9c714c6d633be4fa3b90e2579e4b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1855242586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10779,6 +11671,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 603660575}
     m_Modifications:
+    - target: {fileID: 164935809913677855, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
     - target: {fileID: 270152948908908905, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_Name
       value: Keyboard UI
@@ -10787,6 +11683,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 436787855914345458, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 564359954636855953, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 783998109776820897, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 940184144181468898, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1023602112886462648, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1083819327981638348, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1087842195111142001, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1204903667511088012, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1243152941994473071, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
     - target: {fileID: 1285217983852876351, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.044999994
@@ -10843,10 +11775,98 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1286986858219133079, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1331345363660708193, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1460376604749595979, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1646411434577822656, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 1649584723121153997, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2034225316743535887, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2069040842303800829, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2513717762253544549, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2522148659593637101, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2540825879328332773, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2607254190983397791, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2688644927433830323, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2750523297074378427, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2861550171271085531, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 2943360149239958092, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 3035797239919783889, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 3053312189501740415, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 3191352521450214256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
     - target: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: inputTextLabel
       value: 
       objectReference: {fileID: 310780152}
+    - target: {fileID: 3320176010818114123, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 3461528168380567669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 3826164786454042232, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 3885351145715371095, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
     - target: {fileID: 4017737048729727701, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10855,6 +11875,90 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ValidatePassword
       objectReference: {fileID: 0}
+    - target: {fileID: 4337820569478444743, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 4753389965420483579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 4906165272701436868, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 4935422859697127562, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 4970376761291965467, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 5208355921868998431, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 5366572024902206745, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 5669755043520372616, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 5864276532990983599, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 6209570996527866245, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 6354356455081861278, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 7060470585422250484, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 7191431689094858256, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 7504864747808324542, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 7596990077700309521, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 7724747133089332579, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 7763724511183354070, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 8336867115566949669, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 8574333312260964287, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 8969289390380272731, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
+    - target: {fileID: 9157337764229980470, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+      propertyPath: parentKeyboard
+      value: 
+      objectReference: {fileID: 2131378495}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11569,6 +12673,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80cbb9df11318004a95e198e69e78a10, type: 3}
+--- !u!114 &2131378495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3205634297978625159, guid: 40fabc250cf23e4479bc00914d679bcf, type: 3}
+  m_PrefabInstance: {fileID: 1938559868}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9c714c6d633be4fa3b90e2579e4b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2132147188
 GameObject:
   m_ObjectHideFlags: 0
