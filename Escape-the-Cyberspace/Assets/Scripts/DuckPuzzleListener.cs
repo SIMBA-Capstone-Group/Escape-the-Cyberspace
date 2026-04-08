@@ -3,16 +3,13 @@ using TMPro;
 
 public class CheckButton : MonoBehaviour
 {
+    [Header("ENTER 5 UPPERCASE LETTERS, NO NUMBERS.")]
     public string CorrectAnswer;
     [Header("ADD COLORS FOR FLASKS AND DUCKS")]
     public Color[] MatchColors;
 
     [Header("UI STUFF")]
-    public TextMeshProUGUI Letter1;
-    public TextMeshProUGUI Letter2;
-    public TextMeshProUGUI Letter3;
-    public TextMeshProUGUI Letter4;
-    public TextMeshProUGUI Letter5;
+    public TextMeshProUGUI[] letters;
     [SerializeField] private OutputOfCryptex feedbackUI;
 
     [Header("CRYPTEX STUFF")]
@@ -42,7 +39,7 @@ public class CheckButton : MonoBehaviour
     public TMP_Text Duck4;
     public TMP_Text Duck5;
 
-    private string[] DuckBinaries = {"000", "001", "010", "011", "100"};
+    private string[] DuckBinaries = { "000", "001", "010", "011", "100" };
     private int[] DuckOrder;
 
     private int[] GenerateRandomOrder(int length)
@@ -60,24 +57,12 @@ public class CheckButton : MonoBehaviour
         return order;
     }
 
-    private string GenerateRandomAnswer(int length = 5)
-    {
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        string answer = "";
-        for (int i = 0 ;i < length; i++)
-        {
-            answer += chars[Random.Range(0, chars.Length)];
-        }
-        return answer;
-
-    }
     private void InitializePuzzle()
     {
         DuckOrder = GenerateRandomOrder(MatchColors.Length);
-        CorrectAnswer = GenerateRandomAnswer(MatchColors.Length);
 
         TMP_Text[] DuckTexts = { Duck1, Duck2, Duck3, Duck4, Duck5 };
-        TMP_Text[] Notes     = { Note1, Note2, Note3, Note4, Note5 };
+        TMP_Text[] Notes = { Note1, Note2, Note3, Note4, Note5 };
 
         for (int duckIndex = 0; duckIndex < MatchColors.Length; duckIndex++)
         {
@@ -124,17 +109,20 @@ public class CheckButton : MonoBehaviour
         }
 
         // FUTURE WORK: add a 5-letter randomizer here for random cryptex solutions
-        
+
         InitializePuzzle();
     }
 
     public void CheckIfCorrect()
     {
-        char[] letterArray = {Letter1.text[0], Letter2.text[0], Letter3.text[0], Letter4.text[0], Letter5.text[0]};
-        
-        for (int i = 0; i < letterArray.Length; i++)
+        Debug.Log(letters);
+        Debug.Log(CorrectAnswer);
+        int i = 0;
+
+        foreach (TextMeshProUGUI letter in letters)
         {
-            if(letterArray[i] != CorrectAnswer[i])
+            print(letter.text);
+            if (letter.text[0] != CorrectAnswer[i])
             {
                 Debug.Log("Incorrect letter entered");
 
@@ -143,6 +131,7 @@ public class CheckButton : MonoBehaviour
 
                 return;
             }
+            i++;
         }
         Debug.Log("Correct passphrase entered");
         if (feedbackUI != null)

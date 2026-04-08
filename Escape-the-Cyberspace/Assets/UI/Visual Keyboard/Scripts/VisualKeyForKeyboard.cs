@@ -12,6 +12,7 @@ namespace VisualKeyboard
 {
     public class VisualKeyForKeyboard : MonoBehaviour
     {
+        public VisualKeyboard parentKeyboard;
         public static event Action<VisualKeyForKeyboard> OnKeyboardButtonClick;
 
         [Header("Keyboard Key")]
