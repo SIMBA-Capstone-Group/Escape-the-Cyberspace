@@ -1235,6 +1235,10 @@ PrefabInstance:
       propertyPath: container
       value: 
       objectReference: {fileID: 2105749122}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: doors
+      value: 
+      objectReference: {fileID: 1229940059}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4536,6 +4540,11 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!4 &742961244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4866362078771480519, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &753395843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6525,6 +6534,11 @@ Transform:
   - {fileID: 1481667427}
   m_Father: {fileID: 945431774}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &851506680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4866362078771480513, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &863408394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7745,6 +7759,11 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!4 &980852108 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3580107519380850356, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1023585164
 GameObject:
   m_ObjectHideFlags: 0
@@ -8752,6 +8771,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1229940057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4866362078771583977, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229940059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229940057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a071cfe54d77db45a43958168917a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doors
+  rightDoorTransform: {fileID: 851506680}
+  rightOpenOffset: {x: 0, y: 0, z: 2}
+  leftDoorTransform: {fileID: 742961244}
+  leftOpenOffset: {x: 0, y: 0, z: -2}
+  openSpeed: 2
 --- !u!1001 &1230925099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9870,6 +9911,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: 33754c03-48ec-46ef-9bc6-22ed6bfdd8e8
+--- !u!4 &1398094071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3580107519380850354, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1404574309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11055,7 +11101,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7631135625847635081, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
       insertIndex: -1
       addedObject: {fileID: 847375869}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3580107519380495004, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1635969642}
+    - targetCorrespondingSourceObject: {fileID: 4866362078771583977, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229940059}
   m_SourcePrefab: {fileID: 100100000, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
 --- !u!1001 &1564978300
 PrefabInstance:
@@ -11558,6 +11610,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1635969640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3580107519380495004, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1635969642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635969640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a071cfe54d77db45a43958168917a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doors
+  rightDoorTransform: {fileID: 980852108}
+  rightOpenOffset: {x: 0, y: 0, z: -2}
+  leftDoorTransform: {fileID: 1398094071}
+  leftOpenOffset: {x: 0, y: 0, z: 2}
+  openSpeed: 2
 --- !u!1001 &1644249768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14242,7 +14316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 675077928228022310, guid: 650270fed947ca14fb70b07a67dd26c6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.2064998
+      value: -3.2064915
       objectReference: {fileID: 0}
     - target: {fileID: 952896297859863181, guid: 650270fed947ca14fb70b07a67dd26c6, type: 3}
       propertyPath: m_AnchorMax.x
