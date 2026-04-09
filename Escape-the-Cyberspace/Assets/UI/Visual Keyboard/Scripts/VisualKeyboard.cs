@@ -62,6 +62,8 @@ namespace VisualKeyboard
 
         protected virtual void OnKeyboardButtonClick(VisualKeyForKeyboard key)
         {
+            if (key.parentKeyboard != this)
+                return;
             Debug.Log($"[Visual Keyboard] Key is clicked: {key.gameObject.name}", gameObject);
             if (keyPressSound)
                 audioSource.Play();

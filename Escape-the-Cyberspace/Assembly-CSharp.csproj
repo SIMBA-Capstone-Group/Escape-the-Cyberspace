@@ -88,8 +88,8 @@
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\AnInspector.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\FencePlacement.cs" />
     <Compile Include="Assets\Scripts\LoginManager.cs" />
-    <Compile Include="Assets\Scripts\AutoDoor.cs" />
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\VisualKeyboard.cs" />
+    <Compile Include="Assets\Scripts\AutoDoor.cs" />
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_01.cs" />
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\VisualKeyForKeyboard.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Shiftable.cs" />
