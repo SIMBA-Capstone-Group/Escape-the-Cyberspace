@@ -20,33 +20,31 @@ public class TrapDoorTransition : MonoBehaviour
     }
 
     IEnumerator Transition(GameObject player)
+{
+    // 🔒 Stop player movement
+    Rigidbody rb = player.GetComponent<Rigidbody>();
+    if (rb != null)
     {
-        // 🔒 Stop player movement
-        Rigidbody rb = player.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector3.zero;
-            rb.isKinematic = true;
-        }
-
-        // Optional: disable movement script
-        MonoBehaviour movement = player.GetComponent<MonoBehaviour>();
-        if (movement != null)
-            movement.enabled = false;
-
-        // 🌑 Fade to black
-        float t = 0;
-        while (t < fadeDuration)
-        {
-            t += Time.deltaTime;
-            fadeCanvas.alpha = t / fadeDuration;
-            yield return null;
-        }
-
-        // ⏳ Small pause (feels like loading)
-        yield return new WaitForSeconds(0.5f);
-
-        // 🚀 Load next scene
-        SceneManager.LoadScene(sceneToLoad);
+        rb.linearVelocity = Vector3.zero;
+        rb.isKinematic = true;
     }
+
+    // 🌑 Fade to black
+    float t = 0;
+    while (t < fadeDuration)
+    {
+        t += Time.deltaTime;
+        fadeCanvas.alpha = t / fadeDuration;
+        yield return null;
+    }
+
+    // 🚀 Start loading scene in background
+    AsyncOperation operation = SceneManager.LoadSceneAsync(sceneToLoad);
+
+    // ⏳ Wait until loading finishes
+    while (!operation.isDone)
+    {
+        yield return null;
+    }
+}
 }
