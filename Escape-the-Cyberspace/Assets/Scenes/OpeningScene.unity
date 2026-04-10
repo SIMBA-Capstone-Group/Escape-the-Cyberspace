@@ -3660,7 +3660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sceneToLoad: Laboratory
   fadeCanvas: {fileID: 1064624651}
-  fadeDuration: 1
+  fadeDuration: 0.5
 --- !u!114 &690571445
 MonoBehaviour:
   m_ObjectHideFlags: 0
