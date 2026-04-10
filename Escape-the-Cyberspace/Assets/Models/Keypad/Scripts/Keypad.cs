@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Linq;
-using System.Runtime.ExceptionServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,15 +8,12 @@ namespace NavKeypad
 {
     public class Keypad : MonoBehaviour
     {
-        [Header("ADDED FOR SiMBA")]
-        public int maxMessageLength = 4;
-        public TextMeshProUGUI atbashMessageBox;
-
         [Header("Events")]
         [SerializeField] private UnityEvent onAccessGranted;
         [SerializeField] private UnityEvent onAccessDenied;
         [Header("Combination Code (9 Numbers Max)")]
-        private int keypadCombo;
+        [SerializeField] private int keypadCombo = 12345;
+
         public UnityEvent OnAccessGranted => onAccessGranted;
         public UnityEvent OnAccessDenied => onAccessDenied;
 
@@ -48,22 +43,6 @@ namespace NavKeypad
         private bool displayingResult = false;
         private bool accessWasGranted = false;
 
-        // ADDED BY SADIE ANN 
-        private string[] atbashedNumbers = {"avil","lmv","gdl","gsivv","ulfi","urev","hrc","hvevm","vrtsg","mrmv"};
-
-        private void Start()
-        {
-            string correctSequence = "", atbashMessage = "";
-            for(int i = 0; i < maxMessageLength; i++)
-            {
-                int randomed = UnityEngine.Random.Range(0, atbashedNumbers.Length);
-                correctSequence += randomed.ToString();
-                atbashMessage += atbashedNumbers[randomed] + " ";
-            }
-            Debug.Log("sequence: " + atbashMessage);
-            atbashMessageBox.text = atbashMessage;
-            keypadCombo = int.Parse(correctSequence);
-        }
         private void Awake()
         {
             ClearInput();
