@@ -6,7 +6,7 @@ public class TrapDoorTransition : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad = "Laboratory";
     [SerializeField] private CanvasGroup fadeCanvas; // assign FadePanel
-    [SerializeField] private float fadeDuration = 1.5f;
+    [SerializeField] private float fadeDuration = 0.25f;
 
     private bool triggered = false;
 
