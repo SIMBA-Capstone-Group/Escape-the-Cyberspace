@@ -5,46 +5,75 @@ using System.Collections;
 public class TrapDoorTransition : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad = "Laboratory";
-    [SerializeField] private CanvasGroup fadeCanvas; // assign FadePanel
-    [SerializeField] private float fadeDuration = 0.25f;
+    [SerializeField] private CanvasGroup fadeCanvas;
+    [SerializeField] private float fadeDuration = 1f;
+    [SerializeField] private MonoBehaviour playerMovementScript;
+    [SerializeField] private GameObject loadingText;
 
     private bool triggered = false;
 
+    private void Start()
+    {
+        if (fadeCanvas != null)
+            fadeCanvas.alpha = 0f;
+
+        if (loadingText != null)
+            loadingText.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (!triggered && other.CompareTag("Player"))
+        if (triggered) return;
+
+        if (other.CompareTag("Player"))
         {
             triggered = true;
             StartCoroutine(Transition(other.gameObject));
         }
     }
 
-    IEnumerator Transition(GameObject player)
-{
-    // 🔒 Stop player movement
-    Rigidbody rb = player.GetComponent<Rigidbody>();
-    if (rb != null)
+    private IEnumerator Transition(GameObject player)
     {
-        rb.linearVelocity = Vector3.zero;
-        rb.isKinematic = true;
-    }
+        // Stop movement script
+        if (playerMovementScript != null)
+            playerMovementScript.enabled = false;
 
-    // 🌑 Fade to black
-    float t = 0;
-    while (t < fadeDuration)
-    {
-        t += Time.deltaTime;
-        fadeCanvas.alpha = t / fadeDuration;
-        yield return null;
-    }
+        // Stop Rigidbody movement if present
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.isKinematic = true;
+        }
 
-    // 🚀 Start loading scene in background
-    AsyncOperation operation = SceneManager.LoadSceneAsync(sceneToLoad);
+        // Fade to black
+        float t = 0f;
+        while (t < fadeDuration)
+        {
+            t += Time.deltaTime;
+            fadeCanvas.alpha = Mathf.Clamp01(t / fadeDuration);
+            yield return null;
+        }
 
-    // ⏳ Wait until loading finishes
-    while (!operation.isDone)
-    {
-        yield return null;
+        // Show loading text after fade
+        if (loadingText != null)
+            loadingText.SetActive(true);
+
+        // Start async load
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneToLoad);
+        operation.allowSceneActivation = false;
+
+        // Wait until scene is loaded to 90%
+        while (operation.progress < 0.9f)
+        {
+            yield return null;
+        }
+
+        // Small pause so the loading screen is visible
+        yield return new WaitForSeconds(1f);
+
+        // Enter scene
+        operation.allowSceneActivation = true;
     }
-}
 }

@@ -65,11 +65,11 @@
     <Compile Include="Assets\Scripts\NoteSpawner.cs" />
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_02.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\PrefabGroup.cs" />
+    <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Rotatable.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\GlowLight.cs" />
     <Compile Include="Assets\Scripts\DuckPuzzleListener.cs" />
     <Compile Include="Assets\Scripts\DisableColliderOnAccess.cs" />
-    <Compile Include="Assets\Scripts\exit.cs" />
     <Compile Include="Assets\Models\Keypad\Scripts\KeypadButton.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ShiftableObject.cs" />

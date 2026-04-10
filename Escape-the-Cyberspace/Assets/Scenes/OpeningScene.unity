@@ -3618,16 +3618,28 @@ PrefabInstance:
       value: Floor_Fire_Trap
       objectReference: {fileID: 0}
     - target: {fileID: 4423016678262089088, guid: 95e476fe401a2234581577728dcbc61a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1973925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423016678262089088, guid: 95e476fe401a2234581577728dcbc61a, type: 3}
       propertyPath: m_Size.y
-      value: 0.3021102
+      value: 0.41597986
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423016678262089088, guid: 95e476fe401a2234581577728dcbc61a, type: 3}
+      propertyPath: m_Size.z
+      value: 1.2834487
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423016678262089088, guid: 95e476fe401a2234581577728dcbc61a, type: 3}
+      propertyPath: m_Center.x
+      value: 0.009333134
       objectReference: {fileID: 0}
     - target: {fileID: 4423016678262089088, guid: 95e476fe401a2234581577728dcbc61a, type: 3}
       propertyPath: m_Center.y
-      value: 0.09754729
+      value: 0.15448213
       objectReference: {fileID: 0}
     - target: {fileID: 4423016678262089088, guid: 95e476fe401a2234581577728dcbc61a, type: 3}
       propertyPath: m_Center.z
-      value: -0.0000054836273
+      value: 0.03935504
       objectReference: {fileID: 0}
     - target: {fileID: 4423016678262089088, guid: 95e476fe401a2234581577728dcbc61a, type: 3}
       propertyPath: m_IsTrigger
@@ -3661,6 +3673,8 @@ MonoBehaviour:
   sceneToLoad: Laboratory
   fadeCanvas: {fileID: 1064624651}
   fadeDuration: 0.5
+  playerMovementScript: {fileID: 949499713}
+  loadingText: {fileID: 0}
 --- !u!114 &690571445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9154,8 +9168,37 @@ PrefabInstance:
     - {fileID: -9046873067196991600, guid: 4180b807580030547ae9335ed2057320, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3708155055863018839, guid: 4180b807580030547ae9335ed2057320, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2062698385}
   m_SourcePrefab: {fileID: 100100000, guid: 4180b807580030547ae9335ed2057320, type: 3}
+--- !u!1 &2062698384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3708155055863018839, guid: 4180b807580030547ae9335ed2057320, type: 3}
+  m_PrefabInstance: {fileID: 2062698383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2062698385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062698384}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4073972, y: 2.302837, z: 0.25609738}
+  m_Center: {x: -0.0010884622, y: 0.07273296, z: 0.18650506}
 --- !u!1001 &2076768505
 PrefabInstance:
   m_ObjectHideFlags: 0
