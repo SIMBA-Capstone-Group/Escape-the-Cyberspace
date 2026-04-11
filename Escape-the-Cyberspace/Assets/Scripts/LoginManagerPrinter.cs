@@ -34,7 +34,9 @@ public class LoginManagerPrinter : MonoBehaviour, IPointerClickHandler
             // print paper at printer
             
             paperObject.transform.position = printerSpawnPoint.position;
-            paperObject.transform.rotation = printerSpawnPoint.rotation
+            Debug.Log(paperObject.transform.position);
+            paperObject.transform.rotation = printerSpawnPoint.rotation;
+            Debug.Log(paperObject.transform.rotation);
 
             // Play the print sound
             if (printerAudio != null)

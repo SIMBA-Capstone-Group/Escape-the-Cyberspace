@@ -9132,6 +9132,11 @@ Transform:
   - {fileID: 1029047616}
   m_Father: {fileID: 1430531272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1026845832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2940253655754315667, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+  m_PrefabInstance: {fileID: 1370035976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029047615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9261,6 +9266,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1141951008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1096545148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400389725732078977, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+  m_PrefabInstance: {fileID: 2064745298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1108355388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11633,6 +11643,14 @@ PrefabInstance:
     - target: {fileID: 5450494626954034059, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1370035981}
+    - target: {fileID: 5450494626954034059, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ValidatePassword
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450494626954034059, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoginManagerPrinter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5517512260715311275, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11734,9 +11752,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3567835075322420184, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       insertIndex: 0
       addedObject: {fileID: 936485616}
-    - targetCorrespondingSourceObject: {fileID: 3567835075322420184, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1520136035}
     - targetCorrespondingSourceObject: {fileID: 1891034417892477890, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1358527415}
@@ -11785,7 +11800,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoginManagerPrinter
   keyboardUI: {fileID: 1370035979}
   passwordInputField: {fileID: 1370035977}
-  poweredOnScreens: []
+  poweredOnScreens:
+  - {fileID: 1839800881}
+  - {fileID: 1026845832}
   loginScreen: {fileID: 1370035980}
   correctPassword: pass
   KeyboardListener: {fileID: 0}
@@ -12908,12 +12925,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520136034}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.25171474, y: 0.6646475, z: -0.6433016, w: -0.28468677}
-  m_LocalPosition: {x: -13.530718, y: 2.2198446, z: -10.013932}
+  m_LocalRotation: {x: -0.61940694, y: 0.2993924, z: -0.30583045, w: -0.6581543}
+  m_LocalPosition: {x: 0, y: 0.382, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 675551985}
+  m_Father: {fileID: 1096545148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1529031244
 PrefabInstance:
@@ -15706,6 +15723,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1839800881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8519318446141951499, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+  m_PrefabInstance: {fileID: 1370035976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1853610096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17530,7 +17552,10 @@ PrefabInstance:
     - {fileID: 8676368616266574622, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
     - {fileID: 2363308159948817276, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
     - {fileID: 3111880889207021301, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400389725732078977, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1520136035}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 476648579031825305, guid: 9c54376a68d8b06408bcf8dc46ef5120, type: 3}
       insertIndex: -1
