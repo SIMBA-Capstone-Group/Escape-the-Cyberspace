@@ -8356,6 +8356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HelpPaperNetworkTopology
       objectReference: {fileID: 0}
+    - target: {fileID: 7404161918660173322, guid: 4654028c98f07fa4f8f2d9be5f75eebd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11719,7 +11723,8 @@ PrefabInstance:
       propertyPath: 'poweredOnScreens.Array.data[0]'
       value: 
       objectReference: {fileID: 742743765}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2957429756982488966, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
     m_RemovedGameObjects:
     - {fileID: 161490941965655147, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
     - {fileID: 2583358176823278144, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
