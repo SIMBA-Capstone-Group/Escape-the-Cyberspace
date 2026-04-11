@@ -18,6 +18,7 @@ public class PointsSystem : MonoBehaviour
     void Start()
     {
         savePath = Application.persistentDataPath + "/level" + levelNumber + "score.json";
+        Debug.Log(savePath);
         LoadScore(); // try loading first
 
         isRunning = true;
@@ -58,6 +59,7 @@ public class PointsSystem : MonoBehaviour
     public void stopScoring()
     {
         isRunning = false;
+        SaveScore();
     }
 
      public void SaveScore()
