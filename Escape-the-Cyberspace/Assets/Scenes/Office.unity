@@ -8365,11 +8365,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4654028c98f07fa4f8f2d9be5f75eebd, type: 3}
---- !u!1 &936485615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1261054916016604262, guid: 4654028c98f07fa4f8f2d9be5f75eebd, type: 3}
-  m_PrefabInstance: {fileID: 936485614}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &936485616 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1220409684145833246, guid: 4654028c98f07fa4f8f2d9be5f75eebd, type: 3}
@@ -11790,7 +11785,7 @@ MonoBehaviour:
   loginScreen: {fileID: 1370035980}
   correctPassword: pass
   KeyboardListener: {fileID: 0}
-  paperObject: {fileID: 936485615}
+  paperObject: {fileID: 1398115583}
   printerSpawnPoint: {fileID: 1520136035}
   printerAudio: {fileID: 0}
 --- !u!114 &1383996525
@@ -11821,6 +11816,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: 33754c03-48ec-46ef-9bc6-22ed6bfdd8e8
+--- !u!1 &1398115583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7404161918660173322, guid: 4654028c98f07fa4f8f2d9be5f75eebd, type: 3}
+  m_PrefabInstance: {fileID: 936485614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1404574309
 MonoBehaviour:
   m_ObjectHideFlags: 0
