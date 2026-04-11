@@ -65,6 +65,7 @@
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_03.cs" />
     <Compile Include="Assets\Models\Keypad\Scripts\KeypadButtonXR.cs" />
     <Compile Include="Assets\Scripts\NoteSpawner.cs" />
+    <Compile Include="Assets\Scripts\VestibuleGateTrigger.cs" />
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_02.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\PrefabGroup.cs" />
     <Compile Include="Assets\Scripts\GateAccessMachine.cs" />
