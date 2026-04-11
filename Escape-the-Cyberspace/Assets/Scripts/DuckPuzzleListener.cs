@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class CheckButton : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class CheckButton : MonoBehaviour
     public TMP_Text Duck3;
     public TMP_Text Duck4;
     public TMP_Text Duck5;
+
+    [Header("SCORING SYSTEM")]
+    public UnityEvent pointsListener;
 
     private string[] DuckBinaries = {"000", "001", "010", "011", "100"};
     private int[] DuckOrder;
@@ -140,6 +144,7 @@ public class CheckButton : MonoBehaviour
 
                 if (feedbackUI != null)
                     feedbackUI.PlayIncorrectFeedback();
+                pointsListener?.Invoke();
 
                 return;
             }
