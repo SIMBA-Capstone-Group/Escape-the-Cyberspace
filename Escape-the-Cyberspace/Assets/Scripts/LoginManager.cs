@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class LoginManager : MonoBehaviour, IPointerClickHandler
 {
@@ -10,6 +11,7 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
     public GameObject loginScreen;
     public string correctPassword = "BadPassword123";
     public KeyboardPlacementCheck KeyboardListener;
+    public UnityEvent onIncorrect;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -43,6 +45,10 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
             {
                 KeyboardListener.NoMoreUIPlease();
             }
+        }
+        else if(onIncorrect != null)
+        {
+            onIncorrect.Invoke();
         }
     }
 
