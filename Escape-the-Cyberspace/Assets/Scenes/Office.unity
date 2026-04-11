@@ -9928,9 +9928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Doors
   rightDoorTransform: {fileID: 851506680}
-  rightOpenOffset: {x: 0, y: 0, z: 2}
-  leftDoorTransform: {fileID: 0}
-  leftOpenOffset: {x: 0, y: 0, z: -2}
+  rightOpenOffset: {x: 2, y: 0, z: 0}
+  leftDoorTransform: {fileID: 1529031245}
+  leftOpenOffset: {x: -2, y: 0, z: 0}
   openSpeed: 2
 --- !u!1001 &1230925099
 PrefabInstance:
@@ -12785,6 +12785,16 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1229940059}
   m_SourcePrefab: {fileID: 100100000, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+--- !u!4 &1529031245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4866362078771480519, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1529031246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3580107519380850356, guid: d7ff4085d8061ca42b7b940a213acf31, type: 3}
+  m_PrefabInstance: {fileID: 1529031244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1564978300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13303,10 +13313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a071cfe54d77db45a43958168917a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Doors
-  rightDoorTransform: {fileID: 0}
-  rightOpenOffset: {x: 0, y: 0, z: -2}
+  rightDoorTransform: {fileID: 1529031246}
+  rightOpenOffset: {x: -2, y: 0, z: 0}
   leftDoorTransform: {fileID: 1398094071}
-  leftOpenOffset: {x: 0, y: 0, z: 2}
+  leftOpenOffset: {x: 2, y: 0, z: 0}
   openSpeed: 2
 --- !u!1001 &1644249768
 PrefabInstance:
