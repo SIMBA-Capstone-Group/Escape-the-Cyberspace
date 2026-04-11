@@ -11630,6 +11630,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.36
       objectReference: {fileID: 0}
+    - target: {fileID: 5450494626954034059, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5517512260715311275, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.2
