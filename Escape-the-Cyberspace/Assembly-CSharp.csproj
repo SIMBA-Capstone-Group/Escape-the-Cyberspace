@@ -89,6 +89,7 @@
     <Compile Include="Assets\Models\Keypad\Scripts\KeypadButton.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ShiftableObject.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHiderManager.cs" />
+    <Compile Include="Assets\Scripts\LoadOpeningScene.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\AnInspector.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\FencePlacement.cs" />
     <Compile Include="Assets\Scripts\LoginManager.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SnapToPoint.cs" />
     <Compile Include="Assets\Scripts\ChangeText.cs" />
+    <Compile Include="Assets\Scripts\SceneFade.cs" />
     <Compile Include="Assets\Scripts\CheeseNoteTeleporter.cs" />
     <Compile Include="Assets\Scripts\SnapAndStay.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHider.cs" />
