@@ -31,22 +31,10 @@ public class LoginManagerPrinter : MonoBehaviour, IPointerClickHandler
         Debug.Log(passwordInputField.text);
         if (passwordInputField.text == correctPassword)
         {
-
             // print paper at printer
-            if (paperObject != null && printerSpawnPoint != null)
-            {
-                // Move paper to printer
-                paperObject.transform.position = printerSpawnPoint.position;
-                paperObject.transform.rotation = printerSpawnPoint.rotation;
-
-                // Stop any previous physics movement so it doesn't fly away
-                //Rigidbody rb = paperObject.GetComponent<Rigidbody>();
-                //if (rb != null)
-                //{
-                    //rb.velocity = Vector3.zero;
-                    //rb.angularVelocity = Vector3.zero;
-                //}
-            }
+            
+            paperObject.transform.position = printerSpawnPoint.position;
+            paperObject.transform.rotation = printerSpawnPoint.rotation
 
             // Play the print sound
             if (printerAudio != null)
