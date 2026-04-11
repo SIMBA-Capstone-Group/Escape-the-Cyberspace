@@ -9928,9 +9928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Doors
   rightDoorTransform: {fileID: 851506680}
-  rightOpenOffset: {x: 2, y: 0, z: 0}
+  rightOpenOffset: {x: -2, y: 0, z: 0}
   leftDoorTransform: {fileID: 1529031245}
-  leftOpenOffset: {x: -2, y: 0, z: 0}
+  leftOpenOffset: {x: 2, y: 0, z: 0}
   openSpeed: 2
 --- !u!1001 &1230925099
 PrefabInstance:
@@ -13314,9 +13314,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Doors
   rightDoorTransform: {fileID: 1529031246}
-  rightOpenOffset: {x: -2, y: 0, z: 0}
+  rightOpenOffset: {x: 2, y: 0, z: 0}
   leftDoorTransform: {fileID: 1398094071}
-  leftOpenOffset: {x: 2, y: 0, z: 0}
+  leftOpenOffset: {x: -2, y: 0, z: 0}
   openSpeed: 2
 --- !u!1001 &1644249768
 PrefabInstance:
