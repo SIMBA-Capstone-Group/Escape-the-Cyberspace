@@ -64,6 +64,7 @@
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\IgnoreInInspectorAttribute.cs" />
     <Compile Include="Assets\Scripts\CaesarRotation.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\KeyValuePairPropertyDrawer.cs" />
+    <Compile Include="Assets\Scripts\LoginManagerPrinter.cs" />
     <Compile Include="Assets\WireBuilder\Scripts\PlugController.cs" />
     <Compile Include="Assets\Scripts\StickyNote_TextController.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ArrayArrangement.cs" />
