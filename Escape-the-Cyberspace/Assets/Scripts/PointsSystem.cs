@@ -85,12 +85,12 @@ public class PointsSystem : MonoBehaviour
             string json = File.ReadAllText(savePath);
             ScoreData data = JsonUtility.FromJson<ScoreData>(json);
 
-            scoredPoints = data.currentScore;
+            //scoredPoints = data.currentScore;
             scoreHistory = data.scoreHistory != null 
             ? new List<double>(data.scoreHistory) 
             : new List<double>();
 
-            Debug.Log("Loaded score: " + scoredPoints);
+            //Debug.Log("Loaded score: " + scoredPoints);
         }
         else
         {
