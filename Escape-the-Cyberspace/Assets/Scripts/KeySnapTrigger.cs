@@ -29,22 +29,25 @@ public class KeySnapTrigger : MonoBehaviour
         if (keyTransform == null || objectToRotate == null)
             return;
 
-        // Only check for activation once
-        if (!hasActivated)
-        {
-            float distance = Vector3.Distance(keyTransform.position, transform.position);
+        Debug.Log("Distance: " + Vector3.Distance(keyTransform.position, transform.position));
 
-            if (distance <= requiredDistance && keyTransform.CompareTag(requiredTag))
-            {
-                hasActivated = true;
-                shouldRotate = true;
-                targetRotation = objectToRotate.rotation * Quaternion.Euler(0f, rotateAmount, 0f);
-            }
-        }
+if (!hasActivated)
+{
+    float distance = Vector3.Distance(keyTransform.position, transform.position);
+
+    if (distance <= requiredDistance && keyTransform.CompareTag(requiredTag))
+    {
+        Debug.Log("Key inserted, starting rotation");
+        hasActivated = true;
+        shouldRotate = true;
+        targetRotation = objectToRotate.rotation * Quaternion.Euler(0f, rotateAmount, 0f);
+    }
+}
 
         // Continue rotating until target is reached
         if (shouldRotate)
         {
+            Debug.Log("Rotating door...");
             objectToRotate.rotation = Quaternion.RotateTowards(
                 objectToRotate.rotation,
                 targetRotation,
