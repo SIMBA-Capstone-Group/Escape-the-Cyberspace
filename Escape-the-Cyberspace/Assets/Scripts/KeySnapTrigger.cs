@@ -1,58 +1,78 @@
 using System.Collections;
 using UnityEngine;
 
-public class DoorUnlock : MonoBehaviour
+public class KeySnapTrigger : MonoBehaviour
 {
-    public Transform door;
-    public Vector3 rotationAmount = new Vector3(0, -90, 0);
+    public Transform doorHinge;          // assign the whole door pivot here
+    public Transform snapTarget;         // usually KeySnap itself
+    public float snapDistance = 0.03f;   // how close key must be before it counts
     public float rotateDuration = 1f;
 
-    private bool hasOpened = false;
+    private bool opened = false;
+    private Collider currentKey;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered by: " + other.name);
-
-        if (hasOpened) return;
+        if (opened) return;
 
         if (other.CompareTag("Key"))
         {
-            Debug.Log("Key entered snap point");
-
-            hasOpened = true;
-
-            other.transform.position = transform.position;
-            other.transform.rotation = transform.rotation;
-
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.linearVelocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-                rb.isKinematic = true;
-            }
-
-            StartCoroutine(RotateDoorSmooth());
+            currentKey = other;
+            Debug.Log("Key entered trigger");
         }
     }
 
-    IEnumerator RotateDoorSmooth()
+    private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Starting door rotation");
-
-        Quaternion startRotation = door.rotation;
-        Quaternion targetRotation = startRotation * Quaternion.Euler(rotationAmount);
-
-        float time = 0f;
-
-        while (time < rotateDuration)
+        if (other == currentKey)
         {
-            door.rotation = Quaternion.Slerp(startRotation, targetRotation, time / rotateDuration);
-            time += Time.deltaTime;
+            currentKey = null;
+            Debug.Log("Key left trigger");
+        }
+    }
+
+    private void Update()
+    {
+        if (opened || currentKey == null) return;
+
+        float distance = Vector3.Distance(currentKey.transform.position, snapTarget.position);
+
+        if (distance <= snapDistance)
+        {
+            Debug.Log("Key fully inserted");
+
+            opened = true;
+
+            // Snap key exactly into place
+            currentKey.transform.position = snapTarget.position;
+            currentKey.transform.rotation = snapTarget.rotation;
+
+            Rigidbody rb = currentKey.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+
+            StartCoroutine(OpenDoor());
+        }
+    }
+
+    IEnumerator OpenDoor()
+    {
+        Quaternion startRot = doorHinge.rotation;
+        Quaternion endRot = startRot * Quaternion.Euler(0f, -90f, 0f);
+
+        float t = 0f;
+
+        while (t < rotateDuration)
+        {
+            t += Time.deltaTime;
+            doorHinge.rotation = Quaternion.Slerp(startRot, endRot, t / rotateDuration);
             yield return null;
         }
 
-        door.rotation = targetRotation;
-        Debug.Log("Door rotation complete");
+        doorHinge.rotation = endRot;
     }
 }
