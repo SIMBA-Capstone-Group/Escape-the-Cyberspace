@@ -28,6 +28,11 @@ public class KeySnapTrigger : MonoBehaviour
     {
         if (hasActivated || cubeToRotate == null) return;
 
+        Debug.Log("Triggered by: " + other.name);
+        Debug.Log("KeySnap active: " + gameObject.activeSelf);
+        Debug.Log("KeySnap position: " + transform.position);
+
+
         // Check if the object entering is on the required layer
         if (other.gameObject.layer == LayerMask.NameToLayer(requiredLayerName))
         {
