@@ -3,15 +3,15 @@ using UnityEngine;
 public class KeySnapTrigger : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform objectToRotate;   // assign Cube_10 here
-    [SerializeField] private Transform keyTransform;     // assign the key here
+    [SerializeField] private Transform objectToRotate;
+    [SerializeField] private Transform keyTransform;
 
     [Header("Rotation")]
     [SerializeField] private float rotateAmount = -90f;
     [SerializeField] private float rotateSpeed = 180f;
 
     [Header("Snap Check")]
-    [SerializeField] private float requiredDistance = 0.05f; // how close key must be
+    [SerializeField] private float requiredDistance = 0.05f;
     [SerializeField] private string requiredTag = "Key";
 
     private bool shouldRotate = false;
@@ -26,18 +26,23 @@ public class KeySnapTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (hasActivated || keyTransform == null || objectToRotate == null)
+        if (keyTransform == null || objectToRotate == null)
             return;
 
-        float distance = Vector3.Distance(keyTransform.position, transform.position);
-
-        if (distance <= requiredDistance)
+        // Only check for activation once
+        if (!hasActivated)
         {
-            hasActivated = true;
-            shouldRotate = true;
-            targetRotation = objectToRotate.rotation * Quaternion.Euler(0f, rotateAmount, 0f);
+            float distance = Vector3.Distance(keyTransform.position, transform.position);
+
+            if (distance <= requiredDistance && keyTransform.CompareTag(requiredTag))
+            {
+                hasActivated = true;
+                shouldRotate = true;
+                targetRotation = objectToRotate.rotation * Quaternion.Euler(0f, rotateAmount, 0f);
+            }
         }
 
+        // Continue rotating until target is reached
         if (shouldRotate)
         {
             objectToRotate.rotation = Quaternion.RotateTowards(
