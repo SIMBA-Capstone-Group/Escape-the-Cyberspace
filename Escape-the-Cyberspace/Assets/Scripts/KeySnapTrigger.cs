@@ -1,78 +1,30 @@
-using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class KeySnapTrigger : MonoBehaviour
+public class LoadSceneOnSnap : MonoBehaviour
 {
-    public Transform doorHinge;          // assign the whole door pivot here
-    public Transform snapTarget;         // usually KeySnap itself
-    public float snapDistance = 0.03f;   // how close key must be before it counts
-    public float rotateDuration = 1f;
+    public UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
+    public string sceneName = "NextScene";
+    public string requiredTag = "Snappable";
 
-    private bool opened = false;
-    private Collider currentKey;
-
-    private void OnTriggerEnter(Collider other)
+    private void OnEnable()
     {
-        if (opened) return;
-
-        if (other.CompareTag("Key"))
-        {
-            currentKey = other;
-            Debug.Log("Key entered trigger");
-        }
+        socket.selectEntered.AddListener(OnObjectSnapped);
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnDisable()
     {
-        if (other == currentKey)
-        {
-            currentKey = null;
-            Debug.Log("Key left trigger");
-        }
+        socket.selectEntered.RemoveListener(OnObjectSnapped);
     }
 
-    private void Update()
+    private void OnObjectSnapped(SelectEnterEventArgs args)
     {
-        if (opened || currentKey == null) return;
+        GameObject snappedObject = args.interactableObject.transform.gameObject;
 
-        float distance = Vector3.Distance(currentKey.transform.position, snapTarget.position);
-
-        if (distance <= snapDistance)
+        if (snappedObject.CompareTag(requiredTag))
         {
-            Debug.Log("Key fully inserted");
-
-            opened = true;
-
-            // Snap key exactly into place
-            currentKey.transform.position = snapTarget.position;
-            currentKey.transform.rotation = snapTarget.rotation;
-
-            Rigidbody rb = currentKey.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-                rb.linearVelocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-            }
-
-            StartCoroutine(OpenDoor());
+            SceneManager.LoadScene(sceneName);
         }
-    }
-
-    IEnumerator OpenDoor()
-    {
-        Quaternion startRot = doorHinge.rotation;
-        Quaternion endRot = startRot * Quaternion.Euler(0f, -90f, 0f);
-
-        float t = 0f;
-
-        while (t < rotateDuration)
-        {
-            t += Time.deltaTime;
-            doorHinge.rotation = Quaternion.Slerp(startRot, endRot, t / rotateDuration);
-            yield return null;
-        }
-
-        doorHinge.rotation = endRot;
     }
 }
