@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -6,7 +7,6 @@ public class LoadSceneOnSnap : MonoBehaviour
 {
     public UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
     public string sceneName = "NextScene";
-    public string requiredTag = "Snappable";
 
     private void OnEnable()
     {
@@ -20,11 +20,12 @@ public class LoadSceneOnSnap : MonoBehaviour
 
     private void OnObjectSnapped(SelectEnterEventArgs args)
     {
-        GameObject snappedObject = args.interactableObject.transform.gameObject;
+        StartCoroutine(LoadAfterDelay());
+    }
 
-        if (snappedObject.CompareTag(requiredTag))
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+    private IEnumerator LoadAfterDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneName);
     }
 }
