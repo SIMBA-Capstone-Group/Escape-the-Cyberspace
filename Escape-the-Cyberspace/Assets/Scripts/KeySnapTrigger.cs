@@ -1,64 +1,54 @@
+using System.Collections;
 using UnityEngine;
 
-public class KeySnapTrigger : MonoBehaviour
+public class DoorUnlock : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private Transform objectToRotate;
-    [SerializeField] private Transform keyTransform;
+    public Transform door;              // Drag your door object here
+    public string keyObjectName = "DoorKey";
+    public Vector3 rotationAmount = new Vector3(0, -90, 0);
+    public float rotateDuration = 1f;
 
-    [Header("Rotation")]
-    [SerializeField] private float rotateAmount = -90f;
-    [SerializeField] private float rotateSpeed = 180f;
+    private bool hasOpened = false;
 
-    [Header("Snap Check")]
-    [SerializeField] private float requiredDistance = 0.05f;
-    [SerializeField] private string requiredTag = "Key";
-
-    private bool shouldRotate = false;
-    private bool hasActivated = false;
-    private Quaternion targetRotation;
-
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        if (objectToRotate != null)
-            targetRotation = objectToRotate.rotation;
-    }
+        if (hasOpened) return;
 
-    private void Update()
-    {
-        if (keyTransform == null || objectToRotate == null)
-            return;
-
-        Debug.Log("Distance: " + Vector3.Distance(keyTransform.position, transform.position));
-
-if (!hasActivated)
-{
-    float distance = Vector3.Distance(keyTransform.position, transform.position);
-
-    if (distance <= requiredDistance && keyTransform.CompareTag(requiredTag))
-    {
-        Debug.Log("Key inserted, starting rotation");
-        hasActivated = true;
-        shouldRotate = true;
-        targetRotation = objectToRotate.rotation * Quaternion.Euler(0f, rotateAmount, 0f);
-    }
-}
-
-        // Continue rotating until target is reached
-        if (shouldRotate)
+        if (other.gameObject.name == keyObjectName)
         {
-            Debug.Log("Rotating door...");
-            objectToRotate.rotation = Quaternion.RotateTowards(
-                objectToRotate.rotation,
-                targetRotation,
-                rotateSpeed * Time.deltaTime
-            );
+            hasOpened = true;
 
-            if (Quaternion.Angle(objectToRotate.rotation, targetRotation) < 0.1f)
+            // Snap key into place
+            other.transform.position = transform.position;
+            other.transform.rotation = transform.rotation;
+
+            // Optional: stop physics on key
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            if (rb != null)
             {
-                objectToRotate.rotation = targetRotation;
-                shouldRotate = false;
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
             }
+
+            StartCoroutine(RotateDoorSmooth());
         }
+    }
+
+    IEnumerator RotateDoorSmooth()
+    {
+        Quaternion startRotation = door.rotation;
+        Quaternion targetRotation = startRotation * Quaternion.Euler(rotationAmount);
+
+        float time = 0f;
+
+        while (time < rotateDuration)
+        {
+            door.rotation = Quaternion.Slerp(startRotation, targetRotation, time / rotateDuration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        door.rotation = targetRotation;
     }
 }
