@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class DoorUnlock : MonoBehaviour
 {
-    public Transform door;              // Drag your door object here
-    public string keyObjectName = "DoorKey";
+    public Transform door;
     public Vector3 rotationAmount = new Vector3(0, -90, 0);
     public float rotateDuration = 1f;
 
@@ -12,17 +11,19 @@ public class DoorUnlock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Triggered by: " + other.name);
+
         if (hasOpened) return;
 
-        if (other.gameObject.name == keyObjectName)
+        if (other.CompareTag("Key"))
         {
+            Debug.Log("Key entered snap point");
+
             hasOpened = true;
 
-            // Snap key into place
             other.transform.position = transform.position;
             other.transform.rotation = transform.rotation;
 
-            // Optional: stop physics on key
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null)
             {
@@ -37,6 +38,8 @@ public class DoorUnlock : MonoBehaviour
 
     IEnumerator RotateDoorSmooth()
     {
+        Debug.Log("Starting door rotation");
+
         Quaternion startRotation = door.rotation;
         Quaternion targetRotation = startRotation * Quaternion.Euler(rotationAmount);
 
@@ -50,5 +53,6 @@ public class DoorUnlock : MonoBehaviour
         }
 
         door.rotation = targetRotation;
+        Debug.Log("Door rotation complete");
     }
 }
