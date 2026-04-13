@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,6 +9,11 @@ namespace NavKeypad
 {
     public class Keypad : MonoBehaviour
     {
+        [Header("For SiMBA")]
+        public TextMeshProUGUI computerAtbash;
+        public int passwordLength = 4;
+        private string[] atbashTranslations = {"avil","lmv","gdl","gsivv","ulfi","urev","hrc","hvevm","vrtsg","mrmv"};
+
         [Header("Events")]
         [SerializeField] private UnityEvent onAccessGranted;
         [SerializeField] private UnityEvent onAccessDenied;
@@ -43,10 +49,47 @@ namespace NavKeypad
         private bool displayingResult = false;
         private bool accessWasGranted = false;
 
+        private double GeneratePassword()
+        {
+            double password = 0;
+            for(int i = 0; i < passwordLength; i++)
+            {
+                int chosenNumber = UnityEngine.Random.Range(0, atbashTranslations.Length);
+                password += chosenNumber * Math.Pow(10, i);
+
+            }
+
+            return password;
+        }
+
+        
+
+        private string ConvertToAtbashText(int combo)
+        {
+            string atbash = "";
+            int temp = 0 + combo;
+            for(int i = passwordLength; i > 0; i--)
+            {
+                int targetIndex = Convert.ToInt32(Math.Floor(temp / Math.Pow(10, i-1)));
+                Debug.Log(targetIndex);
+                temp -= targetIndex * Convert.ToInt32(Math.Pow(10, i-1));
+                atbash += " " + atbashTranslations[targetIndex];
+            }
+            return atbash;
+        }
+        public void Start()
+        {
+            keypadCombo = Convert.ToInt32(GeneratePassword());
+
+            string atbashedPassphrase = ConvertToAtbashText(keypadCombo);
+            Debug.Log(atbashedPassphrase);
+            computerAtbash.text = atbashedPassphrase;
+        }
         private void Awake()
         {
             ClearInput();
             panelMesh.material.SetVector("_EmissionColor", screenNormalColor * screenIntensity);
+
         }
 
 
