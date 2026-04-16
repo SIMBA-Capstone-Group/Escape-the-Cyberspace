@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+
 public class Doors : MonoBehaviour
 {
     public Transform rightDoorTransform;
@@ -7,6 +8,12 @@ public class Doors : MonoBehaviour
     public Transform leftDoorTransform;
     public Vector3 leftOpenOffset = new Vector3(0, 0, 0);
     public float openSpeed = 2f;
+
+    // Audio
+    [Header("Audio Settings")]
+    public AudioSource audioSource;
+    public AudioClip openSound;    
+    public AudioClip closeSound;   
 
     private Vector3 rightClosedPosition;
     private Vector3 leftClosedPosition;
@@ -23,6 +30,12 @@ public class Doors : MonoBehaviour
         leftClosedPosition = leftDoorTransform.position;
         rightOpenPosition = rightClosedPosition + rightOpenOffset;
         leftOpenPosition = leftClosedPosition + leftOpenOffset;
+
+        // Validation check to avoid errors if you forget to assign the AudioSource
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -60,6 +73,13 @@ public class Doors : MonoBehaviour
             Debug.Log("Door already open!");
             return;
         }
+
+        // Audio
+        if (audioSource != null && openSound != null)
+        {
+            audioSource.PlayOneShot(openSound);
+        }
+
         isOpening = true;
         isClosing = false;
         Debug.Log("Door opening!");
@@ -79,6 +99,13 @@ public class Doors : MonoBehaviour
             Debug.Log("Door already closed!");
             return;
         }
+
+        // Audio
+        if (audioSource != null && closeSound != null)
+        {
+            audioSource.PlayOneShot(closeSound);
+        }
+
         isClosing = true;
         isOpening = false;
         Debug.Log("Door closing!");
