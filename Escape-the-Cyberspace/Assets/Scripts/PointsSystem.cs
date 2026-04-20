@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
+using TMPro;
 
 public class PointsSystem : MonoBehaviour
 {
@@ -11,24 +12,32 @@ public class PointsSystem : MonoBehaviour
     public int ticksPerUpdate = 0;
     private int ticksToFrameUpdate;
     private string savePath;
-    private List<double> scoreHistory = new();
+    public Transform leaderboardLocation;
+    public GameObject leaderboardPrefab;
 
+    private ScoreData scores;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         savePath = Application.persistentDataPath + "/level" + levelNumber + "score.json";
         Debug.Log(savePath);
-        LoadScore(); // try loading first
+        scores = LoadScore(); // try loading first
 
-        isRunning = true;
+        
         if(startingPoints != 0)
         {
+            isRunning = true;
             scoredPoints += startingPoints;
         }
         else
         {
             Debug.Log("No starting value entered!");
+        }
+
+        if(leaderboardLocation != null)
+        {
+            GenerateLeaderboard();
         }
 
         ticksToFrameUpdate += ticksPerUpdate;
@@ -59,49 +68,99 @@ public class PointsSystem : MonoBehaviour
     public void stopScoring()
     {
         isRunning = false;
-        SaveScore();
+        SaveScore("default");
     }
 
-     public void SaveScore()
+    public void SaveScore(string playerName)
     {
-        scoreHistory.Add(scoredPoints);
-
-        ScoreData data = new ScoreData
+        ScoreEntry newEntry = new ScoreEntry
         {
-            currentScore = scoredPoints,
-            scoreHistory = scoreHistory.ToArray()
+            playerName = playerName,
+            score = scoredPoints
         };
 
-        string json = JsonUtility.ToJson(data, true);
+        scores.entries.Add(newEntry);
+
+        string json = JsonUtility.ToJson(scores, true);
         File.WriteAllText(savePath, json);
 
-        Debug.Log("Saved to: " + savePath);
+        Debug.Log("Saved score for: " + playerName);
     }
 
-    public void LoadScore()
+    public ScoreData LoadScore()
     {
         if (File.Exists(savePath))
         {
             string json = File.ReadAllText(savePath);
             ScoreData data = JsonUtility.FromJson<ScoreData>(json);
 
-            //scoredPoints = data.currentScore;
-            scoreHistory = data.scoreHistory != null 
-            ? new List<double>(data.scoreHistory) 
-            : new List<double>();
+            data.entries ??= new List<ScoreEntry>();
 
-            //Debug.Log("Loaded score: " + scoredPoints);
+            return data;
         }
-        else
+
+        return new ScoreData();
+    }
+
+    public List<ScoreEntry> GetTopScores(int count = 3)
+    {
+        // Sort descending by score
+        scores.entries.Sort((a, b) => b.score.CompareTo(a.score));
+
+        // Clamp in case there are fewer than 3
+        int take = Mathf.Min(count, scores.entries.Count);
+
+        return scores.entries.GetRange(0, take);
+    }
+
+    public void GenerateLeaderboard()
+    {
+        List<ScoreEntry> topScores = GetTopScores();
+
+        if (topScores == null || topScores.Count == 0)
         {
-            Debug.Log("No save file found.");
+            Debug.Log("Leaderboard is empty!");
+        }
+
+        int maxSlots = 3;
+
+        for (int i = 0; i < maxSlots; i++)
+        {
+            GameObject leaderboardInstance = Instantiate(leaderboardPrefab, leaderboardLocation);
+            if (i < topScores.Count)
+            {
+                // Set Text
+                TextMeshProUGUI textComponent = leaderboardInstance.GetComponentInChildren<TextMeshProUGUI>();
+                if (textComponent != null)
+                {
+                    leaderboardInstance.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = topScores[i].playerName;
+                    leaderboardInstance.transform.Find("Score").GetComponent<TextMeshProUGUI>().text = topScores[i].score.ToString("F1");
+                }           
+                Debug.Log($"{i + 1}. {topScores[i].playerName} - {topScores[i].score}");
+            }
+            else
+            {
+                TextMeshProUGUI textComponent = leaderboardInstance.GetComponentInChildren<TextMeshProUGUI>();
+                if (textComponent != null)
+                {
+                    leaderboardInstance.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "---";
+                    leaderboardInstance.transform.Find("Score").GetComponent<TextMeshProUGUI>().text = "---";
+                } 
+                Debug.Log($"{i + 1}. ---");
+            }
         }
     }
 }
 
 [System.Serializable]
+public class ScoreEntry
+{
+    public string playerName;
+    public double score;
+}
+
+[System.Serializable]
 public class ScoreData
 {
-    public double currentScore;
-    public double[] scoreHistory;
+    public List<ScoreEntry> entries = new();
 }

@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneFader : MonoBehaviour
 {
-    public Image fadeImage;
+    public Image[] fadeImage;
     public float fadeDuration = 1f;
 
     private void Start()
     {
         if (fadeImage != null)
         {
-            Color c = fadeImage.color;
+            Color c = fadeImage[0].color;
             c.a = 0f;
-            fadeImage.color = c;
+            fadeImage[0].color = c;
         }
     }
 
@@ -32,13 +32,16 @@ public class SceneFader : MonoBehaviour
     IEnumerator FadeAndLoad(string sceneName)
     {
         float time = 0f;
-        Color color = fadeImage.color;
+        Color color = fadeImage[0].color;
 
         while (time < fadeDuration)
         {
             time += Time.deltaTime;
             color.a = Mathf.Lerp(0f, 1f, time / fadeDuration);
-            fadeImage.color = color;
+            foreach(Image image in fadeImage)
+            {
+                image.color = color;
+            }
             yield return null;
         }
 
