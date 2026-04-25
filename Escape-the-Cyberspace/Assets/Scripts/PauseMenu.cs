@@ -13,6 +13,8 @@ public class VRPauseManager : MonoBehaviour
     public float menuDistance = 2f;
     public float menuHeightOffset = 0f;
 
+    public Behaviour[] handInteractionScripts;
+
     [Header("Pause Menu")]
     public GameObject pauseMenu;
 
