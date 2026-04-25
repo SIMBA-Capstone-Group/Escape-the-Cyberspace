@@ -59,7 +59,7 @@ public class VRPauseManager : MonoBehaviour
             xrCamera.position + forward * menuDistance + Vector3.up * menuHeightOffset;
 
         pauseMenu.transform.rotation =
-            Quaternion.LookRotation(forward);
+            Quaternion.LookRotation(-forward);
     }
 
     pauseMenu.SetActive(isPaused);
