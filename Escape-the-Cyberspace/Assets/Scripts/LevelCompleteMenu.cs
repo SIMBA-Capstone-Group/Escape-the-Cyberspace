@@ -26,7 +26,7 @@ public class LevelCompleteMenu : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ExitGame()
