@@ -69,6 +69,7 @@
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ArrayArrangement.cs" />
     <Compile Include="Assets\Scripts\KeySnap.cs" />
     <Compile Include="Assets\Scripts\UIPopup.cs" />
+    <Compile Include="Assets\OfficePause.cs" />
     <Compile Include="Assets\Models\ScifiOfficeLite\Scripts\DemoDoor.cs" />
     <Compile Include="Assets\Scripts\ChalkboardPuzzle.cs" />
     <Compile Include="Assets\Scripts\RFIDTagStorage.cs" />
