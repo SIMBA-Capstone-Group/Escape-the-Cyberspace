@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class VRPauseManager : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class VRPauseManager : MonoBehaviour
 
     [Header("Points System")]
     public PointsSystem pointsSystem;
+
+    [Header("Score UI")]
+    public TextMeshProUGUI scoreText;
 
     private bool isPaused = false;
 
@@ -66,6 +70,11 @@ public class VRPauseManager : MonoBehaviour
         }
 
         pauseMenu.SetActive(isPaused);
+
+        if (isPaused && scoreText != null && pointsSystem != null)
+        {
+            scoreText.text = "Score: " + pointsSystem.scoredPoints.ToString("F1");
+        }
 
         foreach (Behaviour script in locomotionScripts)
         {
