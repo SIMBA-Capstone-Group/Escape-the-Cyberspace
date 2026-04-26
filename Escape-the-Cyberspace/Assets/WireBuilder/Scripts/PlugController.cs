@@ -40,7 +40,7 @@ public class PlugController : MonoBehaviour
     private void Update()
     {
 
-        if (isConected)
+        if (isConnected)
         {
             endAnchorRB.isKinematic = true;
             endAnchor.transform.position = plugPosition.position;
