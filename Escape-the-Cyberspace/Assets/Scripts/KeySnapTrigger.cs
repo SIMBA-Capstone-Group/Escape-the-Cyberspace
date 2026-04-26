@@ -12,11 +12,12 @@ public class KeySnapTrigger : MonoBehaviour
         if (completed) return;
         completed = true;
 
-        pointsSystem.stopScoring();
+        if (pointsSystem != null)
+            pointsSystem.stopScoring();
 
-        levelCompleteUI.SetActive(true);
+        if (levelCompleteUI != null)
+            levelCompleteUI.SetActive(true);
 
-        // Optional:
         Time.timeScale = 0f;
     }
 }
