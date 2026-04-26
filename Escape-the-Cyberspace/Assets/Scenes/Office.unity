@@ -13906,6 +13906,7 @@ GameObject:
   - component: {fileID: 102977025}
   - component: {fileID: 102977026}
   - component: {fileID: 102977029}
+  - component: {fileID: 102977030}
   m_Layer: 6
   m_Name: EndAnchor(Clone)
   m_TagString: Untagged
@@ -14209,6 +14210,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &102977030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102977024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: Wire4
 --- !u!1 &103436833
 GameObject:
   m_ObjectHideFlags: 0
@@ -61753,7 +61767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -83263,7 +83277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -118756,7 +118770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -139334,11 +139348,11 @@ GameObject:
   - component: {fileID: 909889874}
   - component: {fileID: 909889876}
   - component: {fileID: 909889875}
-  - component: {fileID: 909889879}
   - component: {fileID: 909889878}
   - component: {fileID: 909889877}
+  - component: {fileID: 909889879}
   m_Layer: 0
-  m_Name: Wire_female
+  m_Name: Wire_female2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139494,29 +139508,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 909889873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e354cbc7ebdf624d850f4a8e189f505, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
+  m_EditorClassIdentifier: Assembly-CSharp::WireFemaleSocket
+  acceptedWireID: Wire3
+  snapPoint: {fileID: 0}
+  onCorrectWirePlugged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
+      m_Calls: []
 --- !u!1 &910057062
 GameObject:
   m_ObjectHideFlags: 0
@@ -144394,6 +144393,7 @@ GameObject:
   - component: {fileID: 942707959}
   - component: {fileID: 942707960}
   - component: {fileID: 942707963}
+  - component: {fileID: 942707964}
   m_Layer: 6
   m_Name: EndAnchor(Clone)
   m_TagString: Untagged
@@ -144697,6 +144697,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &942707964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942707958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: Wire1
 --- !u!1 &943354462
 GameObject:
   m_ObjectHideFlags: 0
@@ -147112,11 +147125,10 @@ GameObject:
   - component: {fileID: 960449516}
   - component: {fileID: 960449518}
   - component: {fileID: 960449517}
-  - component: {fileID: 960449521}
   - component: {fileID: 960449520}
   - component: {fileID: 960449519}
   m_Layer: 0
-  m_Name: Wire_female
+  m_Name: Wire_female1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147263,38 +147275,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16293709, y: 0.08212144, z: 0.122929}
   m_Center: {x: -0.0026057437, y: 0.0016939288, z: 0.0009746497}
---- !u!114 &960449521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960449515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
 --- !u!1 &960848342
 GameObject:
   m_ObjectHideFlags: 0
@@ -163513,7 +163493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -165819,6 +165799,7 @@ GameObject:
   - component: {fileID: 1101310898}
   - component: {fileID: 1101310899}
   - component: {fileID: 1101310902}
+  - component: {fileID: 1101310903}
   m_Layer: 6
   m_Name: EndAnchor(Clone)
   m_TagString: Untagged
@@ -166122,6 +166103,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &1101310903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101310897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: Wire3
 --- !u!1 &1103347779
 GameObject:
   m_ObjectHideFlags: 0
@@ -175245,7 +175239,6 @@ GameObject:
   - component: {fileID: 1174536594}
   - component: {fileID: 1174536596}
   - component: {fileID: 1174536595}
-  - component: {fileID: 1174536599}
   - component: {fileID: 1174536598}
   - component: {fileID: 1174536597}
   m_Layer: 0
@@ -175396,38 +175389,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16293709, y: 0.08212144, z: 0.122929}
   m_Center: {x: -0.0013040676, y: 0.0028307086, z: 0.0014629309}
---- !u!114 &1174536599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174536593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
 --- !u!1 &1175027876
 GameObject:
   m_ObjectHideFlags: 0
@@ -184469,7 +184430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -193801,11 +193762,10 @@ GameObject:
   - component: {fileID: 1294476579}
   - component: {fileID: 1294476581}
   - component: {fileID: 1294476580}
-  - component: {fileID: 1294476584}
   - component: {fileID: 1294476583}
   - component: {fileID: 1294476582}
   m_Layer: 0
-  m_Name: Wire_female
+  m_Name: Wire_female2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193952,38 +193912,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16293709, y: 0.08212144, z: 0.122929}
   m_Center: {x: -0.0000017358899, y: 0.00218221, z: 0.0021152443}
---- !u!114 &1294476584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294476578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
 --- !u!1 &1298267521
 GameObject:
   m_ObjectHideFlags: 0
@@ -201899,7 +201827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -220873,7 +220801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -225544,11 +225472,11 @@ GameObject:
   - component: {fileID: 1514217228}
   - component: {fileID: 1514217230}
   - component: {fileID: 1514217229}
-  - component: {fileID: 1514217233}
   - component: {fileID: 1514217232}
   - component: {fileID: 1514217231}
+  - component: {fileID: 1514217233}
   m_Layer: 0
-  m_Name: Wire_female
+  m_Name: Wire_female4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225704,29 +225632,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1514217227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e354cbc7ebdf624d850f4a8e189f505, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
+  m_EditorClassIdentifier: Assembly-CSharp::WireFemaleSocket
+  acceptedWireID: Wire1
+  snapPoint: {fileID: 0}
+  onCorrectWirePlugged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
+      m_Calls: []
 --- !u!1 &1514263629
 GameObject:
   m_ObjectHideFlags: 0
@@ -247258,11 +247171,11 @@ GameObject:
   - component: {fileID: 1652172085}
   - component: {fileID: 1652172087}
   - component: {fileID: 1652172086}
-  - component: {fileID: 1652172090}
   - component: {fileID: 1652172089}
   - component: {fileID: 1652172088}
+  - component: {fileID: 1652172090}
   m_Layer: 0
-  m_Name: Wire_female
+  m_Name: Wire_female1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247418,29 +247331,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1652172084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e354cbc7ebdf624d850f4a8e189f505, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
+  m_EditorClassIdentifier: Assembly-CSharp::WireFemaleSocket
+  acceptedWireID: Wire2
+  snapPoint: {fileID: 0}
+  onCorrectWirePlugged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
+      m_Calls: []
 --- !u!1 &1655633533
 GameObject:
   m_ObjectHideFlags: 0
@@ -289112,7 +289010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConected: 0
+  isConnected: 0
   OnWirePlugged:
     m_PersistentCalls:
       m_Calls: []
@@ -294440,7 +294338,6 @@ GameObject:
   - component: {fileID: 1933832964}
   - component: {fileID: 1933832966}
   - component: {fileID: 1933832965}
-  - component: {fileID: 1933832969}
   - component: {fileID: 1933832968}
   - component: {fileID: 1933832967}
   m_Layer: 0
@@ -294591,38 +294488,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16293709, y: 0.08212144, z: 0.122929}
   m_Center: {x: -0.001954861, y: 0.0028307086, z: 0.0013008063}
---- !u!114 &1933832969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933832963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
 --- !u!1 &1935643717
 GameObject:
   m_ObjectHideFlags: 0
@@ -308134,11 +307999,11 @@ GameObject:
   - component: {fileID: 2022919786}
   - component: {fileID: 2022919788}
   - component: {fileID: 2022919787}
-  - component: {fileID: 2022919791}
   - component: {fileID: 2022919790}
   - component: {fileID: 2022919789}
+  - component: {fileID: 2022919791}
   m_Layer: 0
-  m_Name: Wire_female
+  m_Name: Wire_female3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308294,29 +308159,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022919785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dec0f85036a2b64dbf7555e2d70c96b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e354cbc7ebdf624d850f4a8e189f505, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlugController
-  isConected: 0
-  OnWirePlugged:
+  m_EditorClassIdentifier: Assembly-CSharp::WireFemaleSocket
+  acceptedWireID: Wire4
+  snapPoint: {fileID: 0}
+  onCorrectWirePlugged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plugPosition: {fileID: 0}
-  endAnchor: {fileID: 0}
-  endAnchorRB: {fileID: 0}
-  wireController: {fileID: 0}
+      m_Calls: []
 --- !u!1 &2023580350
 GameObject:
   m_ObjectHideFlags: 0
@@ -320885,6 +320735,7 @@ GameObject:
   - component: {fileID: 2119014093}
   - component: {fileID: 2119014094}
   - component: {fileID: 2119014097}
+  - component: {fileID: 2119014098}
   m_Layer: 6
   m_Name: EndAnchor(Clone)
   m_TagString: Untagged
@@ -321188,6 +321039,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &2119014098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119014092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: Wire2
 --- !u!54 &2122048465
 Rigidbody:
   m_ObjectHideFlags: 0
