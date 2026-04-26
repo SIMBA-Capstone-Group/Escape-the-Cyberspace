@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class PlugController : MonoBehaviour
 {
-    public bool isConected = false;
+    public bool isConnected = false;
     public UnityEvent OnWirePlugged;
     public Transform plugPosition;
 
@@ -27,7 +27,7 @@ public class PlugController : MonoBehaviour
         Debug.Log(other.name);
         if (other.gameObject == endAnchor.gameObject)
         {
-            isConected = true;
+            isConnected = true;
             endAnchorRB.isKinematic = true;
             endAnchor.transform.position = plugPosition.position;
             endAnchor.transform.rotation = transform.rotation;
