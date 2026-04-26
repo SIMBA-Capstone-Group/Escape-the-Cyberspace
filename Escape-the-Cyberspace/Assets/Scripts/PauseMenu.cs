@@ -52,6 +52,14 @@ public class VRPauseManager : MonoBehaviour
         }
     }
 
+    public void ResumeGame()
+    {
+        if (isPaused)
+        {
+            TogglePause();
+        }
+    }
+
     void TogglePause()
     {
         isPaused = !isPaused;
