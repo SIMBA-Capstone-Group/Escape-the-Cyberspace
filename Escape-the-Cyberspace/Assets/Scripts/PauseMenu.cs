@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class VRPauseManager : MonoBehaviour
 {
@@ -30,6 +32,12 @@ public class VRPauseManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
 
     private bool isPaused = false;
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
 
     void OnEnable()
     {
