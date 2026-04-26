@@ -1,31 +1,22 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.XR.Interaction.Toolkit;
 
-public class LoadSceneOnSnap : MonoBehaviour
+public class KeySnapTrigger : MonoBehaviour
 {
-    public UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
-    public string sceneName = "NextScene";
+    public GameObject levelCompleteUI;
+    public PointsSystem pointsSystem;
 
-    private void OnEnable()
-    {
-        socket.selectEntered.AddListener(OnObjectSnapped);
-    }
+    private bool completed = false;
 
-    private void OnDisable()
+    public void OnKeySnapped()
     {
-        socket.selectEntered.RemoveListener(OnObjectSnapped);
-    }
+        if (completed) return;
+        completed = true;
 
-    private void OnObjectSnapped(SelectEnterEventArgs args)
-    {
-        StartCoroutine(LoadAfterDelay());
-    }
+        pointsSystem.stopScoring();
 
-    private IEnumerator LoadAfterDelay()
-    {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(sceneName);
+        levelCompleteUI.SetActive(true);
+
+        // Optional:
+        Time.timeScale = 0f;
     }
 }

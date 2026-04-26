@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\IsCorrectPassword.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SnapToPoint.cs" />
+    <Compile Include="Assets\Scripts\LevelCompleteMenu.cs" />
     <Compile Include="Assets\Scripts\ChangeText.cs" />
     <Compile Include="Assets\Scripts\SceneFade.cs" />
     <Compile Include="Assets\Scripts\CheeseNoteTeleporter.cs" />
