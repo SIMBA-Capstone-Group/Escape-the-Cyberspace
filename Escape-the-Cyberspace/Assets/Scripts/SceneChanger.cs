@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TrapDoorTransition : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad = "Laboratory";
-    [SerializeField] private CanvasGroup fadeCanvas;
+    public Image fadeImage;
     [SerializeField] private float fadeDuration = 1f;
     [SerializeField] private MonoBehaviour playerMovementScript;
     [SerializeField] private GameObject loadingText;
@@ -14,8 +15,12 @@ public class TrapDoorTransition : MonoBehaviour
 
     private void Start()
     {
-        if (fadeCanvas != null)
-            fadeCanvas.alpha = 0f;
+        if (fadeImage != null)
+        {
+            Color c = fadeImage.color;
+            c.a = 0f;
+            fadeImage.color = c;
+        }
 
         if (loadingText != null)
             loadingText.SetActive(false);
@@ -49,10 +54,12 @@ public class TrapDoorTransition : MonoBehaviour
 
         // Fade to black
         float t = 0f;
+        Color color = fadeImage.color;
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            fadeCanvas.alpha = Mathf.Clamp01(t / fadeDuration);
+            color.a = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            fadeImage.color = color;
             yield return null;
         }
 
