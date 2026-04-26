@@ -22903,6 +22903,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880f5cf23bdec1948aec4dda4f50fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  primaryButtonLeft:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Primary Button Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4214e506-de7d-442b-99e7-8aa346433959
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 541d90b1-d226-4055-9bf0-f01e3351083b
+        m_Path: <XRController>{LeftHand}/primaryButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Primary Button Left
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  primaryButtonRight:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Primary Button Right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 30d81103-5d48-4e4d-b8d4-214c85dc3fcd
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 8f9dcdec-f2ba-4e04-95de-1087dd960747
+        m_Path: <XRController>{RightHand}/primaryButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Primary Button Right
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  xrCamera: {fileID: 1838692241}
+  menuDistance: 2
+  menuHeightOffset: 0
+  handInteractionScripts: []
+  pauseMenu: {fileID: 0}
+  locomotionScripts: []
+  pointsSystem: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!1 &2005180565
 GameObject:
   m_ObjectHideFlags: 0

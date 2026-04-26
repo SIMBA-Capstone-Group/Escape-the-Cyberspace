@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 
-public class VRPauseManager : MonoBehaviour
+public class VROfficePauseManager : MonoBehaviour
 {
     [Header("Input Actions")]
     public InputActionProperty primaryButtonLeft;
