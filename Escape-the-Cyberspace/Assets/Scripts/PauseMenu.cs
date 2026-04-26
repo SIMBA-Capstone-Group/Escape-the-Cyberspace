@@ -5,22 +5,25 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class VRPauseManager : MonoBehaviour
 {
     [Header("Input Actions")]
-    public InputActionProperty primaryButtonLeft;   // X button
-    public InputActionProperty primaryButtonRight;  // A button
+    public InputActionProperty primaryButtonLeft;
+    public InputActionProperty primaryButtonRight;
 
     [Header("Menu Positioning")]
     public Transform xrCamera;
     public float menuDistance = 2f;
     public float menuHeightOffset = 0f;
 
+    [Header("Interaction Scripts")]
     public Behaviour[] handInteractionScripts;
 
     [Header("Pause Menu")]
     public GameObject pauseMenu;
 
     [Header("Locomotion Providers")]
-    public Behaviour[] locomotionScripts; 
-    // Drag your move/turn providers here in inspector
+    public Behaviour[] locomotionScripts;
+
+    [Header("Points System")]
+    public PointsSystem pointsSystem;
 
     private bool isPaused = false;
 
@@ -46,36 +49,41 @@ public class VRPauseManager : MonoBehaviour
     }
 
     void TogglePause()
-{
-    isPaused = !isPaused;
-
-    if (isPaused)
     {
-        Vector3 forward = xrCamera.forward;
-        forward.y = 0f;
-        forward.Normalize();
+        isPaused = !isPaused;
 
-        pauseMenu.transform.position =
-            xrCamera.position + forward * menuDistance + Vector3.up * menuHeightOffset;
+        if (isPaused)
+        {
+            Vector3 forward = xrCamera.forward;
+            forward.y = 0f;
+            forward.Normalize();
+
+            pauseMenu.transform.position =
+                xrCamera.position + forward * menuDistance + Vector3.up * menuHeightOffset;
 
             pauseMenu.transform.rotation =
-        Quaternion.LookRotation(-forward) * Quaternion.Euler(0f, 180f, 0f);
+                Quaternion.LookRotation(-forward) * Quaternion.Euler(0f, 180f, 0f);
         }
 
-    pauseMenu.SetActive(isPaused);
+        pauseMenu.SetActive(isPaused);
 
-    foreach (Behaviour script in locomotionScripts)
-    {
-        if (script != null)
-            script.enabled = !isPaused;
+        foreach (Behaviour script in locomotionScripts)
+        {
+            if (script != null)
+                script.enabled = !isPaused;
+        }
+
+        foreach (Behaviour script in handInteractionScripts)
+        {
+            if (script != null)
+                script.enabled = !isPaused;
+        }
+
+        if (pointsSystem != null)
+        {
+            pointsSystem.isRunning = !isPaused;
+        }
+
+        Time.timeScale = isPaused ? 0f : 1f;
     }
-
-    foreach (Behaviour script in handInteractionScripts)
-    {
-        if (script != null)
-            script.enabled = !isPaused;
-    }
-
-    Time.timeScale = isPaused ? 0f : 1f;
-}
 }
