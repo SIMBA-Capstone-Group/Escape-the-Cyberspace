@@ -8,14 +8,13 @@ public class WireFemaleSocket : MonoBehaviour
     public string acceptedWireID;
     public Transform snapPoint;
     public UnityEvent onCorrectWirePlugged;
+    public bool isCorrect = false;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
-    private bool isConnected = false;
 
     public void OnPluggedIn(SelectEnterEventArgs args)
     {
         Debug.Log("Plugged in!");
-        if (isConnected) return;
 
         var go = args.interactableObject.transform.gameObject;
         WireMalePlug malePlug = go.GetComponentInParent<WireMalePlug>();
@@ -29,14 +28,19 @@ public class WireFemaleSocket : MonoBehaviour
 
         if (malePlug.wireID == acceptedWireID)
         {
-            isConnected = true;
-
-
+            isCorrect = true;
             Debug.Log("Correct wire connected: " + malePlug.wireID); 
         }
         else
         {
+            isCorrect = false;
             Debug.Log("Wrong wire. Needed: " + acceptedWireID + ", got: " + malePlug.wireID);
         }
+    }
+
+    public void OnUnplug()
+    {
+        Debug.Log("Unplugged wire");
+        isCorrect = false;
     }
 }
