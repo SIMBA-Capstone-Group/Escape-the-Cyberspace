@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6447687921033170271, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: acceptedWireID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6560384887101544735, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2315,6 +2319,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 619916670840784063, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1590091735}
+    - targetCorrespondingSourceObject: {fileID: 619916670840784063, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1590091736}
     - targetCorrespondingSourceObject: {fileID: 3324701344483919317, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1031983451}
@@ -2324,6 +2331,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7376171714283706834, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 331083924}
+    - targetCorrespondingSourceObject: {fileID: 7376171714283706834, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 331083925}
   m_SourcePrefab: {fileID: 100100000, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
 --- !u!1 &230380878 stripped
 GameObject:
@@ -3611,6 +3621,54 @@ MonoBehaviour:
   onCorrectWirePlugged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &331083925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230380878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_Handedness: 0
+  m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_ShowInteractableHoverMeshes: 1
+  m_InteractableHoverMeshMaterial: {fileID: 0}
+  m_InteractableCantHoverMeshMaterial: {fileID: 0}
+  m_SocketActive: 1
+  m_InteractableHoverScale: 1
+  m_RecycleDelayTime: 1
+  m_HoverSocketSnapping: 0
+  m_SocketSnappingRadius: 0.1
+  m_SocketScaleMode: 0
+  m_FixedScale: {x: 1, y: 1, z: 1}
+  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
 --- !u!114 &332406503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19960,6 +20018,54 @@ MonoBehaviour:
   onCorrectWirePlugged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1590091736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230380879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_Handedness: 0
+  m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_ShowInteractableHoverMeshes: 1
+  m_InteractableHoverMeshMaterial: {fileID: 0}
+  m_InteractableCantHoverMeshMaterial: {fileID: 0}
+  m_SocketActive: 1
+  m_InteractableHoverScale: 1
+  m_RecycleDelayTime: 1
+  m_HoverSocketSnapping: 0
+  m_SocketSnappingRadius: 0.1
+  m_SocketScaleMode: 0
+  m_FixedScale: {x: 1, y: 1, z: 1}
+  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
 --- !u!54 &1591636442
 Rigidbody:
   m_ObjectHideFlags: 0
