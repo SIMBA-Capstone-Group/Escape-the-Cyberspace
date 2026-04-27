@@ -137,12 +137,20 @@ public class WireController : MonoBehaviour
                 //Instantiate new segment.
                 Transform newSegment = Instantiate(segment, segments[lastSegment].position + (segments[lastSegment].forward * segmentsSeparation), segments[lastSegment].rotation, transform);
                 newSegment.GetComponent<ConfigurableJoint>().connectedBody = segments[lastSegment].GetComponent<Rigidbody>();
+                
+                // FIXED: Dynamically correct the rotation to prevent overshoot drift
+                newSegment.LookAt(selectPosition);
+
                 segments.Add(newSegment);
             }
             else
             {
                 //Instantiate new segment.
                 Transform newSegment = Instantiate(segmentNoPhysics, segments[lastSegment].position + (segments[lastSegment].forward * segmentsSeparation), segments[lastSegment].rotation, transform);
+                
+                // FIXED: Dynamically correct the rotation to prevent overshoot drift
+                newSegment.LookAt(selectPosition);
+
                 segments.Add(newSegment);
             }
             #region Undo
@@ -191,6 +199,10 @@ public class WireController : MonoBehaviour
         #region undo
         undoCount = 0;
         #endregion
+
+        // FIXED: Reset the infinite loop failsafe on every new segment batch
+        limit = 0;
+
         if (firstSegment == null)
         {
 
@@ -423,7 +435,7 @@ public class WireController : MonoBehaviour
         }
     }
 
-        public void RenderWireMesh()
+    public void RenderWireMesh()
     {
         /// <summary>
         /// For more wire render settings see TubeRender.cs.
