@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro; // <-- Added this to read the Sticky Note!
 
 // same as LoginManager script, but used for the printer computer in lvl 2
 
@@ -10,7 +11,11 @@ public class LoginManagerPrinter : MonoBehaviour, IPointerClickHandler
     public InputField passwordInputField;
     public GameObject[] poweredOnScreens;
     public GameObject loginScreen;
-    public string correctPassword = "BadPassword123";
+    
+    [Header("Password Setup")]
+    [Tooltip("Drag the TextMeshPro object of the sticky note you want this computer to use.")]
+    public TMP_Text linkedStickyNote; // <-- Replaced the hardcoded string with this!
+
     public KeyboardPlacementCheck KeyboardListener;
 
     [Header("Printer Settings")]
@@ -29,6 +34,15 @@ public class LoginManagerPrinter : MonoBehaviour, IPointerClickHandler
     public void ValidatePassword()
     {
         Debug.Log(passwordInputField.text);
+        
+        // Grab the text straight from the sticky note and remove any hidden spaces
+        string correctPassword = "";
+        if (linkedStickyNote != null)
+        {
+            correctPassword = linkedStickyNote.text.Trim();
+        }
+
+        // Check the player's input against the sticky note
         if (passwordInputField.text == correctPassword)
         {
             // print paper at printer
