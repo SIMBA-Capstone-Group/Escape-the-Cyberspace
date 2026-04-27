@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 
-// This creates a custom block in the Inspector where you can name the group and add its passwords
 [System.Serializable]
 public class PasswordPool
 {
@@ -35,47 +34,29 @@ public class PasswordNoteManager : MonoBehaviour
             Debug.LogWarning($"You have {stickyNotes.Count} sticky notes but {passwordPools.Count} password pools.");
         }
 
-        List<string> chosenPasswords = new List<string>();
-
-        foreach (PasswordPool pool in passwordPools)
-        {
-            if (pool.passwords != null && pool.passwords.Count > 0)
-            {
-                int randomIndex = Random.Range(0, pool.passwords.Count);
-                chosenPasswords.Add(pool.passwords[randomIndex]);
-            }
-        }
-
-        ShuffleList(chosenPasswords);
-
-        int notesToFill = Mathf.Min(stickyNotes.Count, chosenPasswords.Count);
+        // We only loop up to the smallest list to prevent errors
+        int notesToFill = Mathf.Min(stickyNotes.Count, passwordPools.Count);
 
         for (int i = 0; i < notesToFill; i++)
         {
-            if (stickyNotes[i] != null)
+            PasswordPool pool = passwordPools[i];
+            TMP_Text note = stickyNotes[i];
+
+            // Make sure the note exists and the pool actually has passwords inside it
+            if (note != null && pool.passwords != null && pool.passwords.Count > 0)
             {
-                // 1. Assign the password
-                stickyNotes[i].text = chosenPasswords[i];
+                // 1. Pick a random password from THIS specific pool
+                int randomIndex = Random.Range(0, pool.passwords.Count);
+                string selectedPassword = pool.passwords[randomIndex];
 
-                // 2. Turn on Auto Sizing via script
-                stickyNotes[i].enableAutoSizing = true;
+                // 2. Assign it directly to the matching sticky note
+                note.text = selectedPassword;
 
-                // 3. Set your Min and Max font sizes (adjust these numbers to fit your specific VR scale)
-                stickyNotes[i].fontSizeMin = 2f;
-                stickyNotes[i].fontSizeMax = 26f;
+                // 3. Turn on Auto Sizing via script
+                note.enableAutoSizing = true;
+                note.fontSizeMin = 2f;
+                note.fontSizeMax = 26f;
             }
-        }
-    }
-
-    // Helper function to shuffle the list
-    void ShuffleList(List<string> list)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            string temp = list[i];
-            int randomIndex = Random.Range(i, list.Count);
-            list[i] = list[randomIndex];
-            list[randomIndex] = temp;
         }
     }
 }
