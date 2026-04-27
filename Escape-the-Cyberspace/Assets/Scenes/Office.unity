@@ -143,6 +143,34 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 594043097624669954, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 594043097624669954, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594043097624669954, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1095403674}
+    - target: {fileID: 594043097624669954, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 594043097624669954, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPluggedIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 594043097624669954, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 594043097624669954, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 607691890745317666, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: wireID
       value: 1
@@ -174,6 +202,34 @@ PrefabInstance:
     - target: {fileID: 1760532758200473220, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840750420789831341, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840750420789831341, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840750420789831341, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1600059263}
+    - target: {fileID: 1840750420789831341, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840750420789831341, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPluggedIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840750420789831341, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840750420789831341, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2272677077696368721, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
@@ -291,6 +347,34 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5542117733349548393, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542117733349548393, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542117733349548393, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 271081034}
+    - target: {fileID: 5542117733349548393, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542117733349548393, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPluggedIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542117733349548393, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542117733349548393, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5648137761964872576, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -334,6 +418,34 @@ PrefabInstance:
     - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091069387}
+    - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPluggedIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221888802715766274, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7728972751130590767, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Name
@@ -2059,6 +2171,34 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1042842987971811240, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042842987971811240, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042842987971811240, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1548835539}
+    - target: {fileID: 1042842987971811240, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042842987971811240, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPluggedIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042842987971811240, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042842987971811240, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1126611384018756992, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2175,6 +2315,34 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3703984908081228928, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703984908081228928, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703984908081228928, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 230380889}
+    - target: {fileID: 3703984908081228928, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703984908081228928, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPluggedIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703984908081228928, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703984908081228928, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3719375086989999250, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2213,11 +2381,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2226,7 +2394,7 @@ PrefabInstance:
     - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 331083924}
     - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2237,7 +2405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopCoroutine
+      value: OnPluggedIn
       objectReference: {fileID: 0}
     - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -16175,7 +16343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1303974441}
-  - component: {fileID: 1303974440}
+  - component: {fileID: 1303974442}
   m_Layer: 0
   m_Name: ServerWireListener
   m_TagString: Untagged
@@ -16183,27 +16351,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1303974440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303974439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c1725d60ce260c4e8308ed3abaef759, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  sockets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 271081033}
-  - {fileID: 0}
-  - {fileID: 121841679}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1303974441
 Transform:
   m_ObjectHideFlags: 0
@@ -16219,6 +16366,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303974442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303974439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e348d1b4d40b244e8e5ecdba9d754d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1304609265
 PrefabInstance:
   m_ObjectHideFlags: 0
