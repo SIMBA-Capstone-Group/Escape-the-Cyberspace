@@ -1654,7 +1654,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253116467}
   m_LocalRotation: {x: 0.65070003, y: 0.017437385, z: -0.020335922, w: 0.75886214}
-  m_LocalPosition: {x: 0, y: 0, z: 0.025924683}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0101}
   m_LocalScale: {x: 0.006603759, y: 0.010686492, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1662,8 +1662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 81.224, y: 0, z: -3.07}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.017700195, y: 0.0121}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 0.0023, y: 0.0111}
+  m_SizeDelta: {x: 15.61094, y: 8.12202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253116469
 MonoBehaviour:
@@ -1721,8 +1721,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -2905,7 +2905,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363094359}
   m_LocalRotation: {x: 0.65070003, y: 0.017437385, z: -0.020335922, w: 0.75886214}
-  m_LocalPosition: {x: 0, y: 0, z: 0.025924683}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0124}
   m_LocalScale: {x: 0.006603759, y: 0.010686492, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2913,8 +2913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 81.224, y: 0, z: -3.07}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.017700195, y: 0.0121}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 0.0029, y: 0.013}
+  m_SizeDelta: {x: 15.73167, y: 10.86602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &363094361
 MonoBehaviour:
@@ -2972,8 +2972,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -5394,7 +5394,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566167223}
   m_LocalRotation: {x: 0.65070003, y: 0.017437385, z: -0.020335922, w: 0.75886214}
-  m_LocalPosition: {x: 0, y: 0, z: 0.025924683}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0126}
   m_LocalScale: {x: 0.006603759, y: 0.010686492, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5402,8 +5402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 81.224, y: 0, z: -3.07}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.017700195, y: 0.0121}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 0.0019, y: 0.0129}
+  m_SizeDelta: {x: 15.4273, y: 7.61349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566167225
 MonoBehaviour:
@@ -5459,8 +5459,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -10938,7 +10938,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960848342}
   m_LocalRotation: {x: 0.65070003, y: 0.017437385, z: -0.020335922, w: 0.75886214}
-  m_LocalPosition: {x: 0, y: 0, z: 0.025924683}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01}
   m_LocalScale: {x: 0.006603759, y: 0.010686492, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10946,8 +10946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 81.224, y: 0, z: -3.07}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.017700195, y: 0.0121}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 0.0041, y: 0.0118}
+  m_SizeDelta: {x: 16.13646, y: 8.09758}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960848344
 MonoBehaviour:
@@ -11005,8 +11005,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -12497,7 +12497,7 @@ Transform:
   m_GameObject: {fileID: 1141951007}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.711, y: 0.048999995, z: -23.859}
+  m_LocalPosition: {x: -0.2841406, y: -1.31708, z: -17.9448}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12506,7 +12506,7 @@ Transform:
   - {fileID: 780041923}
   - {fileID: 88838186}
   - {fileID: 1087444811}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1656323631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1143925817
 PrefabInstance:
@@ -15575,6 +15575,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: linkedStickyNote
+      value: 
+      objectReference: {fileID: 1874358068}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: 'poweredOnScreens.Array.data[0]'
       value: 
       objectReference: {fileID: 1358527414}
@@ -15614,6 +15618,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: linkedStickyNote
+      value: 
+      objectReference: {fileID: 960848344}
     - target: {fileID: 1864050447719727711, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_Texture
       value: 
@@ -15630,6 +15638,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: linkedStickyNote
+      value: 
+      objectReference: {fileID: 566167225}
     - target: {fileID: 4383293711669528158, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.4
@@ -15735,6 +15747,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: linkedStickyNote
+      value: 
+      objectReference: {fileID: 363094361}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: 'poweredOnScreens.Array.data[0]'
       value: 
       objectReference: {fileID: 1930857064}
@@ -15805,7 +15821,7 @@ MonoBehaviour:
   - {fileID: 1839800881}
   - {fileID: 1026845832}
   loginScreen: {fileID: 1370035980}
-  correctPassword: pass
+  linkedStickyNote: {fileID: 253116469}
   KeyboardListener: {fileID: 0}
   paperObject: {fileID: 1398115583}
   printerSpawnPoint: {fileID: 1520136035}
@@ -18596,8 +18612,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656323631}
+  - component: {fileID: 1656323632}
   m_Layer: 0
-  m_Name: PW Notes
+  m_Name: StickyNotes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18620,8 +18637,54 @@ Transform:
   - {fileID: 1365561800}
   - {fileID: 1832464159}
   - {fileID: 425392817}
+  - {fileID: 1141951008}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656323632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656323630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc34ab002799674684c763fb2475619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PasswordNoteManager
+  stickyNotes:
+  - {fileID: 566167225}
+  - {fileID: 363094361}
+  - {fileID: 253116469}
+  - {fileID: 1874358068}
+  - {fileID: 960848344}
+  passwordPools:
+  - poolName: theFalkenMan's StickyNote Password
+    passwords:
+    - Professor_F
+    - TicTacT0e!
+    - Falken101
+  - poolName: notEnoughCaffine's StickyNote Password
+    passwords:
+    - redbullFan1
+    - DecafisaLie
+    - Mug=Empty
+  - poolName: cheeseFritters StickyNote Password
+    passwords:
+    - PacketOfCheese
+    - GoudaRouter!
+    - BrieAndBandwidth
+  - poolName: idonthaveanything StickyNote Password
+    passwords:
+    - Password1234
+    - AdminPleaseHelp
+    - QWERTY
+  - poolName: duckDuckDuck StickyNote Password
+    passwords:
+    - duck_111
+    - uglyDuckling
+    - Quack123
+    - Quack_Attack!
 --- !u!114 &1695444361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21938,7 +22001,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874358066}
   m_LocalRotation: {x: 0.65070003, y: 0.017437385, z: -0.020335922, w: 0.75886214}
-  m_LocalPosition: {x: 0, y: 0, z: 0.025924683}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0076}
   m_LocalScale: {x: 0.006603759, y: 0.010686492, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21946,8 +22009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 81.224, y: 0, z: -3.07}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.017700195, y: 0.0121}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 0.0029, y: 0.0132}
+  m_SizeDelta: {x: 15.81072, y: 8.52815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874358068
 MonoBehaviour:
@@ -22005,8 +22068,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -28313,10 +28376,10 @@ SceneRoots:
   - {fileID: 438419453}
   - {fileID: 943501317}
   - {fileID: 409342802}
-  - {fileID: 1141951008}
   - {fileID: 1492152724}
   - {fileID: 2130845160}
   - {fileID: 1370035976}
   - {fileID: 1656323631}
   - {fileID: 313145456}
   - {fileID: 2133522625}
+  - {fileID: 105690294}
