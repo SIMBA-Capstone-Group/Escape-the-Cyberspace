@@ -35,8 +35,7 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
         string correctPassword = "";
         if (linkedStickyNote != null)
         {
-            correctPassword = linkedStickyNote.text.Replace("\u200B", "").Trim();
-        }
+correctPassword = linkedStickyNote.text.Replace("\u200B", "").Trim();        }
 
         // Now we compare what the player typed to the sticky note's text
         if (passwordInputField.text == correctPassword)
