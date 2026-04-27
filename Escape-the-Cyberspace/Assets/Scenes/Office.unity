@@ -319,6 +319,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 956822199}
+    - target: {fileID: 7053752960217816848, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: acceptedWireID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7196629333903281598, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
       value: 0

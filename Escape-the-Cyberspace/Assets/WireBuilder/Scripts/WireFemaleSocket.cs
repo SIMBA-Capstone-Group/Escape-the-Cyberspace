@@ -12,22 +12,7 @@ public class WireFemaleSocket : MonoBehaviour
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
     private bool isConnected = false;
 
-    private void Awake()
-    {
-        socket = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
-    }
-
-    private void OnEnable()
-    {
-        socket.selectEntered.AddListener(OnPluggedIn);
-    }
-
-    private void OnDisable()
-    {
-        socket.selectEntered.RemoveListener(OnPluggedIn);
-    }
-
-    private void OnPluggedIn(SelectEnterEventArgs args)
+    public void OnPluggedIn(SelectEnterEventArgs args)
     {
         Debug.Log("Plugged in!");
         if (isConnected) return;
@@ -46,13 +31,6 @@ public class WireFemaleSocket : MonoBehaviour
         {
             isConnected = true;
 
-            // if (snapPoint != null)
-            // {
-            //     malePlug.transform.position = snapPoint.position;
-            //     malePlug.transform.rotation = snapPoint.rotation;
-            // }
-
-            //onCorrectWirePlugged.Invoke();
 
             Debug.Log("Correct wire connected: " + malePlug.wireID); 
         }
