@@ -20,14 +20,14 @@ public class ManualElevatorCloser : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // VR Troubleshooting: Make sure your VR CameraRig or Hands have the "Player" tag!
+        // Check for Player tag
         if (other.CompareTag("Player") && !hasTriggered)
         {
             if (audioSource && closeSound) audioSource.PlayOneShot(closeSound);
             
             isClosing = true;
             hasTriggered = true;
-            Debug.Log("Player hit the trigger! Moving doors to targets.");
+            Debug.Log("Player detected! Closing doors to local targets.");
         }
     }
 
@@ -35,17 +35,17 @@ public class ManualElevatorCloser : MonoBehaviour
     {
         if (isClosing)
         {
-            // Move the real doors toward the positions of the Empty Object targets
-            rightDoor.position = Vector3.Lerp(rightDoor.position, rightDoorTarget.position, Time.deltaTime * closeSpeed);
-            leftDoor.position = Vector3.Lerp(leftDoor.position, leftDoorTarget.position, Time.deltaTime * closeSpeed);
+            // Move using localPosition so they stay relative to the elevator
+            rightDoor.localPosition = Vector3.Lerp(rightDoor.localPosition, rightDoorTarget.localPosition, Time.deltaTime * closeSpeed);
+            leftDoor.localPosition = Vector3.Lerp(leftDoor.localPosition, leftDoorTarget.localPosition, Time.deltaTime * closeSpeed);
 
-            // Snap to position when close enough
-            if (Vector3.Distance(rightDoor.position, rightDoorTarget.position) < 0.001f)
+            // Check distance using localPosition
+            if (Vector3.Distance(rightDoor.localPosition, rightDoorTarget.localPosition) < 0.01f)
             {
-                rightDoor.position = rightDoorTarget.position;
-                leftDoor.position = leftDoorTarget.position;
+                rightDoor.localPosition = rightDoorTarget.localPosition;
+                leftDoor.localPosition = leftDoorTarget.localPosition;
                 isClosing = false;
-                Debug.Log("Doors fully closed.");
+                Debug.Log("Doors closed locally!");
             }
         }
     }
