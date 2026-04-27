@@ -143,9 +143,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 607691890745317666, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: wireID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 644322732074647348, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 854423200997047365, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: wireID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 996616725662861071, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
@@ -271,6 +279,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4788549268786220120, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: wireID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4976911804343027861, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -331,6 +343,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8537546004271444396, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      propertyPath: wireID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8734190982346883497, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -347,7 +363,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4788549268786220120, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -357,6 +374,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 305377898103420024, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 252236645}
+    - targetCorrespondingSourceObject: {fileID: 1122958288164398110, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246115916}
     - targetCorrespondingSourceObject: {fileID: 5111826011005889090, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5312768}
@@ -496,20 +516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: 41976d89-60de-4deb-bff9-16b4af96b290
---- !u!114 &30925000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230380879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5d08bd3ee4a2949aee1a590d406369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  correctPlugID: 2
-  currentPlug: {fileID: 0}
 --- !u!114 &33311929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,6 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   correctPlugID: 3
+  socket: {fileID: 0}
   currentPlug: {fileID: 0}
 --- !u!82 &130967288
 AudioSource:
@@ -2120,6 +2127,46 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopCoroutine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: WireFemaleSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656718859005223984, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5739476035330696986, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2208,34 +2255,75 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1706209600}
-    m_RemovedComponents: []
+    - target: {fileID: 8740833192787435272, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: OnWirePlugged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740833192787435272, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: OnWirePlugged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740833192787435272, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: OnWirePlugged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740833192787435272, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: OnWirePlugged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740833192787435272, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: OnWirePlugged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SnapIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740833192787435272, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: OnWirePlugged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WireSocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740833192787435272, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      propertyPath: OnWirePlugged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: WirePlug, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3154720478064602093, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4547979997886701631, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 230380889}
+    - targetCorrespondingSourceObject: {fileID: 7003258900280414359, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 282222579}
     - targetCorrespondingSourceObject: {fileID: 1042482811764847649, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 230380887}
+    - targetCorrespondingSourceObject: {fileID: 3941237338321243289, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 282222580}
     - targetCorrespondingSourceObject: {fileID: 889897836108480962, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 230380886}
     - targetCorrespondingSourceObject: {fileID: 3724612764923176905, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 121841679}
+    - targetCorrespondingSourceObject: {fileID: 7348165280940211958, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 282222578}
     - targetCorrespondingSourceObject: {fileID: 3995870387417159800, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1248127606}
     - targetCorrespondingSourceObject: {fileID: 619916670840784063, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 30925000}
+      addedObject: {fileID: 1590091735}
+    - targetCorrespondingSourceObject: {fileID: 3324701344483919317, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1031983451}
     - targetCorrespondingSourceObject: {fileID: 3719375086989999250, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 230380888}
     - targetCorrespondingSourceObject: {fileID: 7376171714283706834, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2116893236}
+      addedObject: {fileID: 331083924}
   m_SourcePrefab: {fileID: 100100000, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
 --- !u!1 &230380878 stripped
 GameObject:
@@ -2329,7 +2417,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   correctPlugID: 4
+  socket: {fileID: 0}
   currentPlug: {fileID: 0}
+--- !u!1 &246115915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122958288164398110, guid: 94f43dc8f003e7246a6397019b0b76fe, type: 3}
+  m_PrefabInstance: {fileID: 5312759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &246115916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246115915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: 1
 --- !u!43 &247016065
 Mesh:
   m_ObjectHideFlags: 0
@@ -2521,6 +2628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   correctPlugID: 8
+  socket: {fileID: 0}
   currentPlug: {fileID: 0}
 --- !u!1 &253116467
 GameObject:
@@ -2745,7 +2853,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   correctPlugID: 5
+  socket: {fileID: 0}
   currentPlug: {fileID: 0}
+--- !u!4 &282222574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4884535504616904568, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+  m_PrefabInstance: {fileID: 230380877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282222575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7348165280940211958, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+  m_PrefabInstance: {fileID: 230380877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282222576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7003258900280414359, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+  m_PrefabInstance: {fileID: 230380877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282222577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3941237338321243289, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+  m_PrefabInstance: {fileID: 230380877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &282222578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282222575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: 1
+--- !u!114 &282222579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282222576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: 1
+--- !u!114 &282222580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282222577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: 1
 --- !u!65 &284305619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3426,6 +3594,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_PhysicsTriggerInteraction: 1
+--- !u!114 &331083924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230380878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e354cbc7ebdf624d850f4a8e189f505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireFemaleSocket
+  acceptedWireID: 
+  snapPoint: {fileID: 1031983449}
+  onCorrectWirePlugged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &332406503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13347,6 +13532,29 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
+--- !u!1 &1031983448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3324701344483919317, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+  m_PrefabInstance: {fileID: 230380877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1031983449 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4206846102453736223, guid: 61dfc0ee93489d7479808cdca42972b3, type: 3}
+  m_PrefabInstance: {fileID: 230380877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1031983451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031983448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7211470c2b1114ab9177ad19c9b2a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireMalePlug
+  wireID: 1
 --- !u!1 &1053713423
 GameObject:
   m_ObjectHideFlags: 0
@@ -13749,6 +13957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   correctPlugID: 6
+  socket: {fileID: 0}
   currentPlug: {fileID: 0}
 --- !u!1 &1141951007
 GameObject:
@@ -15672,8 +15881,8 @@ MonoBehaviour:
   - {fileID: 271081033}
   - {fileID: 230380889}
   - {fileID: 121841679}
-  - {fileID: 30925000}
-  - {fileID: 2116893236}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1303974441
 Transform:
   m_ObjectHideFlags: 0
@@ -19621,6 +19830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   correctPlugID: 7
+  socket: {fileID: 0}
   currentPlug: {fileID: 0}
 --- !u!114 &1570490908
 MonoBehaviour:
@@ -19733,6 +19943,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1590091735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230380879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e354cbc7ebdf624d850f4a8e189f505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireFemaleSocket
+  acceptedWireID: 
+  snapPoint: {fileID: 282222574}
+  onCorrectWirePlugged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &1591636442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28265,20 +28492,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   plugID: 3
---- !u!114 &2116893236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230380878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5d08bd3ee4a2949aee1a590d406369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  correctPlugID: 1
-  currentPlug: {fileID: 0}
 --- !u!43 &2121383102
 Mesh:
   m_ObjectHideFlags: 0

@@ -51,7 +51,6 @@
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\IgnoreInInspectorAttribute.cs" />
     <Compile Include="Assets\Scripts\CaesarRotation.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\KeyValuePairPropertyDrawer.cs" />
-    <Compile Include="Assets\Scripts\WireFemale.cs" />
     <Compile Include="Assets\Scripts\LoginManagerPrinter.cs" />
     <Compile Include="Assets\WireBuilder\Scripts\PlugController.cs" />
     <Compile Include="Assets\Scripts\StickyNote_TextController.cs" />
@@ -84,11 +83,9 @@
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ShiftableObject.cs" />
-    <Compile Include="Assets\Scripts\WireMale.cs" />
     <Compile Include="Assets\WireBuilder\Scripts\WireMalePlug.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHiderManager.cs" />
     <Compile Include="Assets\Scripts\LoadScene.cs" />
-    <Compile Include="Assets\Scripts\WireChecker.cs" />
     <Compile Include="Assets\WireBuilder\Scripts\WireFemaleSocket.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\AnInspector.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\FencePlacement.cs" />
