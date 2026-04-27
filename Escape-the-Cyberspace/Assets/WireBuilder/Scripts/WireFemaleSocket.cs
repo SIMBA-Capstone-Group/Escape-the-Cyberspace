@@ -29,9 +29,12 @@ public class WireFemaleSocket : MonoBehaviour
 
     private void OnPluggedIn(SelectEnterEventArgs args)
     {
+        Debug.Log("Plugged in!");
         if (isConnected) return;
 
-        WireMalePlug malePlug = args.interactableObject.transform.GetComponentInParent<WireMalePlug>();
+        var go = args.interactableObject.transform.gameObject;
+        WireMalePlug malePlug = go.GetComponentInParent<WireMalePlug>();
+        Debug.Log(malePlug);
 
         if (malePlug == null)
         {
@@ -43,13 +46,13 @@ public class WireFemaleSocket : MonoBehaviour
         {
             isConnected = true;
 
-            if (snapPoint != null)
-            {
-                malePlug.transform.position = snapPoint.position;
-                malePlug.transform.rotation = snapPoint.rotation;
-            }
+            // if (snapPoint != null)
+            // {
+            //     malePlug.transform.position = snapPoint.position;
+            //     malePlug.transform.rotation = snapPoint.rotation;
+            // }
 
-            onCorrectWirePlugged.Invoke();
+            //onCorrectWirePlugged.Invoke();
 
             Debug.Log("Correct wire connected: " + malePlug.wireID); 
         }
