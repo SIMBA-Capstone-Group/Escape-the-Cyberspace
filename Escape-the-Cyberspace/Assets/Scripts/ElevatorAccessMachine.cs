@@ -1,17 +1,17 @@
 using UnityEngine;
 using TMPro; // Required for your elevator screen
 
-public class GateAccessMachine : MonoBehaviour
+public class ElevatorAccessMachine : MonoBehaviour
 {
     public RFIDListener listener;
     public Doors doors;
 
     [Header("Scanner Identity")]
     [Tooltip("Type the exact Job Role from the JSON that is allowed here.")]
-    public string requiredRole = "Security Engineer"; 
+    public string requiredRole = "Project Manager"; 
 
     [Header("UI Settings")]
-    public TextMeshProUGUI statusDisplay; // Drag your TMPro screen here
+    public TextMeshProUGUI statusDisplay; // Drag your Elevator's TMPro screen here
 
     [Header("Audio Settings")]
     public AudioSource audioSource;
@@ -20,18 +20,22 @@ public class GateAccessMachine : MonoBehaviour
 
     private void Start()
     {
+        // Automatically find AudioSource if not assigned
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
-        UpdateDisplay("PLEASE SCAN", Color.white);
+        
+        UpdateDisplay("ELEVATOR SECURED\nPLEASE SCAN", Color.white);
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        // Search for the RFIDTag component in the object or its parent
         RFIDTag tag = other.GetComponentInParent<RFIDTag>();
+        
         if (tag != null)
         {
-            Debug.Log($"Scanning tag for role: {requiredRole}");
+            Debug.Log($"Elevator checking tag for role: {requiredRole}");
 
-            // We ask the listener: "Does this tag ID belong to someone with this role?"
+            // Call the loop logic in the listener to see if this ID belongs to a Project Manager
             if (listener.CheckAccessByRole(tag.storedID, requiredRole))
             {
                 AccessGranted();
@@ -45,15 +49,21 @@ public class GateAccessMachine : MonoBehaviour
 
     void AccessGranted()
     {
-        UpdateDisplay("ACCESS GRANTED", Color.green);
-        if (audioSource && accessGrantedSound) audioSource.PlayOneShot(accessGrantedSound);
+        UpdateDisplay("ACCESS GRANTED\nWELCOME", Color.green);
+        
+        if (audioSource && accessGrantedSound) 
+            audioSource.PlayOneShot(accessGrantedSound);
+            
+        // Trigger the elevator door animation
         doors.Open();
     }
 
     void AccessDenied()
     {
-        UpdateDisplay("ACCESS DENIED", Color.red);
-        if (audioSource && accessDeniedSound) audioSource.PlayOneShot(accessDeniedSound);
+        UpdateDisplay("UNAUTHORIZED\nACCESS DENIED", Color.red);
+        
+        if (audioSource && accessDeniedSound) 
+            audioSource.PlayOneShot(accessDeniedSound);
     }
 
     void UpdateDisplay(string message, Color textColor)
