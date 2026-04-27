@@ -69,7 +69,6 @@
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ArrayArrangement.cs" />
     <Compile Include="Assets\Scripts\KeySnap.cs" />
     <Compile Include="Assets\Scripts\UIPopup.cs" />
-    <Compile Include="Assets\OfficePause.cs" />
     <Compile Include="Assets\Models\ScifiOfficeLite\Scripts\DemoDoor.cs" />
     <Compile Include="Assets\Scripts\ChalkboardPuzzle.cs" />
     <Compile Include="Assets\Scripts\RFIDTagStorage.cs" />
@@ -93,10 +92,11 @@
     <Compile Include="Assets\Scripts\exit.cs" />
     <Compile Include="Assets\Models\Keypad\Scripts\KeypadButton.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ShiftableObject.cs" />
+    <Compile Include="Assets\WireBuilder\Scripts\WireMalePlug.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\MaterialHiderManager.cs" />
-    <Compile Include="Assets\Scripts\LoadScene.cs" />
+    <Compile Include="Assets\Scripts\LoadOpeningScene.cs" />
+    <Compile Include="Assets\WireBuilder\Scripts\WireFemaleSocket.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Inspector\AnInspector.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\FencePlacement.cs" />
     <Compile Include="Assets\Scripts\HowToListener.cs" />
@@ -117,7 +117,6 @@
     <Compile Include="Assets\Scripts\IsCorrectPassword.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SnapToPoint.cs" />
-    <Compile Include="Assets\Scripts\LevelCompleteMenu.cs" />
     <Compile Include="Assets\Scripts\ChangeText.cs" />
     <Compile Include="Assets\Scripts\SceneFade.cs" />
     <Compile Include="Assets\Scripts\CheeseNoteTeleporter.cs" />
