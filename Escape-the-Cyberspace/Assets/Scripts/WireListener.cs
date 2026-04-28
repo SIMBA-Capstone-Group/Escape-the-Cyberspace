@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class WireListener : MonoBehaviour
 {
+    [Header("MAKE SURE: the order of the socket/plugs is the same as in the hierarchy! \nA socket's index must be the same as its plug counterpart!")]
     public WireFemaleSocket[] sockets;
     public WireMalePlug[] plugs;
     public UnityEvent onCorrect;
