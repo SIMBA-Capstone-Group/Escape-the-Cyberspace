@@ -12,11 +12,11 @@ public class AdminLoginManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void ToggleScreens()
     {
+        loginScreen.ChangeScreen(0, targetScreen);
         if (isLoggedIn)
         {
             loadingScreen.SetActive(false);
             targetScreen.SetActive(true);
         }
-        loginScreen.poweredOnScreens[0] = targetScreen;
     }
 }
