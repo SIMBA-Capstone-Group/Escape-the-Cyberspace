@@ -71,6 +71,7 @@
     <Compile Include="Assets\UI\Visual Keyboard\Scripts\Light Animation (fun)\Demo_VisualKeyboardAnimation_02.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\PrefabGroup.cs" />
     <Compile Include="Assets\Scripts\GateAccessMachine.cs" />
+    <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\SiMBA_SFX\PlaySoundOnDrop.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\Rotatable.cs" />
     <Compile Include="Assets\Scripts\levelSelectController.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\Scripts\RFIDListener.cs" />
     <Compile Include="Assets\Scripts\DuckPuzzleListener.cs" />
     <Compile Include="Assets\Scripts\DisableColliderOnAccess.cs" />
-    <Compile Include="Assets\Scripts\exit.cs" />
     <Compile Include="Assets\Models\Keypad\Scripts\KeypadButton.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -130,6 +130,7 @@
     <Compile Include="Assets\Scripts\RFIDReader.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\MarpaStudio\Info\Thank you.txt" />
     <None Include="Assets\Models\VNB - Office Set\ReadMe.txt" />
     <None Include="Assets\Models\3D Laboratory Environment with Appratus\Documentation\3D Laboratory environment with appratus.txt" />
   </ItemGroup>
@@ -172,6 +173,14 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.0f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.0f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.0f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClusterInputModule">
@@ -436,6 +445,10 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.0f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.0f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VirtualTexturingModule">
@@ -704,10 +717,6 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff\Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.collections@aea9d3bd5e19\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
