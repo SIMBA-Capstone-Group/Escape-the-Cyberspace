@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\exit.cs" />
     <Compile Include="Assets\Models\Keypad\Scripts\KeypadButton.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\DynamicCPT.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Models\Fries and Seagull\Ultimate Interior Pack\Scene Props\Scripts\ShiftableObject.cs" />
     <Compile Include="Assets\WireBuilder\Scripts\WireMalePlug.cs" />
