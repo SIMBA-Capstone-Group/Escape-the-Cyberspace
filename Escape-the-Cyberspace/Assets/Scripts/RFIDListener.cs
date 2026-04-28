@@ -24,7 +24,7 @@ public class RFIDListener : MonoBehaviour
     // --- RFID Cloner stuff ---
     public TextMeshProUGUI employeeName;
     protected RFIDData currentEmployee;
-    
+
     public RFIDData GetCurrentEmployee()
     {
         return currentEmployee;
@@ -35,7 +35,7 @@ public class RFIDListener : MonoBehaviour
     public TextAsset potentialRFIDContentsFile;
     public Transform container;
     public GameObject cardObject;
-    
+
     // --- RFID Tag stuff ---
     public GameObject rFIDTag;
     protected string rFIDTagContents = "NONE";
@@ -47,7 +47,6 @@ public class RFIDListener : MonoBehaviour
     {
         return correctRFID;
     }
-
     // NEW: This is the "Job Check" loop you asked for!
     // This allows any scanner to ask: "Does this ID match this Job Role?"
     public bool CheckAccessByRole(int scannedID, string requiredRole)
@@ -67,7 +66,7 @@ public class RFIDListener : MonoBehaviour
                 }
             }
         }
-        
+
         Debug.Log("Access Denied: Role mismatch.");
         return false;
     }
@@ -98,18 +97,17 @@ public class RFIDListener : MonoBehaviour
         currentEmployee = capturedCard;
         employeeName.text = capturedCard.ownerName;
     }
-
     void Start()
     {
         if (potentialRFIDContentsFile != null)
         {
             potentialRFIDDatabase = JsonUtility.FromJson<RFIDDatabase>(potentialRFIDContentsFile.text);
             Debug.Log("Loaded cards count: " + potentialRFIDDatabase.cards.Length);
-            
+
             foreach (var card in potentialRFIDDatabase.cards)
             {
                 // This still sets the default "Victor" ID for your original GateAccessMachine
-                if(card.role == "Security Engineer")
+                if (card.role == "Security Engineer")
                 {
                     correctRFID = card.id;
                     Debug.Log("Default Security Engineer ID set to: " + correctRFID);
@@ -123,3 +121,5 @@ public class RFIDListener : MonoBehaviour
         GenerateCards();
     }
 }
+
+
