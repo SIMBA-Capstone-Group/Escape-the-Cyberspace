@@ -1,53 +1,46 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor))]
 public class WireFemaleSocket : MonoBehaviour
 {
     public string acceptedWireID;
     public Transform snapPoint;
     public UnityEvent onCorrectWirePlugged;
+    public bool isCorrect = false;
 
-    private bool isConnected = false;
+    private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnPluggedIn(SelectEnterEventArgs args)
     {
-        if (isConnected) return;
+        Debug.Log("Plugged in!");
 
-        WireMalePlug malePlug = other.GetComponent<WireMalePlug>();
+        var go = args.interactableObject.transform.gameObject;
+        WireMalePlug malePlug = go.GetComponentInParent<WireMalePlug>();
+        Debug.Log(malePlug);
 
         if (malePlug == null)
         {
+            Debug.LogWarning("No WireMalePlug found!");
             return;
         }
 
         if (malePlug.wireID == acceptedWireID)
         {
-            isConnected = true;
-
-            Rigidbody rb = malePlug.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-            }
-
-            if (snapPoint != null)
-            {
-                malePlug.transform.position = snapPoint.position;
-                malePlug.transform.rotation = snapPoint.rotation;
-            }
-            else
-            {
-                malePlug.transform.position = transform.position;
-                malePlug.transform.rotation = transform.rotation;
-            }
-
-            onCorrectWirePlugged.Invoke();
-
-            Debug.Log("Correct wire connected: " + malePlug.wireID);
+            isCorrect = true;
+            Debug.Log("Correct wire connected: " + malePlug.wireID); 
         }
         else
         {
+            isCorrect = false;
             Debug.Log("Wrong wire. Needed: " + acceptedWireID + ", got: " + malePlug.wireID);
         }
+    }
+
+    public void OnUnplug()
+    {
+        Debug.Log("Unplugged wire");
+        isCorrect = false;
     }
 }
