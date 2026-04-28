@@ -79,9 +79,4 @@ correctPassword = linkedStickyNote.text.Replace("\u200B", "").Trim();        }
             passwordInputField.text = "";
         }
     }
-
-    public void ChangeScreen(int index, GameObject screen)
-    {
-        poweredOnScreens[index] = screen;
-    }
 }
