@@ -1,10 +1,17 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using TMPro; // Required for your elevator screen
 
 public class GateAccessMachine : MonoBehaviour
 {
     public RFIDListener listener;
     public Doors doors;
+
+    [Header("Scanner Identity")]
+    [Tooltip("Type the exact Job Role from the JSON that is allowed here.")]
+    public string requiredRole = "Security Engineer"; 
+
+    [Header("UI Settings")]
+    public TextMeshProUGUI statusDisplay; // Drag your TMPro screen here
 
     [Header("Audio Settings")]
     public AudioSource audioSource;
@@ -13,11 +20,8 @@ public class GateAccessMachine : MonoBehaviour
 
     private void Start()
     {
-        // Automatically try to find the AudioSource if you forgot to drag it in
-        if (audioSource == null)
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
+        UpdateDisplay("PLEASE SCAN", Color.white);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,31 +29,39 @@ public class GateAccessMachine : MonoBehaviour
         RFIDTag tag = other.GetComponentInParent<RFIDTag>();
         if (tag != null)
         {
-            Debug.Log("Tag entered scanner!");
+            Debug.Log($"Scanning tag for role: {requiredRole}");
 
-            // check against correct ID
-            if (listener.GetCorrectRFID() == tag.storedID)
+            // We ask the listener: "Does this tag ID belong to someone with this role?"
+            if (listener.CheckAccessByRole(tag.storedID, requiredRole))
             {
-                Debug.Log("Access granted!");
-
-                // correct audio
-                if (audioSource != null && accessGrantedSound != null)
-                {
-                    audioSource.PlayOneShot(accessGrantedSound);
-                }
-
-                doors.Open();
+                AccessGranted();
             }
             else
             {
-                Debug.Log("Access denied!");
-
-                // Fail audio
-                if (audioSource != null && accessDeniedSound != null)
-                {
-                    audioSource.PlayOneShot(accessDeniedSound);
-                }
+                AccessDenied();
             }
+        }
+    }
+
+    void AccessGranted()
+    {
+        UpdateDisplay("ACCESS GRANTED", Color.green);
+        if (audioSource && accessGrantedSound) audioSource.PlayOneShot(accessGrantedSound);
+        doors.Open();
+    }
+
+    void AccessDenied()
+    {
+        UpdateDisplay("ACCESS DENIED", Color.red);
+        if (audioSource && accessDeniedSound) audioSource.PlayOneShot(accessDeniedSound);
+    }
+
+    void UpdateDisplay(string message, Color textColor)
+    {
+        if (statusDisplay != null)
+        {
+            statusDisplay.text = message;
+            statusDisplay.color = textColor;
         }
     }
 }
