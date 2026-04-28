@@ -11,8 +11,6 @@ public class LoginManager : MonoBehaviour, IPointerClickHandler
     public GameObject[] poweredOnScreens;
     public GameObject loginScreen;
 
-    public AdminLoginManager admin;
-
     [Header("Password Setup")]
     [Tooltip("Drag the TextMeshPro object of the sticky note you want this computer to use.")]
     public TMP_Text linkedStickyNote; // <-- Added this slot to hold the sticky note
@@ -60,10 +58,6 @@ correctPassword = linkedStickyNote.text.Replace("\u200B", "").Trim();        }
             if (KeyboardListener != null)
             {
                 KeyboardListener.NoMoreUIPlease();
-            }
-            if (admin != null)
-            {
-                admin.isLoggedIn = true;
             }
         }
         else if (onIncorrect != null)
