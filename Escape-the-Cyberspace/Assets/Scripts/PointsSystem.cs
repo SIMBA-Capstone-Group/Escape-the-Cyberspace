@@ -68,7 +68,7 @@ public class PointsSystem : MonoBehaviour
     public void stopScoring()
     {
         isRunning = false;
-        SaveScore("default");
+        SaveScore("DEF");
     }
 
     public void SaveScore(string playerName)

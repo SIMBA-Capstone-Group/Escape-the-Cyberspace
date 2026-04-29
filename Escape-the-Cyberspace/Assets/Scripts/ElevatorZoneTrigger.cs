@@ -19,6 +19,8 @@ public class ManualElevatorCloser : MonoBehaviour
     [Header("Player Control")]
     public MonoBehaviour playerMovementScript; // drag your movement script here
 
+    public PointsSystem pointsSystem;
+
     private Vector3 rightClosedPosition;
     private Vector3 leftClosedPosition;
     private bool isClosing = false;
@@ -77,7 +79,12 @@ public class ManualElevatorCloser : MonoBehaviour
                 if (playerMovementScript != null)
                     playerMovementScript.enabled = false;
 
+                if (pointsSystem != null)
+                    pointsSystem.stopScoring();
+
                 Debug.Log("Doors closed. Player frozen. UI shown.");
+
+                
             }
         }
     }

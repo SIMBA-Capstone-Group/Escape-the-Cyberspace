@@ -3,17 +3,22 @@ using UnityEngine.Events;
 
 public class WireListener : MonoBehaviour
 {
-    [Header("MAKE SURE: the order of the socket/plugs is the same as in the hierarchy! \nA socket's index must be the same as its plug counterpart!")]
+    [Header("Wiring Settings")]
+    [Tooltip("Order must match hierarchy! Socket index must match plug index.")]
     public WireFemaleSocket[] sockets;
     public WireMalePlug[] plugs;
+
+    [Header("Feedback Settings")]
+    public AudioSource successAudioSource; // Drag your AudioSource here
     public UnityEvent onCorrect;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private bool hasTriggered = false; // Prevents the sound/event from firing multiple times
+
     void Start()
     {
-        if(sockets.Length != plugs.Length)
+        if (sockets.Length != plugs.Length)
         {
-            Debug.Log("Not enough plugs/sockets!");
+            Debug.LogWarning("Not enough plugs/sockets on " + gameObject.name);
         }
 
         SocketSetup();
@@ -22,7 +27,7 @@ public class WireListener : MonoBehaviour
 
     void SocketSetup()
     {
-        foreach(WireFemaleSocket socket in sockets)
+        foreach (WireFemaleSocket socket in sockets)
         {
             socket.acceptedWireID = "id";
         }
@@ -30,7 +35,7 @@ public class WireListener : MonoBehaviour
 
     void PlugSetup()
     {
-        foreach(WireMalePlug plug in plugs)
+        foreach (WireMalePlug plug in plugs)
         {
             plug.wireID = "id";
         }
@@ -38,21 +43,29 @@ public class WireListener : MonoBehaviour
 
     public void CheckCorrectness()
     {
-        foreach(WireFemaleSocket socket in sockets)
+        // Don't check if we already finished the puzzle
+        if (hasTriggered) return;
+
+        foreach (WireFemaleSocket socket in sockets)
         {
-            if(!socket.isCorrect)
+            if (!socket.isCorrect)
             {
-                Debug.Log("One incorrect!");
+                Debug.Log("One or more wires are still incorrect.");
                 return;
             }
         }
-        Debug.Log("All correct!");
-        onCorrect.Invoke();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // --- SUCCESS LOGIC ---
+        Debug.Log("All wires correct!");
+        hasTriggered = true; // Mark as done
+
+        // Play the audio if assigned
+        if (successAudioSource != null)
+        {
+            successAudioSource.Play();
+        }
+
+        // Trigger any other events (like opening the door or enabling the collider)
+        onCorrect.Invoke();
     }
 }
