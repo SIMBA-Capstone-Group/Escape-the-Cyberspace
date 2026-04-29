@@ -8,12 +8,15 @@ public class DynamicCPT : MonoBehaviour
     public TextMeshProUGUI[] adminSubnet;
     public TextMeshProUGUI[] utilitiesSubnet;
 
+    public TextMeshProUGUI[] stickyNotes;
+
     void Start()
     {
         string[] mask1 = GetRandomIP(employeeSubnet.Length, "10.0.3.");
         for (int i = 0; i < employeeSubnet.Length; i++)
         {
             employeeSubnet[i].text = mask1[i];
+            
         }
 
         string[] mask2 = GetRandomIP(adminSubnet.Length, "10.0.1.");
@@ -26,6 +29,7 @@ public class DynamicCPT : MonoBehaviour
         for (int i = 0; i < utilitiesSubnet.Length; i++)
         {
             utilitiesSubnet[i].text = mask3[i];
+            stickyNotes[i].text = mask3[i];
         }
     }
 
