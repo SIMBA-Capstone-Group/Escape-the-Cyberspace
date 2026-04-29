@@ -3,22 +3,17 @@ using UnityEngine.Events;
 
 public class WireListener : MonoBehaviour
 {
-    [Header("Wiring Settings")]
-    [Tooltip("Order must match hierarchy! Socket index must match plug index.")]
+    [Header("MAKE SURE: the order of the socket/plugs is the same as in the hierarchy! \nA socket's index must be the same as its plug counterpart!")]
     public WireFemaleSocket[] sockets;
     public WireMalePlug[] plugs;
-    
-    [Header("Feedback Settings")]
-    public AudioSource successAudioSource; // Drag your AudioSource here
     public UnityEvent onCorrect;
 
-    private bool hasTriggered = false; // Prevents the sound/event from firing multiple times
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if(sockets.Length != plugs.Length)
         {
-            Debug.LogWarning("Not enough plugs/sockets on " + gameObject.name);
+            Debug.Log("Not enough plugs/sockets!");
         }
 
         SocketSetup();
@@ -43,29 +38,21 @@ public class WireListener : MonoBehaviour
 
     public void CheckCorrectness()
     {
-        // Don't check if we already finished the puzzle
-        if (hasTriggered) return;
-
         foreach(WireFemaleSocket socket in sockets)
         {
             if(!socket.isCorrect)
             {
-                Debug.Log("One or more wires are still incorrect.");
+                Debug.Log("One incorrect!");
                 return;
             }
         }
-
-        // --- SUCCESS LOGIC ---
-        Debug.Log("All wires correct!");
-        hasTriggered = true; // Mark as done
-
-        // Play the audio if assigned
-        if (successAudioSource != null)
-        {
-            successAudioSource.Play();
-        }
-
-        // Trigger any other events (like opening the door or enabling the collider)
+        Debug.Log("All correct!");
         onCorrect.Invoke();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
