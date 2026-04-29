@@ -16,6 +16,9 @@ public class ManualElevatorCloser : MonoBehaviour
     [Header("Level Complete UI")]
     public GameObject levelCompleteUI;
 
+    [Header("Player Control")]
+    public MonoBehaviour playerMovementScript; // drag your movement script here
+
     private Vector3 rightClosedPosition;
     private Vector3 leftClosedPosition;
     private bool isClosing = false;
@@ -39,8 +42,6 @@ public class ManualElevatorCloser : MonoBehaviour
 
             isClosing = true;
             hasTriggered = true;
-
-            Debug.Log("Player entered! Closing elevator doors.");
         }
     }
 
@@ -68,10 +69,15 @@ public class ManualElevatorCloser : MonoBehaviour
 
                 isClosing = false;
 
+                // Show UI
                 if (levelCompleteUI != null)
                     levelCompleteUI.SetActive(true);
 
-                Debug.Log("Elevator doors closed. Level complete UI shown.");
+                // 🚫 Disable player movement
+                if (playerMovementScript != null)
+                    playerMovementScript.enabled = false;
+
+                Debug.Log("Doors closed. Player frozen. UI shown.");
             }
         }
     }
