@@ -48,7 +48,7 @@ public class PointsSystem : MonoBehaviour
     {
         if((scoredPoints > 0) && isRunning && (ticksToFrameUpdate == 0))
         {
-            scoredPoints -= startingPoints * 0.01;
+            scoredPoints -= startingPoints * 0.001;
             ticksToFrameUpdate += ticksPerUpdate;
         }
         else if (isRunning)
@@ -61,7 +61,7 @@ public class PointsSystem : MonoBehaviour
     {
         if((scoredPoints > 0) && isRunning)
         {
-            scoredPoints -= startingPoints * .02;
+            scoredPoints -= startingPoints * .01;
         }
     }
 

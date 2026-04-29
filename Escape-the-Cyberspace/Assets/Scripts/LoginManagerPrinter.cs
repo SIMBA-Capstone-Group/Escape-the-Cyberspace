@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using TMPro; // <-- Added this to read the Sticky Note!
+using TMPro;
+using UnityEngine.Events; // <-- Added this to read the Sticky Note!
 
 // same as LoginManager script, but used for the printer computer in lvl 2
 
@@ -22,6 +23,8 @@ public class LoginManagerPrinter : MonoBehaviour, IPointerClickHandler
     public GameObject paperObject;      // paper object
     public Transform printerSpawnPoint; // empty object for paper to spawn at
     public AudioSource printerAudio;    // printer sound source
+
+    public UnityEvent incorrect;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -77,6 +80,10 @@ public class LoginManagerPrinter : MonoBehaviour, IPointerClickHandler
             {
                 KeyboardListener.NoMoreUIPlease();
             }
+        }
+        else
+        {
+            incorrect.Invoke();
         }
     }
 

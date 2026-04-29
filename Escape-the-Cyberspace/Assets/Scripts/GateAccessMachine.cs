@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GateAccessMachine : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GateAccessMachine : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip accessGrantedSound; 
     public AudioClip accessDeniedSound;
+
+    public UnityEvent incorrect;
 
     private void Start()
     {
@@ -43,6 +46,7 @@ public class GateAccessMachine : MonoBehaviour
             else
             {
                 Debug.Log("Access denied!");
+                incorrect.Invoke();
 
                 // Fail audio
                 if (audioSource != null && accessDeniedSound != null)

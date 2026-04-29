@@ -2579,6 +2579,34 @@ PrefabInstance:
       propertyPath: accessGrantedSound
       value: 
       objectReference: {fileID: 8300000, guid: 0d2a4919367510446997cf9e83d321c9, type: 3}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: incorrect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: incorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: incorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964039258}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: incorrect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: incorrect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncorrectAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: incorrect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PointsSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328091162474130516, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
+      propertyPath: incorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1055051568639764132, guid: 94613d7b6a5736146944f27320d2153c, type: 3}
     m_RemovedGameObjects: []
@@ -12285,6 +12313,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2308518365709215270, guid: 246033705ea83904da3ad9af1045c122, type: 3}
   m_PrefabInstance: {fileID: 963102536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &964039257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964039259}
+  - component: {fileID: 964039258}
+  m_Layer: 0
+  m_Name: PointsScorer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &964039258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964039257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd800b8b75a7784299da891ba27fd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointsSystem
+  levelNumber: 2
+  startingPoints: 150000
+  scoredPoints: 0
+  isRunning: 1
+  ticksPerUpdate: 10000
+  leaderboardLocation: {fileID: 0}
+  leaderboardPrefab: {fileID: 0}
+--- !u!4 &964039259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964039257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.90311, y: 1.00436, z: -23.48681}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &976989787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17552,6 +17631,34 @@ PrefabInstance:
       propertyPath: 'poweredOnScreens.Array.data[0]'
       value: 
       objectReference: {fileID: 1358527414}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964039258}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncorrectAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PointsSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 460739227585098493, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 624796045488874524, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17596,6 +17703,34 @@ PrefabInstance:
       propertyPath: linkedStickyNote
       value: 
       objectReference: {fileID: 960848344}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964039258}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CancelInvoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PointsSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771988538833466160, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1864050447719727711, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_Texture
       value: 
@@ -17620,6 +17755,34 @@ PrefabInstance:
       propertyPath: linkedStickyNote
       value: 
       objectReference: {fileID: 566167225}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964039258}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncorrectAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PointsSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297643046114884226, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4383293711669528158, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.4
@@ -17752,6 +17915,34 @@ PrefabInstance:
       propertyPath: 'poweredOnScreens.Array.data[0]'
       value: 
       objectReference: {fileID: 1930857064}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964039258}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncorrectAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PointsSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528974568633371245, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
+      propertyPath: onIncorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8761522031422931850, guid: 92da2fbb6fe7f98408334259be06701e, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -17840,6 +18031,21 @@ MonoBehaviour:
   paperObject: {fileID: 1398115583}
   printerSpawnPoint: {fileID: 1520136035}
   printerAudio: {fileID: 1650823270}
+  incorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 964039258}
+        m_TargetAssemblyTypeName: PointsSystem, Assembly-CSharp
+        m_MethodName: IncorrectAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1383996525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110068,6 +110274,21 @@ MonoBehaviour:
   audioSource: {fileID: 5274062682923621286}
   accessGrantedSound: {fileID: 8300000, guid: 0d2a4919367510446997cf9e83d321c9, type: 3}
   accessDeniedSound: {fileID: 8300000, guid: 022b4e6ede1ecb14f9b43dade81de70c, type: 3}
+  incorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 964039258}
+        m_TargetAssemblyTypeName: PointsSystem, Assembly-CSharp
+        m_MethodName: IncorrectAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &4230588980441942842
 Transform:
   m_ObjectHideFlags: 0
@@ -202789,3 +203010,4 @@ SceneRoots:
   - {fileID: 1536737631}
   - {fileID: 2031526049}
   - {fileID: 2076796733}
+  - {fileID: 964039259}

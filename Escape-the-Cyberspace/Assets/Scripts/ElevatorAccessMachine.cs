@@ -1,5 +1,6 @@
 using UnityEngine;
-using TMPro; // Required for your elevator screen
+using TMPro;
+using UnityEngine.Events; // Required for your elevator screen
 
 public class ElevatorAccessMachine : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class ElevatorAccessMachine : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip accessGrantedSound; 
     public AudioClip accessDeniedSound;
+
+    public UnityEvent incorrect;
 
     private void Start()
     {
@@ -60,6 +63,7 @@ public class ElevatorAccessMachine : MonoBehaviour
 
     void AccessDenied()
     {
+        incorrect.Invoke();
         UpdateDisplay("UNAUTHORIZED\nACCESS DENIED", Color.red);
         
         if (audioSource && accessDeniedSound) 
