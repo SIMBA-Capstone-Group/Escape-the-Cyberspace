@@ -33702,7 +33702,7 @@ MonoBehaviour:
   audioSource: {fileID: 5274062682923621286}
   closeSound: {fileID: 8300000, guid: 6d7824fe426a90a429eb194389ebe2a1, type: 3}
   levelCompleteUI: {fileID: 1123179075}
-  playerMovementScript: {fileID: 1430531280}
+  playerMovementScript: {fileID: 1988078725}
 --- !u!4 &112191119244230910
 Transform:
   m_ObjectHideFlags: 0
