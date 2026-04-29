@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\CryptexRingMovement.cs" />
     <Compile Include="Assets\Scripts\IsCorrectPassword.cs" />
     <Compile Include="Assets\Scripts\WireListener.cs" />
+    <Compile Include="Assets\Scripts\AdminLoginManager.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SnapToPoint.cs" />
     <Compile Include="Assets\Scripts\LevelCompleteMenu.cs" />
