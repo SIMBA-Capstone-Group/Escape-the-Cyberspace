@@ -21,8 +21,8 @@ public class WireListener : MonoBehaviour
             Debug.LogWarning("Not enough plugs/sockets on " + gameObject.name);
         }
 
-        SocketSetup();
-        PlugSetup();
+        //SocketSetup();
+        //PlugSetup();
     }
 
     void SocketSetup()

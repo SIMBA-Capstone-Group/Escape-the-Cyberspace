@@ -17,7 +17,9 @@ public class WireFemaleSocket : MonoBehaviour
 
         var go = args.interactableObject.transform.gameObject;
         WireMalePlug malePlug = go.GetComponentInParent<WireMalePlug>();
-        Debug.Log(malePlug);
+        Debug.Log(go.name);
+        Debug.Log(malePlug?.name);
+        Debug.Log(this.acceptedWireID);
 
         if (malePlug == null)
         {
