@@ -25,15 +25,15 @@ public class WireFemaleSocket : MonoBehaviour
             return;
         }
 
-        if (malePlug.wireID == acceptedWireID)
+        if (malePlug.GetWireID() == acceptedWireID)
         {
             isCorrect = true;
-            Debug.Log("Correct wire connected: " + malePlug.wireID); 
+            Debug.Log("Correct wire connected: " + malePlug.GetWireID() + " into " + acceptedWireID); 
         }
         else
         {
             isCorrect = false;
-            Debug.Log("Wrong wire. Needed: " + acceptedWireID + ", got: " + malePlug.wireID);
+            Debug.Log("Wrong wire. Needed: " + acceptedWireID + ", got: " + malePlug.GetWireID());
         }
     }
 
