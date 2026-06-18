@@ -75,7 +75,7 @@ public class RFIDListener : MonoBehaviour
     {
         foreach (var card in potentialRFIDDatabase.cards)
         {
-            GameObject cardUI = Instantiate(cardObject, container);
+            GameObject cardUI = Instantiate(cardObject, container, false);
             TextMeshProUGUI textComponent = cardUI.GetComponentInChildren<TextMeshProUGUI>();
             if (textComponent != null)
             {

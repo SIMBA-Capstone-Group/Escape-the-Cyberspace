@@ -36,11 +36,6 @@
             "role": "DevOps Engineer"
         },
         {
-            "id": 71829364,
-            "ownerName": "Hannah Fitzgerald",
-            "role": "Project Manager"
-        },
-        {
             "id": 82917455,
             "ownerName": "Victor Huang",
             "role": "Security Engineer"
@@ -64,6 +59,11 @@
             "id": 32674851,
             "ownerName": "Ethan Brooks",
             "role": "Cloud Architect"
+        },
+        {
+            "id": 71829364,
+            "ownerName": "Hannah Fitzgerald",
+            "role": "Project Manager"
         },
         {
             "id": 43785962,
